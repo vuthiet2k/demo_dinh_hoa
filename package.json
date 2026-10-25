@@ -1,13 +1,16 @@
 {
   "name": "demo-dinh-hoa",
-  "version": "2.0.0",
-  "description": "He sinh thai So hoa Di tich Lich su Cach mang & Anh hung Dan toc - ATK Dinh Hoa (Chuan Astra Agentic Workflow, DTCG 3-Tier Tokens 60-30-10, W3C WCAG 2.2)",
+  "version": "2.1.0",
+  "description": "He sinh thai So hoa Di tich Lich su Cach mang & Chuyen de Mua Thu Doc Lap - ATK Dinh Hoa (Astra Agentic Workflow, Figma Node 28:2, Bootstrap 5.3 CDN, DTCG 3-Tier Tokens 60-30-10)",
   "private": false,
   "metadata": {
     "prd_version": "UI-COLOR-SPEC-v2.0",
     "policy_version": "ASTRA-GPT6-1.0",
     "schema_version": "DTCG-2026.1",
-    "plan_version": "PLAN-COLOR-60-30-10-v1.0",
+    "plan_version": "PLAN-BOOTSTRAP-THEME-FIGMA-28-2-v1.0",
+    "figma_file_key": "ANxe1oSyFCZDLHBBvYqYnE",
+    "figma_node_id": "28:2",
+    "ui_framework": "Bootstrap 5.3.3 CDN",
     "geometry_policy": "zero-radius-zero-shadow"
   },
   "repository": {
