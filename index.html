@@ -3,739 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bảo Tàng Hồ Chí Minh — Không Gian Chuyên Đề Mùa Thu Độc Lập</title>
-  <meta name="description" content="Triển lãm chuyên đề kỷ niệm 80 năm Cách mạng Tháng Tám (1945 - 2025) & Quốc khánh 2/9 — Bảo tàng Hồ Chí Minh." />
-
-  <!-- Google Fonts: Merriweather & Be Vietnam Pro (Chuẩn Figma node 28:2) -->
+  <title>Hệ Thống Số Hóa Di Tích Lịch Sử ATK Định Hóa — Thủ Đô Gió Ngàn Chiến Khu Việt Bắc</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-
-  <!-- Bootstrap 5.3.3 CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-
-  <!-- Custom Theme & Strict Flat Geometry Config (Zero Border-Radius, Zero Box-Shadow, No Black Borders) -->
-  <link rel="stylesheet" href="./styles/themes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/themes.css" />
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
 
-  <!-- ========================================================================
-       SECTION 1: MAIN HEADER NAVIGATION (Figma 28:423 — Visual Top Y=0..82)
-       Background: #8F2929 (--brand-primary-default) | Text: #F6F0E4 & #DFC58E
-       ======================================================================== -->
-  <header class="section-header-nav" data-figma-node="28:423">
-    <div class="container-figma d-flex flex-wrap justify-content-between align-items-center py-2" style="min-height: 80px;">
-      <!-- Brand Identity (28:425) -->
-      <a href="#" class="d-flex align-items-center gap-3 text-decoration-none">
-        <div class="d-flex align-items-center gap-2 px-2 py-1" style="border: 1px solid rgba(223, 197, 142, 0.35); background-color: rgba(111, 17, 21, 0.45);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="2" y="18" width="20" height="3" fill="#DFC58E"/>
-            <rect x="4" y="10" width="3" height="7" fill="#DFC58E"/>
-            <rect x="10.5" y="10" width="3" height="7" fill="#DFC58E"/>
-            <rect x="17" y="10" width="3" height="7" fill="#DFC58E"/>
-            <polygon points="12,3 2,9 22,9" fill="#C29A50"/>
-          </svg>
-          <div style="line-height: 1.1;">
-            <div class="text-brand-soft fw-bold" style="font-size: 8px; letter-spacing: 0.05em;">BẢO TÀNG HỒ CHÍ MINH</div>
-            <div class="text-inverse-cream" style="font-size: 7px; opacity: 0.85;">HO CHI MINH MUSEUM</div>
-          </div>
+  <!-- STICKY NAVIGATION & THEME SWITCHER HEADER -->
+  <header class="bg-brand-primary text-white border-b-4 border-accent sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+      <a href="#mainOverviewMount" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-brand-accent text-content-primary border-2 border-white font-display font-extrabold text-sm flex items-center justify-center shrink-0">
+          ATK
         </div>
         <div>
-          <div class="font-serif-heritage fw-bold text-inverse-cream" style="font-size: 18px; line-height: 1.25;">
-            BẢO TÀNG HỒ CHÍ MINH
+          <div class="text-[10px] font-mono-code uppercase tracking-widest text-[#E5DCCB]">
+            CỔNG DỮ LIỆU ĐỊA CHỈ ĐỎ QUỐC GIA
           </div>
-          <div class="fw-bold text-brand-soft" style="font-size: 10px; letter-spacing: 0.04em;">
-            KHÔNG GIAN CHUYÊN ĐỀ MÙA THU ĐỘC LẬP
+          <div class="font-display font-extrabold text-sm sm:text-base uppercase leading-tight">
+            HỆ THỐNG SỐ HÓA DI TÍCH ATK ĐỊNH HÓA
           </div>
         </div>
       </a>
 
-      <!-- Navigation Links (28:432) -->
-      <nav class="d-none d-xl-flex align-items-center gap-3" aria-label="Điều hướng chính">
-        <a href="#hero-section" class="header-nav-link active">Trang chủ</a>
-        <a href="#galleries-section" class="header-nav-link">Triển lãm "Mùa Thu Độc Lập"</a>
-        <a href="#galleries-section" class="header-nav-link">Hiện vật &amp; Tư liệu số</a>
-        <a href="#hero-section" class="header-nav-link">Tham quan ảo 3D/360</a>
-        <a href="#booking-section" class="header-nav-link">Đặt vé &amp; Lịch trình</a>
-        <a href="#news-section" class="header-nav-link">Tin tức sự kiện</a>
+      <nav class="flex flex-wrap items-center gap-1.5 text-xs font-semibold" aria-label="Điều hướng phân hệ">
+        <a href="#mainOverviewMount" class="px-3 py-1.5 border border-white/25 hover:bg-white/15">
+          1. Trang Chủ Hub
+        </a>
+        <a href="#gisFullSectionMount" class="px-3 py-1.5 border border-white/25 hover:bg-white/15">
+          2. Bản Đồ Số GIS
+        </a>
+        <a href="#flipbookFullSectionMount" class="px-3 py-1.5 border border-white/25 hover:bg-white/15">
+          3. Cẩm Nang 3D Flipbook
+        </a>
+        <a href="#eduHubFullSectionMount" class="px-3 py-1.5 border border-white/25 hover:bg-white/15">
+          4. Edu-Hub &amp; Sổ Tay (<span id="headerStampBadgeCount">3/8</span>)
+        </a>
       </nav>
 
-      <!-- Right Action Controls (28:445) -->
-      <div class="d-flex align-items-center gap-3">
-        <button type="button" class="btn btn-sm text-inverse-cream p-1 border-0" title="Tìm kiếm" aria-label="Tìm kiếm">
-          <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-          </svg>
+      <!-- 3 Color Options Switcher (60-30-10) -->
+      <div class="flex items-center gap-1 text-[11px] font-mono-code">
+        <span class="opacity-85 mr-1 hidden xl:inline">Hệ màu:</span>
+        <button type="button" class="px-2 py-1 border border-white/40 pill-active" data-theme-switch="option1">
+          Opt 1 (#7A1C1C)
         </button>
-        <div class="header-lang-box d-inline-flex align-items-center">
-          <span class="text-brand-soft">VI</span>
-          <span class="text-brand-accent mx-1">|</span>
-          <span class="text-inverse-cream">EN</span>
-        </div>
-        <a href="#booking-section" class="header-btn-ticket">
-          ĐẶT VÉ THAM QUAN
-        </a>
-        <div class="header-user-box" title="Tài khoản">
-          <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4"/>
-          </svg>
-        </div>
+        <button type="button" class="px-2 py-1 border border-white/40 bg-white/10" data-theme-switch="option2">
+          Opt 2 (#566447)
+        </button>
+        <button type="button" class="px-2 py-1 border border-white/40 bg-white/10" data-theme-switch="option3">
+          Opt 3 (#356B91)
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- ========================================================================
-       SECTION 2: TOP SOVEREIGN BANNER / OFFICIAL STEERING INFO (Figma 28:110 — Y=80..112)
-       Background: #8F2929 (--brand-primary-default) | Text: #F6F0E4 & #DFC58E
-       ======================================================================== -->
-  <section class="section-top-banner" data-figma-node="28:110">
-    <div class="container-figma d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <div class="d-flex align-items-center gap-2">
-        <span class="text-brand-soft fw-bold" style="font-size: 13px;" aria-hidden="true">★</span>
-        <span class="fw-semibold text-inverse-cream" style="font-size: 12px;">
-          TRIỂN LÃM CHUYÊN ĐỀ KỶ NIỆM 80 NĂM CÁCH MẠNG THÁNG TÁM (1945 - 2025) &amp; QUỐC KHÁNH 2/9
-        </span>
-      </div>
-      <div class="d-flex flex-wrap align-items-center gap-3 text-brand-soft fw-bold" style="font-size: 10px;">
-        <span>Ban Tuyên giáo và Dân vận TW</span>
-        <span>•</span>
-        <span>Bộ VH-TT&amp;DL</span>
-        <span>•</span>
-        <span>Bảo tàng Hồ Chí Minh</span>
-      </div>
-    </div>
-  </section>
+  <!-- MAIN CONTENT MOUNTS (4 MODULAR SECTIONS) -->
+  <main class="flex-1 space-y-8">
+    <!-- Mount 1: Main Overview (Main.jpg) -->
+    <div id="mainOverviewMount"></div>
 
-  <main>
-    <!-- ======================================================================
-         SECTION 3: HERO SECTION — GRAND INDEPENDENCE AUTUMN DISPLAY (Figma 28:128)
-         Background: #F6F0E4 (--surface-bg-primary) | Padding: 64px 0
-         ====================================================================== -->
-    <section id="hero-section" class="section-surface-primary" data-figma-node="28:128">
-      <div class="container-figma">
-        <div class="row g-4 align-items-start">
-          <!-- Left Editorial Column (28:130) -->
-          <div class="col-12 col-lg-6 pe-lg-4">
-            <!-- Epoch Badge (28:132) -->
-            <div class="mb-3">
-              <div class="epoch-badge">
-                <span class="epoch-badge-dot"></span>
-                <span>1945 • MỐC SON LỊCH SỬ • 2025</span>
-              </div>
-            </div>
+    <!-- Mount 2: Detailed GIS Map System (Bản Đồ Số GIS - ATK Định Hóa.jpg) -->
+    <section id="gisFullSectionMount" class="border-t-4 border-brand bg-surface-primary"></section>
 
-            <!-- Monumental Typography (28:136) -->
-            <div class="mb-3">
-              <div class="fw-semibold text-brand-accent mb-1" style="font-size: 14px;">
-                CHUYÊN ĐỀ TRƯNG BÀY ĐẶC BIỆT
-              </div>
-              <h1 class="font-serif-heritage fw-bold text-brand-primary mb-1" style="font-size: 48px; line-height: 1.12;">
-                MÙA THU ĐỘC LẬP
-              </h1>
-              <div class="font-serif-heritage fst-italic text-brand-accent" style="font-size: 18px;">
-                Independence Autumn Exhibition
-              </div>
-            </div>
+    <!-- Mount 3: 3D Flipbook Handbook (Cẩm Nang Số 3D Flipbook - ATK Định Hóa.jpg) -->
+    <section id="flipbookFullSectionMount" class="border-t-4 border-olive bg-surface-primary"></section>
 
-            <!-- Historic Quote Box "Lời Bác" (28:143) - Fill: #ECE4D3 -->
-            <div class="quote-box-heritage mb-3" data-figma-node="28:143">
-              <div class="d-flex gap-2">
-                <div class="font-serif-heritage fw-bold text-brand-accent" style="font-size: 40px; line-height: 0.9;">“</div>
-                <div>
-                  <blockquote class="font-serif-heritage fst-italic text-body-primary mb-2" style="font-size: 22px; line-height: 1.45;">
-                    Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do, độc lập.
-                  </blockquote>
-                  <cite class="d-block fw-bold text-brand-primary fst-normal" style="font-size: 12px;">
-                    — CHỦ TỊCH HỒ CHÍ MINH (TUYÊN NGÔN ĐỘC LẬP, 2/9/1945)
-                  </cite>
-                </div>
-              </div>
-            </div>
-
-            <!-- Narrative Description (28:153) -->
-            <p class="text-body-primary mb-4" style="font-size: 16px; line-height: 1.62;">
-              Trưng bày giới thiệu hơn <strong class="text-brand-primary">200 tài liệu, hiện vật và hình ảnh vô giá</strong>, tái hiện trọn vẹn hào khí mùa thu năm 1945 và ý chí quật cường của toàn dân tộc dưới sự lãnh đạo sáng suốt của Chủ tịch Hồ Chí Minh.
-            </p>
-
-            <!-- CTA Action ButtonsStacked (28:157) -->
-            <div class="d-flex flex-column align-items-start gap-3 mb-4">
-              <a href="#galleries-section" class="btn-heritage-primary">
-                <span class="text-brand-soft">🧭</span>
-                <span>KHÁM PHÁ KHÔNG GIAN TRƯNG BÀY</span>
-              </a>
-              <a href="#timeline-section" class="btn-heritage-secondary">
-                <span class="text-brand-primary">▣</span>
-                <span>THAM QUAN ẢO 360°</span>
-              </a>
-            </div>
-
-            <!-- Quick Museum Info Bar (28:169) -->
-            <div class="d-flex flex-wrap align-items-center gap-4 pt-1">
-              <div class="d-flex align-items-center gap-1">
-                <span class="text-brand-accent fw-bold" style="font-size: 12px;">◷</span>
-                <span class="fw-bold text-body-primary" style="font-size: 10px;">Mở cửa: 08:00 – 16:30 hàng ngày</span>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                <span class="text-brand-accent fw-bold" style="font-size: 12px;">⌖</span>
-                <span class="fw-bold text-body-primary" style="font-size: 10px;">Gian chuyên đề Tầng 1, Bảo tàng</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Archival Exhibition Image Frame (28:180) - Fill: #ECE4D3 -->
-          <div class="col-12 col-lg-6">
-            <div class="archival-frame-outer" data-figma-node="28:180">
-              <span class="brass-corner tl"></span>
-              <span class="brass-corner tr"></span>
-              <span class="brass-corner bl"></span>
-              <span class="brass-corner br"></span>
-
-              <div class="archival-photo-stage">
-                <img
-                  src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=1000&q=80"
-                  alt="Không gian trưng bày chuyên đề Mùa Thu Độc Lập tại Bảo tàng Hồ Chí Minh"
-                  class="stage-bg-img"
-                />
-                <div class="archival-photo-content d-flex justify-content-between align-items-end gap-3 w-100">
-                  <div>
-                    <div class="badge-zone-primary mb-2">HIỆN VẬT TRƯNG BÀY GỐC</div>
-                    <h2 class="font-serif-heritage fw-bold text-inverse-cream mb-1" style="font-size: 18px;">
-                      Kỷ vật &amp; Tư liệu Cách mạng Tháng Tám
-                    </h2>
-                    <div class="text-brand-soft" style="font-size: 14px;">
-                      Không gian trang trọng với tiểu cảnh Sen Hồng &amp; Tuyên ngôn Độc lập
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-center text-brand-soft" style="width: 28px; height: 28px;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bottom Caption Line (28:198) -->
-              <div class="d-flex flex-wrap justify-content-between align-items-center px-2 pt-2" style="font-size: 10px;">
-                <span class="fw-bold text-body-primary">Gian khánh tiết - Bảo tàng Hồ Chí Minh (Hà Nội)</span>
-                <span class="fw-semibold text-brand-primary">Mã số hồ sơ số: HM-1945/2025</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SECTION 4: HISTORICAL NUMBERS / MILESTONES RIBBON (Figma 28:5)
-         Background Transition: #F6F0E4 -> #ECE4D3 (--surface-bg-ribbon)
-         Cards inside: #F6F0E4 (--surface-bg-primary)
-         ====================================================================== -->
-    <section class="section-surface-ribbon section-milestones-padding" data-figma-node="28:5">
-      <div class="container-figma">
-        <div class="row g-4">
-          <!-- Milestone 1 (28:7) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="milestone-card">
-              <div class="font-serif-heritage fw-bold text-brand-primary mb-1" style="font-size: 36px; line-height: 1.2;">
-                19/8 - 2/9
-              </div>
-              <div class="fw-bold text-brand-accent mb-2" style="font-size: 12px;">
-                MÙA THU NĂM 1945
-              </div>
-              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
-                Mốc son chói lọi mở ra kỷ nguyên độc lập tự do cho Tổ quốc
-              </p>
-            </div>
-          </div>
-
-          <!-- Milestone 2 (28:15) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="milestone-card">
-              <div class="font-serif-heritage fw-bold text-brand-accent mb-1" style="font-size: 36px; line-height: 1.2;">
-                200+
-              </div>
-              <div class="fw-bold text-brand-primary mb-2" style="font-size: 12px;">
-                TÀI LIỆU &amp; HIỆN VẬT
-              </div>
-              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
-                Bản thảo, hình ảnh lịch sử, kỷ vật gốc quý giá được lưu trữ nghiêm ngặt
-              </p>
-            </div>
-          </div>
-
-          <!-- Milestone 3 (28:23) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="milestone-card">
-              <div class="font-serif-heritage fw-bold text-brand-primary mb-1" style="font-size: 36px; line-height: 1.2;">
-                80 Năm
-              </div>
-              <div class="fw-bold text-brand-accent mb-2" style="font-size: 12px;">
-                GIỮ VỮNG ĐỘC LẬP
-              </div>
-              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
-                Sức mạnh đại đoàn kết dân tộc và hành trình Đổi mới hội nhập
-              </p>
-            </div>
-          </div>
-
-          <!-- Milestone 4 (28:31) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="milestone-card">
-              <div class="font-serif-heritage fw-bold text-brand-accent mb-1" style="font-size: 36px; line-height: 1.2;">
-                360° 3D
-              </div>
-              <div class="fw-bold text-brand-primary mb-2" style="font-size: 12px;">
-                BẢO TÀNG SỐ HÓA
-              </div>
-              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
-                Trải nghiệm tương tác đa chiều cho đồng bào khắp trong và ngoài nước
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SECTION 5: KEY EXHIBITION GALLERIES — PHÂN KHU TRƯNG BÀY (Figma 28:204)
-         Background Transition: #ECE4D3 -> #F6F0E4 (--surface-bg-primary)
-         Cards inside: #FFFFFF (--surface-card-white)
-         ====================================================================== -->
-    <section id="galleries-section" class="section-surface-primary" data-figma-node="28:204">
-      <div class="container-figma">
-        <!-- Section Header (28:206) -->
-        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
-          <div style="max-width: 648px;">
-            <div class="d-flex align-items-center gap-2 mb-1">
-              <span style="width: 24px; height: 2px; background-color: var(--brand-accent-highlight); display: inline-block;"></span>
-              <span class="fw-bold text-brand-accent" style="font-size: 12px;">KHÔNG GIAN TRƯNG BÀY</span>
-            </div>
-            <h2 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 28px;">
-              Các Phân Khu Trưng Bày Tiêu Biểu
-            </h2>
-            <p class="text-body-primary mb-0" style="font-size: 16px; line-height: 1.55;">
-              Hành trình lịch sử được phân tách thành 3 chủ đề xuyên suốt, giúp khách tham quan cảm nhận sâu sắc khí thế cách mạng sục sôi và bài học bất hủ.
-            </p>
-          </div>
-          <div class="fw-bold text-brand-primary" style="font-size: 10px;">
-            SƠ ĐỒ TUYẾN THAM QUAN: 1 → 2 → 3
-          </div>
-        </div>
-
-        <!-- 3 Columns Exhibit Cards (28:219) -->
-        <div class="row g-4">
-          <!-- Card 1: Khu A (28:220) -->
-          <div class="col-12 col-lg-4">
-            <article class="exhibit-card" data-figma-node="28:220">
-              <div class="exhibit-card-media">
-                <img
-                  src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=700&q=80"
-                  alt="Mùa Thu Lịch Sử 1945 & Bản Tuyên Ngôn Độc Lập"
-                  class="card-media-img"
-                />
-                <div class="card-media-overlay">
-                  <div>
-                    <span class="badge-zone-primary">KHU A • TRỌNG TÂM</span>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <span class="badge-zone-dark">1945</span>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <div class="fw-semibold text-brand-accent mb-1" style="font-size: 10px;">
-                    KHÔNG GIAN 01
-                  </div>
-                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 18px; line-height: 1.4;">
-                    Mùa Thu Lịch Sử 1945 &amp; Bản Tuyên Ngôn Độc Lập
-                  </h3>
-                  <p class="text-body-primary mb-3" style="font-size: 14px; line-height: 1.6;">
-                    Tập hợp các tài liệu quý giá về Lễ Tuyên ngôn Độc lập tại Quảng trường Ba Đình ngày 2/9/1945, ghi chép của Chính phủ Lâm thời và khí thế tổng khởi nghĩa giành chính quyền trên cả nước.
-                  </p>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                  <span class="fw-bold text-body-primary" style="font-size: 10px;">84 tài liệu trưng bày</span>
-                  <a href="#timeline-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
-                    Xem chi tiết →
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Card 2: Khu B (28:247) -->
-          <div class="col-12 col-lg-4">
-            <article class="exhibit-card" data-figma-node="28:247">
-              <div class="exhibit-card-media">
-                <img
-                  src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80"
-                  alt="Một Số Thủ Lĩnh Các Phong Trào Yêu Nước"
-                  class="card-media-img"
-                />
-                <div class="card-media-overlay">
-                  <div>
-                    <span class="badge-zone-primary">KHU B • NHÂN VẬT</span>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <span class="badge-zone-dark">Tiền bối &amp; Lãnh tụ</span>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <div class="fw-semibold text-brand-accent mb-1" style="font-size: 10px;">
-                    KHÔNG GIAN 02
-                  </div>
-                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 18px; line-height: 1.4;">
-                    Một Số Thủ Lĩnh Các Phong Trào Yêu Nước
-                  </h3>
-                  <p class="text-body-primary mb-3" style="font-size: 14px; line-height: 1.6;">
-                    Tôn vinh khí phách của các chí sĩ, thủ lĩnh các phong trào yêu nước đầu thế kỷ 20 và vai trò hạt nhân của Nguyễn Ái Quốc - Hồ Chí Minh trên con đường tìm đường cứu nước, giải phóng dân tộc.
-                  </p>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                  <span class="fw-bold text-body-primary" style="font-size: 10px;">65 hình ảnh &amp; di cảo</span>
-                  <a href="#timeline-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
-                    Xem chi tiết →
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Card 3: Khu C (28:273) -->
-          <div class="col-12 col-lg-4">
-            <article class="exhibit-card" data-figma-node="28:273">
-              <div class="exhibit-card-media">
-                <img
-                  src="https://images.unsplash.com/photo-1555921015-5532091f6026?auto=format&fit=crop&w=700&q=80"
-                  alt="80 Năm Giữ Vững Độc Lập, Đổi Mới & Phát Triển"
-                  class="card-media-img"
-                />
-                <div class="card-media-overlay">
-                  <div>
-                    <span class="badge-zone-primary">KHU C • TIẾP NỐI</span>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <span class="badge-zone-dark">1945 - 2025</span>
-                  </div>
-                </div>
-              </div>
-              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <div class="fw-semibold text-brand-accent mb-1" style="font-size: 10px;">
-                    KHÔNG GIAN 03
-                  </div>
-                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 18px; line-height: 1.4;">
-                    80 Năm Giữ Vững Độc Lập, Đổi Mới &amp; Phát Triển
-                  </h3>
-                  <p class="text-body-primary mb-3" style="font-size: 14px; line-height: 1.6;">
-                    Khẳng định thành tựu vĩ đại sau 80 năm đấu tranh, bảo vệ chủ quyền biên giới, biển đảo; xây dựng Nhà nước pháp quyền XHCN và vị thế Việt Nam ngày càng vững chắc trên trường quốc tế.
-                  </p>
-                </div>
-                <div class="d-flex justify-content-between align-items-center pt-2">
-                  <span class="fw-bold text-body-primary" style="font-size: 10px;">50+ hiện vật số hóa</span>
-                  <a href="#timeline-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
-                    Xem chi tiết →
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SECTION 6: INTERACTIVE HIGHLIGHT SECTION — HISTORICAL TIMELINE (Figma 28:299)
-         Background Transition: #F6F0E4 -> #ECE4D3 (--surface-bg-ribbon)
-         Step 1-3 Cards: #F6F0E4 | Step 4 Highlight Card: #8F2929
-         ====================================================================== -->
-    <section id="timeline-section" class="section-surface-ribbon section-timeline-padding" data-figma-node="28:299">
-      <div class="container-figma">
-        <!-- Centered Header (28:301) -->
-        <div class="text-center mx-auto mb-5" style="max-width: 768px;">
-          <div class="fw-bold text-brand-primary mb-1" style="font-size: 12px;">
-            DẤU ẤN BẤT HỦ
-          </div>
-          <h2 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 28px;">
-            Biên Niên Sử Mùa Thu Tháng Tám Năm 1945
-          </h2>
-          <p class="text-body-primary mb-0" style="font-size: 16px; line-height: 1.55;">
-            Những thời khắc quyết định vận mệnh cả dân tộc được tái hiện chi tiết thông qua các nguồn dữ liệu bảo tàng đối chiếu khoa học.
-          </p>
-        </div>
-
-        <!-- Timeline Nodes Grid (28:309) -->
-        <div class="row g-4">
-          <!-- Step 1 (28:310) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="timeline-step-card" data-figma-node="28:310">
-              <div class="timeline-step-num">01</div>
-              <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">
-                13 - 15/8/1945
-              </div>
-              <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
-                Hội nghị toàn quốc Tân Trào
-              </h3>
-              <p class="text-body-primary mb-0" style="font-size: 13px; line-height: 1.55;">
-                Hội đồng Quốc dân thông qua quyết định Tổng khởi nghĩa giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 2 (28:323) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="timeline-step-card" data-figma-node="28:323">
-              <div class="timeline-step-num">02</div>
-              <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">
-                19/8/1945
-              </div>
-              <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
-                Khởi nghĩa thắng lợi tại Hà Nội
-              </h3>
-              <p class="text-body-primary mb-0" style="font-size: 13px; line-height: 1.55;">
-                Hàng chục vạn đồng bào tập hợp trước Nhà hát Lớn, chiếm Phủ Khâm sai và các cứ điểm trọng yếu, chính quyền thực dân sụp đổ.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 3 (28:336) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="timeline-step-card" data-figma-node="28:336">
-              <div class="timeline-step-num">03</div>
-              <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">
-                23 - 25/8/1945
-              </div>
-              <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
-                Huế và Sài Gòn toàn thắng
-              </h3>
-              <p class="text-body-primary mb-0" style="font-size: 13px; line-height: 1.55;">
-                Làn sóng tổng khởi nghĩa bùng nổ khắp ba miền Bắc - Trung - Nam, vua Bảo Đại thoái vị trao ấn kiếm cho phái đoàn cách mạng.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 4 Highlight (28:349) - Fill: #8F2929 -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="timeline-step-card step-highlight" data-figma-node="28:349">
-              <div class="timeline-step-num">04</div>
-              <div class="fw-bold text-brand-soft mb-1" style="font-size: 10px;">
-                2/9/1945
-              </div>
-              <h3 class="font-serif-heritage fw-bold text-inverse-cream mb-2" style="font-size: 16px; line-height: 1.4;">
-                Bản Tuyên Ngôn Độc Lập
-              </h3>
-              <p class="text-inverse-cream mb-0" style="font-size: 13px; line-height: 1.55;">
-                Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập tại Quảng trường Ba Đình, khai sinh nước Việt Nam Dân chủ Cộng hòa.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SECTION 7: NEWS & EDUCATIONAL ACTIVITIES SECTION (Figma 28:39)
-         Background Transition: #ECE4D3 -> #F6F0E4 (--surface-bg-primary)
-         Cards inside: #FFFFFF (--surface-card-white)
-         ====================================================================== -->
-    <section id="news-section" class="section-surface-primary" data-figma-node="28:39">
-      <div class="container-figma">
-        <!-- Header Row (28:41) -->
-        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
-          <div>
-            <div class="fw-bold text-brand-accent mb-1" style="font-size: 12px;">
-              HOẠT ĐỘNG ĐỒNG HÀNH
-            </div>
-            <h2 class="font-serif-heritage fw-bold text-body-primary mb-0" style="font-size: 28px;">
-              Tin Tức &amp; Sự Kiện Chuyên Đề
-            </h2>
-          </div>
-          <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
-            Xem tất cả bản tin →
-          </a>
-        </div>
-
-        <!-- 3 News Cards Row (28:52) -->
-        <div class="row g-4">
-          <!-- News Card 1 (28:53) -->
-          <div class="col-12 col-lg-4">
-            <article class="exhibit-card" data-figma-node="28:53">
-              <div class="news-card-media">
-                <img
-                  src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=700&q=80"
-                  alt="Hội thảo khoa học: Giá trị trường tồn của Tuyên ngôn Độc lập năm 1945"
-                  class="card-media-img"
-                />
-              </div>
-              <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">TỌA ĐÀM KHOA HỌC • Hôm nay</div>
-                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
-                    Hội thảo khoa học: “Giá trị trường tồn của Tuyên ngôn Độc lập năm 1945”
-                  </h3>
-                  <p class="text-body-primary mb-3" style="font-size: 13px; line-height: 1.55;">
-                    Quy tụ hơn 120 chuyên gia đầu ngành phân tích sâu giá trị lập hiến và quyền con người trong tư...
-                  </p>
-                </div>
-                <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
-                  Đọc chi tiết →
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <!-- News Card 2 (28:72) -->
-          <div class="col-12 col-lg-4">
-            <article class="exhibit-card" data-figma-node="28:72">
-              <div class="news-card-media">
-                <img
-                  src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=80"
-                  alt="Hành trình về nguồn: Hơn 5000 đoàn viên thanh niên viếng và tham quan"
-                  class="card-media-img"
-                />
-              </div>
-              <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">GIÁO DỤC TRUYỀN THỐNG • 3 ngày trước</div>
-                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
-                    Hành trình về nguồn: Hơn 5000 đoàn viên thanh niên viếng và tham quan...
-                  </h3>
-                  <p class="text-body-primary mb-3" style="font-size: 13px; line-height: 1.55;">
-                    Các chương trình giáo dục tương tác và chiếu phim tư liệu ngắn thu hút đông đảo thế hệ trẻ tìm...
-                  </p>
-                </div>
-                <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
-                  Đọc chi tiết →
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <!-- News Card 3 (28:91) -->
-          <div class="col-12 col-lg-4">
-            <article class="exhibit-card" data-figma-node="28:91">
-              <div class="news-card-media">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
-                  alt="Ra mắt ứng dụng Thuyết minh tự động Audio Guide đa ngữ Mùa Thu Độc Lập"
-                  class="card-media-img"
-                />
-              </div>
-              <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
-                <div>
-                  <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">CHUYỂN ĐỔI SỐ BẢO TÀNG • 1 tuần trước</div>
-                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
-                    Ra mắt ứng dụng Thuyết minh tự động Audio Guide đa ngữ Mùa Thu Độc Lập
-                  </h3>
-                  <p class="text-body-primary mb-3" style="font-size: 13px; line-height: 1.55;">
-                    Ứng dụng quét mã QR tiếp cận trực tiếp file âm thanh và dữ liệu chi tiết bằng 6 ngôn ngữ quốc tế...
-                  </p>
-                </div>
-                <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
-                  Đọc chi tiết →
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SECTION 8: MUSEUM VISIT BOOKING CALLOUT (Figma 28:363)
-         Background Transition: #F6F0E4 -> #8F2929 (--brand-primary-default)
-         CTA Button: #C29A50 (--brand-accent-highlight) with #292723 text
-         ====================================================================== -->
-    <section id="booking-section" class="section-booking-callout" data-figma-node="28:363">
-      <div class="container-figma">
-        <div class="row g-4 align-items-center justify-content-between">
-          <div class="col-12 col-lg-7">
-            <div class="fw-bold text-brand-soft mb-1" style="font-size: 12px;">
-              ĐẶT LỊCH HƯỚNG DẪN CHUYÊN SÂU
-            </div>
-            <h2 class="font-serif-heritage fw-bold text-inverse-cream mb-2" style="font-size: 28px; line-height: 1.35;">
-              Đăng Ký Tham Quan Cho Đoàn &amp; Tổ Chức Giáo Dục
-            </h2>
-            <p class="text-inverse-cream mb-0" style="font-size: 16px; line-height: 1.55;">
-              Bảo tàng tiếp đón các đoàn cựu chiến binh, cơ quan, trường học với dịch vụ thuyết minh viên chuyên nghiệp, thuyết minh song ngữ và phòng chiếu phim tư liệu chuyên đề.
-            </p>
-          </div>
-          <div class="col-12 col-lg-5 d-flex flex-wrap justify-content-lg-end align-items-center gap-3">
-            <a href="mailto:bthm@baotanghochiminh.vn" class="btn-heritage-gold">
-              ĐĂNG KÝ LỊCH ĐOÀN
-            </a>
-            <a href="tel:02438463757" class="btn-heritage-outline-light">
-              <span>📞</span>
-              <span>(024) 38463757</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Mount 4: Edu-Hub & Digital Heritage Passport (Edu-Hub & Quiz Test - ATK Định Hóa.jpg) -->
+    <section id="eduHubFullSectionMount" class="border-t-4 border-brand bg-surface-primary"></section>
   </main>
 
-  <!-- ========================================================================
-       SECTION 9: FOOTER (Figma 28:382)
-       Background Transition: #8F2929 -> #292723 (--surface-footer-dark)
-       ======================================================================== -->
-  <footer class="section-footer-dark" data-figma-node="28:382">
-    <div class="container-figma">
-      <div class="row g-4 pb-4">
-        <!-- Left Column (28:385) -->
-        <div class="col-12 col-lg-6">
-          <div class="font-serif-heritage fw-bold text-brand-accent mb-2" style="font-size: 18px;">
-            BẢO TÀNG HỒ CHÍ MINH
-          </div>
-          <p class="text-inverse-cream mb-3" style="font-size: 14px; line-height: 1.6; max-width: 576px;">
-            Không gian trưng bày chuyên đề kỷ niệm Ngày Độc Lập - Nơi lưu giữ, tôn vinh và lan tỏa những giá trị bất hủ của Chủ tịch Hồ Chí Minh cùng sự nghiệp giải phóng dân tộc.
-          </p>
-          <div class="d-flex flex-column gap-1 fw-semibold text-brand-soft" style="font-size: 14px;">
-            <div>Địa chỉ: <span class="text-inverse-cream fw-normal">Số 19 Ngọc Hà, Ba Đình, Hà Nội</span></div>
-            <div>Điện thoại: <span class="text-inverse-cream fw-normal">(024) 38463757 - (024) 38455435</span></div>
-            <div>Email: <span class="text-inverse-cream fw-normal">bthm@baotanghochiminh.vn</span></div>
-          </div>
-        </div>
-
-        <!-- Right Column with Vertical Border (28:399) -->
-        <div class="col-12 col-lg-6 ps-lg-4" style="border-left: 1px solid rgba(194, 154, 80, 0.28);">
-          <div class="fw-semibold text-brand-accent mb-3" style="font-size: 14px;">
-            BAN CHỈ ĐẠO &amp; ĐƠN VỊ THỰC HIỆN
-          </div>
-          <ul class="list-unstyled d-flex flex-column gap-2 mb-0" style="font-size: 14px;">
-            <li class="d-flex align-items-center gap-2">
-              <span class="text-brand-accent fw-bold">▪</span>
-              <span class="text-inverse-cream">Ban Tuyên giáo và Dân vận Trung ương</span>
-            </li>
-            <li class="d-flex align-items-center gap-2">
-              <span class="text-brand-accent fw-bold">▪</span>
-              <span class="text-inverse-cream">Bộ Văn hóa, Thể thao và Du lịch</span>
-            </li>
-            <li class="d-flex align-items-center gap-2">
-              <span class="text-brand-accent fw-bold">▪</span>
-              <span class="text-inverse-cream">Bảo tàng Hồ Chí Minh (baotanghochiminh.vn)</span>
-            </li>
-          </ul>
-        </div>
+  <!-- IN-PAGE DOSSIER MODAL (ZERO BORDER RADIUS) -->
+  <div id="globalDossierModal" class="hidden fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
+    <div class="bg-surface-card border-4 border-strong max-w-xl w-full p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-subtle pb-3">
+        <span class="font-mono-code text-xs font-bold uppercase text-brand-primary">HỒ SƠ DI TÍCH 5 KHỐI CHUẨN</span>
+        <button type="button" id="closeGlobalDossierModalBtn" class="px-2.5 py-1 bg-brand-primary text-white text-xs font-bold">
+          ✕ ĐÓNG
+        </button>
       </div>
+      <div id="globalDossierModalBody"></div>
+    </div>
+  </div>
 
-      <!-- Bottom Horizontal Border Row (28:413) -->
-      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-4" style="border-top: 1px solid rgba(246, 240, 228, 0.14); font-size: 10px;">
-        <div class="fw-bold text-inverse-cream" style="opacity: 0.85;">
-          © 2024 Bảo tàng Hồ Chí Minh. Giữ toàn bộ bản quyền nội dung và tư liệu số.
-        </div>
-        <div class="d-flex flex-wrap align-items-center gap-4 fw-bold">
-          <a href="#hero-section" class="text-inverse-cream text-decoration-none" style="opacity: 0.85;">Quy chế bảo tàng</a>
-          <a href="#galleries-section" class="text-inverse-cream text-decoration-none" style="opacity: 0.85;">Điều khoản tư liệu số</a>
-          <a href="#booking-section" class="text-inverse-cream text-decoration-none" style="opacity: 0.85;">Liên hệ hướng dẫn đoàn</a>
-        </div>
+  <!-- TOAST NOTIFICATION BAR -->
+  <div id="globalToastBar" class="hidden fixed bottom-5 right-5 z-50 bg-brand-primary text-white border-2 border-accent px-4 py-3 text-xs font-semibold max-w-sm"></div>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-primary text-white border-t-4 border-accent mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs leading-relaxed">
+      <div class="space-y-1.5">
+        <div class="font-display font-bold text-sm uppercase">HỆ THỐNG SỐ HÓA DI TÍCH LỊCH SỬ ATK ĐỊNH HÓA</div>
+        <p class="opacity-85">
+          Thủ đô Gió Ngàn Chiến Khu Việt Bắc (1947 – 1954). Bảo tồn &amp; phát huy giá trị 08 điểm di tích lịch sử kháng chiến tại huyện Định Hóa, tỉnh Thái Nguyên.
+        </p>
+      </div>
+      <div class="space-y-1 font-mono-code text-[11px]">
+        <div class="font-bold uppercase text-[#E5DCCB]">Cấu Trúc Phân Mảnh Mã Nguồn (Modular Architecture):</div>
+        <div>• Dữ liệu độc lập: src/data/relics-data.js</div>
+        <div>• Phân hệ GIS: src/components/gis-map-module.js</div>
+        <div>• Phân hệ Flipbook: src/components/flipbook-module.js</div>
+        <div>• Phân hệ Edu-Hub: src/components/edu-hub-module.js</div>
+      </div>
+      <div class="space-y-1 font-mono-code text-[11px]">
+        <div class="font-bold uppercase text-[#E5DCCB]">Quy Chuẩn Kỹ Thuật Giao Diện:</div>
+        <div>• Hình học phẳng: border-radius: 0px | box-shadow: none</div>
+        <div>• Hệ quy chiếu: VN-2000 &amp; WGS-84 RTK (±0.03m)</div>
+        <div>• Kho lưu trữ: github.com/vuthiet2k/demo_dinh_hoa</div>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap 5.3.3 Bundle JS CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- MODULAR JAVASCRIPT INCLUDES (SEPARATED DATA & COMPONENT FILES) -->
+  <script src="src/data/relics-data.js"></script>
+  <script src="src/components/gis-map-module.js"></script>
+  <script src="src/components/flipbook-module.js"></script>
+  <script src="src/components/edu-hub-module.js"></script>
+  <script src="src/components/app-controller.js"></script>
 </body>
 </html>
