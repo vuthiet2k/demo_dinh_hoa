@@ -1,0 +1,55 @@
+/**
+ * DTCG 3-Tier Semantic Color Tokens & Strict Flat Geometry Rules
+ * Project: He sinh thai So hoa Di tich Lich su Dinh Hoa (ATK Dinh Hoa - Thai Nguyen)
+ * Standard: Astra Agentic Workflow · W3C WCAG 2.2 · 60-30-10 Rule
+ */
+
+:root,
+[data-theme="option1"] {
+  /* Option 1 — Hao hung & Trang trong (Tham chieu: baotanghochiminh.vn) */
+  --surface-bg-primary: #F6F0E4;      /* 60% Nen giay do */
+  --surface-card-secondary: #E5DCCB;  /* Neutral Light / Vien & Nen phu */
+  --brand-primary-default: #8F2929;   /* 30% Do gach */
+  --brand-accent-highlight: #C29A50;  /* 10% Vang dong */
+  --brand-accent-secondary: #8F2929;  /* Dong nhat Primary */
+  --text-primary-body: #292723;       /* Neutral Dark (Than dam - 13.13:1 AAA) */
+  --text-on-brand-inverse: #F6F0E4;   /* Chu trang nga tren nen Do gach (7.35:1 AAA) */
+  --text-on-brand-pure: #FFFFFF;      /* Chu trang tinh (8.34:1 AAA) */
+}
+
+[data-theme="option2"] {
+  /* Option 2 — Ky uc & Lich su sau lang (Tham chieu: vietnam.vn) */
+  --surface-bg-primary: #F1F0E5;      /* 60% Be xam */
+  --surface-card-secondary: #DADCCF;  /* Neutral Light / Vien & Nen phu */
+  --brand-primary-default: #566447;   /* 30% Xanh olive */
+  --brand-accent-highlight: #B9A16A;  /* 10% Vang co */
+  --brand-accent-secondary: #566447;  /* Dong nhat Primary */
+  --text-primary-body: #292E27;       /* Neutral Dark (Than xanh - 12.11:1 AAA) */
+  --text-on-brand-inverse: #FFFFFF;   /* Chu trang tren Xanh olive (6.35:1 AA+) */
+  --text-on-brand-pure: #FFFFFF;
+}
+
+[data-theme="option3"] {
+  /* Option 3 — Khat vong & Tu do (Tham chieu: baotanglichsuquocgia.vn) */
+  --surface-bg-primary: #F3F7FA;      /* 60% Trang xanh */
+  --surface-card-secondary: #DCE6ED;  /* Neutral Light / Vien & Nen phu */
+  --brand-primary-default: #356B91;   /* 30% Xanh hoa binh */
+  --brand-accent-highlight: #D7AD45;  /* 10% Vang sao */
+  --brand-accent-secondary: #B9574B;  /* Sub-Accent Do son diu (4.64:1 AA voi #FFFFFF) */
+  --text-primary-body: #263541;       /* Neutral Dark (Xanh than - 11.69:1 AAA) */
+  --text-on-brand-inverse: #FFFFFF;   /* Chu trang tren Xanh hoa binh (5.73:1 AA) */
+  --text-on-brand-pure: #FFFFFF;
+}
+
+/* STRICT GEOMETRIC INVARIANT: NO BORDER-RADIUS, NO BOX-SHADOW */
+*,
+*::before,
+*::after {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+body {
+  background-color: var(--surface-bg-primary);
+  color: var(--text-primary-body);
+}
