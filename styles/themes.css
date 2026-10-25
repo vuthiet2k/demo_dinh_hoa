@@ -1,50 +1,149 @@
 /**
- * DTCG 3-Tier Semantic Color Tokens & Strict Flat Geometry Rules
- * Project: He sinh thai So hoa Di tich Lich su Dinh Hoa (ATK Dinh Hoa - Thai Nguyen)
- * Standard: Astra Agentic Workflow · W3C WCAG 2.2 · 60-30-10 Rule
+ * DTCG 3-Tier Semantic Color Tokens, Bootstrap 5.3 Config & Strict Flat Geometry Rules
+ * Project: He sinh thai So hoa Di tich Lich su Dinh Hoa & Chuyen de Mua Thu Doc Lap
+ * Figma Source: fileKey ANxe1oSyFCZDLHBBvYqYnE · node-id 28:2
+ * Standard: Astra Agentic Workflow · W3C WCAG 2.2 · 60-30-10 Rule · Bootstrap 5.3 CDN
  */
 
 :root,
 [data-theme="option1"] {
-  /* Option 1 — Hao hung & Trang trong (Tham chieu: baotanghochiminh.vn) */
-  --surface-bg-primary: #F6F0E4;      /* 60% Nen giay do */
-  --surface-card-secondary: #E5DCCB;  /* Neutral Light / Vien & Nen phu */
-  --brand-primary-default: #8F2929;   /* 30% Do gach */
-  --brand-accent-highlight: #C29A50;  /* 10% Vang dong */
-  --brand-accent-secondary: #8F2929;  /* Dong nhat Primary */
-  --text-primary-body: #292723;       /* Neutral Dark (Than dam - 13.13:1 AAA) */
-  --text-on-brand-inverse: #F6F0E4;   /* Chu trang nga tren nen Do gach (7.35:1 AAA) */
-  --text-on-brand-pure: #FFFFFF;      /* Chu trang tinh (8.34:1 AAA) */
+  /* Option 1 — Hào hùng & Trang trọng (Chuẩn Figma node 28:2 - Bảo tàng Hồ Chí Minh) */
+  --surface-bg-primary: #F6F0E4;      /* rgb(246,240,228) - 60% Nền giấy dó chính (Hero, Galleries, News) */
+  --surface-bg-ribbon: #ECE4D3;       /* rgb(236,228,211) - Nền section chuyển tiếp (Milestones Ribbon, Timeline, Quote Box) */
+  --surface-bg-button-alt: #F3EDE1;   /* rgb(243,237,225) - Nền nút phụ (Secondary CTA) */
+  --surface-card-white: #FFFFFF;      /* rgb(255,255,255) - Nền thẻ bài viết & phân khu trưng bày */
+  --surface-card-secondary: #E5DCCB;  /* Viền phân cách & đường viền mảnh */
+  --surface-footer-dark: #292723;     /* rgb(41,39,35)    - Nền Footer & khung ảnh trưng bày */
+
+  --brand-primary-default: #8F2929;   /* rgb(143,41,41)   - 30% Đỏ gạch (Top Banner, Header, Booking Callout, Step 4) */
+  --brand-primary-deep: #6F1115;      /* rgb(111,17,21)   - Đỏ thẫm (Header Action Icon Box) */
+  --brand-accent-highlight: #C29A50;  /* rgb(194,154,80)  - 10% Vàng đồng (Số liệu, nhãn phụ, nút CTA vàng đồng) */
+  --brand-accent-soft: #DFC58E;       /* rgb(223,197,142) - Vàng kem sáng trên nền Đỏ gạch / Footer */
+  --brand-accent-secondary: #8F2929;  /* Đồng nhất Primary */
+
+  --text-primary-body: #292723;       /* rgb(41,39,35)    - Chữ chính Than đậm (13.13:1 AAA) */
+  --text-on-brand-inverse: #F6F0E4;   /* rgb(246,240,228) - Chữ sáng trên nền Đỏ gạch & Footer */
+  --text-on-brand-pure: #FFFFFF;      /* rgb(255,255,255) - Chữ trắng tinh */
+
+  /* Typography Tokens from Figma 28:2 */
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-sans: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Bootstrap 5.3 Root Variable Overrides */
+  --bs-body-bg: var(--surface-bg-primary);
+  --bs-body-color: var(--text-primary-body);
+  --bs-body-font-family: var(--font-sans);
+  --bs-primary: #8F2929;
+  --bs-primary-rgb: 143, 41, 41;
+  --bs-secondary: #ECE4D3;
+  --bs-secondary-rgb: 236, 228, 211;
+  --bs-warning: #C29A50;
+  --bs-warning-rgb: 194, 154, 80;
+  --bs-dark: #292723;
+  --bs-dark-rgb: 41, 39, 35;
+  --bs-light: #F6F0E4;
+  --bs-light-rgb: 246, 240, 228;
+  --bs-border-color: #E5DCCB;
+  --bs-border-radius: 0px;
+  --bs-border-radius-sm: 0px;
+  --bs-border-radius-lg: 0px;
+  --bs-border-radius-xl: 0px;
+  --bs-border-radius-xxl: 0px;
+  --bs-border-radius-2xl: 0px;
+  --bs-border-radius-pill: 0px;
+  --bs-box-shadow: none;
+  --bs-box-shadow-sm: none;
+  --bs-box-shadow-lg: none;
+  --bs-box-shadow-inset: none;
 }
 
 [data-theme="option2"] {
-  /* Option 2 — Ky uc & Lich su sau lang (Tham chieu: vietnam.vn) */
-  --surface-bg-primary: #F1F0E5;      /* 60% Be xam */
-  --surface-card-secondary: #DADCCF;  /* Neutral Light / Vien & Nen phu */
-  --brand-primary-default: #566447;   /* 30% Xanh olive */
-  --brand-accent-highlight: #B9A16A;  /* 10% Vang co */
-  --brand-accent-secondary: #566447;  /* Dong nhat Primary */
-  --text-primary-body: #292E27;       /* Neutral Dark (Than xanh - 12.11:1 AAA) */
-  --text-on-brand-inverse: #FFFFFF;   /* Chu trang tren Xanh olive (6.35:1 AA+) */
+  /* Option 2 — Ký ức & Lịch sử sâu lắng (Tham chiếu: vietnam.vn) */
+  --surface-bg-primary: #F1F0E5;
+  --surface-bg-ribbon: #E4E5D8;
+  --surface-bg-button-alt: #EAEBDD;
+  --surface-card-white: #FFFFFF;
+  --surface-card-secondary: #DADCCF;
+  --surface-footer-dark: #292E27;
+
+  --brand-primary-default: #566447;
+  --brand-primary-deep: #3E4A32;
+  --brand-accent-highlight: #B9A16A;
+  --brand-accent-soft: #DDD0B1;
+  --brand-accent-secondary: #566447;
+
+  --text-primary-body: #292E27;
+  --text-on-brand-inverse: #FFFFFF;
   --text-on-brand-pure: #FFFFFF;
+
+  --bs-body-bg: var(--surface-bg-primary);
+  --bs-body-color: var(--text-primary-body);
+  --bs-primary: #566447;
+  --bs-primary-rgb: 86, 100, 71;
+  --bs-secondary: #E4E5D8;
+  --bs-secondary-rgb: 228, 229, 216;
+  --bs-warning: #B9A16A;
+  --bs-warning-rgb: 185, 161, 106;
+  --bs-dark: #292E27;
+  --bs-dark-rgb: 41, 46, 39;
+  --bs-light: #F1F0E5;
+  --bs-light-rgb: 241, 240, 229;
+  --bs-border-color: #DADCCF;
 }
 
 [data-theme="option3"] {
-  /* Option 3 — Khat vong & Tu do (Tham chieu: baotanglichsuquocgia.vn) */
-  --surface-bg-primary: #F3F7FA;      /* 60% Trang xanh */
-  --surface-card-secondary: #DCE6ED;  /* Neutral Light / Vien & Nen phu */
-  --brand-primary-default: #356B91;   /* 30% Xanh hoa binh */
-  --brand-accent-highlight: #D7AD45;  /* 10% Vang sao */
-  --brand-accent-secondary: #B9574B;  /* Sub-Accent Do son diu (4.64:1 AA voi #FFFFFF) */
-  --text-primary-body: #263541;       /* Neutral Dark (Xanh than - 11.69:1 AAA) */
-  --text-on-brand-inverse: #FFFFFF;   /* Chu trang tren Xanh hoa binh (5.73:1 AA) */
+  /* Option 3 — Khát vọng & Tự do (Tham chiếu: baotanglichsuquocgia.vn) */
+  --surface-bg-primary: #F3F7FA;
+  --surface-bg-ribbon: #E6EEF4;
+  --surface-bg-button-alt: #ECF2F7;
+  --surface-card-white: #FFFFFF;
+  --surface-card-secondary: #DCE6ED;
+  --surface-footer-dark: #263541;
+
+  --brand-primary-default: #356B91;
+  --brand-primary-deep: #234B68;
+  --brand-accent-highlight: #D7AD45;
+  --brand-accent-soft: #F0D796;
+  --brand-accent-secondary: #B9574B;
+
+  --text-primary-body: #263541;
+  --text-on-brand-inverse: #FFFFFF;
   --text-on-brand-pure: #FFFFFF;
+
+  --bs-body-bg: var(--surface-bg-primary);
+  --bs-body-color: var(--text-primary-body);
+  --bs-primary: #356B91;
+  --bs-primary-rgb: 53, 107, 145;
+  --bs-secondary: #E6EEF4;
+  --bs-secondary-rgb: 230, 238, 244;
+  --bs-warning: #D7AD45;
+  --bs-warning-rgb: 215, 173, 69;
+  --bs-dark: #263541;
+  --bs-dark-rgb: 38, 53, 65;
+  --bs-light: #F3F7FA;
+  --bs-light-rgb: 243, 247, 250;
+  --bs-border-color: #DCE6ED;
 }
 
-/* STRICT GEOMETRIC INVARIANT: NO BORDER-RADIUS, NO BOX-SHADOW */
+/* ==========================================================================
+   STRICT GEOMETRIC INVARIANT: ZERO BORDER-RADIUS & ZERO BOX-SHADOW
+   ========================================================================== */
 *,
 *::before,
-*::after {
+*::after,
+.btn,
+.card,
+.badge,
+.form-control,
+.form-select,
+.input-group-text,
+.nav-link,
+.navbar,
+.dropdown-menu,
+.modal-content,
+.alert,
+.accordion-item,
+.accordion-button {
   border-radius: 0px !important;
   box-shadow: none !important;
 }
@@ -52,4 +151,395 @@
 body {
   background-color: var(--surface-bg-primary);
   color: var(--text-primary-body);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
 }
+
+h1, h2, h3, .font-serif-heritage {
+  font-family: var(--font-serif);
+}
+
+/* ==========================================================================
+   SECTION BACKGROUND TRANSITION ARCHITECTURE (FIGMA NODE 28:2 EXACT ORDER)
+   1. Top Banner (28:110)       -> #8F2929 (--brand-primary-default)
+   2. Main Header (28:423)      -> #8F2929 (--brand-primary-default)
+   3. Hero Section (28:128)     -> #F6F0E4 (--surface-bg-primary)
+   4. Milestones Ribbon (28:5)  -> #ECE4D3 (--surface-bg-ribbon)
+   5. Galleries Section (28:204)-> #F6F0E4 (--surface-bg-primary)
+   6. Timeline Section (28:299) -> #ECE4D3 (--surface-bg-ribbon)
+   7. News Section (28:39)      -> #F6F0E4 (--surface-bg-primary)
+   8. Booking Callout (28:363)  -> #8F2929 (--brand-primary-default)
+   9. Footer (28:382)           -> #292723 (--surface-footer-dark)
+   ========================================================================== */
+
+.container-figma {
+  max-width: 1184px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 1240px) {
+  .container-figma {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* 1. Top Sovereign Banner (28:110) */
+.section-top-banner {
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  border-bottom: 1px solid rgba(223, 197, 142, 0.22);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
+}
+
+/* 2. Header Navigation (28:423) */
+.section-header-nav {
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  border-bottom: 2px solid var(--brand-accent-highlight);
+  min-height: 80px;
+}
+
+.header-nav-link {
+  color: var(--text-on-brand-inverse) !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 8px 12px !important;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.header-nav-link.active,
+.header-nav-link:hover {
+  color: var(--brand-accent-soft) !important;
+  border-bottom-color: var(--brand-accent-highlight);
+}
+
+.header-lang-box {
+  border: 1px solid var(--brand-accent-highlight);
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.header-btn-ticket {
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  border: 1px solid var(--brand-accent-soft);
+  padding: 5px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-btn-ticket:hover {
+  background-color: var(--brand-accent-highlight);
+  color: var(--text-primary-body);
+  border-color: var(--brand-accent-highlight);
+}
+
+.header-user-box {
+  background-color: var(--brand-primary-deep);
+  color: var(--text-on-brand-pure);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(223, 197, 142, 0.35);
+}
+
+/* 3. Hero Section (28:128) & Primary Surface Sections (28:204, 28:39) */
+.section-surface-primary {
+  background-color: var(--surface-bg-primary);
+  color: var(--text-primary-body);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid var(--surface-card-secondary);
+}
+
+/* 4. Ribbon & Timeline Surface Sections (28:5, 28:299) */
+.section-surface-ribbon {
+  background-color: var(--surface-bg-ribbon);
+  color: var(--text-primary-body);
+  border-top: 1px solid var(--surface-card-secondary);
+  border-bottom: 1px solid var(--surface-card-secondary);
+}
+
+.section-milestones-padding {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.section-timeline-padding {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* 8. Museum Visit Booking Callout (28:363) */
+.section-booking-callout {
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 3px solid var(--brand-accent-highlight);
+}
+
+/* 9. Footer (28:382) */
+.section-footer-dark {
+  background-color: var(--surface-footer-dark);
+  color: var(--text-on-brand-inverse);
+  padding-top: 64px;
+  padding-bottom: 40px;
+  border-top: 4px solid var(--brand-accent-highlight);
+}
+
+/* ==========================================================================
+   COMPONENT TOKENS & FLAT HERITAGE STYLING (FIGMA 28:2)
+   ========================================================================== */
+
+.epoch-badge {
+  background-color: var(--surface-bg-ribbon);
+  border: 1px solid var(--brand-accent-highlight);
+  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--brand-primary-default);
+  letter-spacing: 0.04em;
+}
+
+.epoch-badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--brand-primary-default);
+  display: inline-block;
+}
+
+.quote-box-heritage {
+  background-color: var(--surface-bg-ribbon);
+  border-left: 4px solid var(--brand-primary-default);
+  border-top: 1px solid var(--surface-card-secondary);
+  border-right: 1px solid var(--surface-card-secondary);
+  border-bottom: 1px solid var(--surface-card-secondary);
+  padding: 16px 20px;
+}
+
+.btn-heritage-primary {
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  border: 1px solid var(--brand-primary-default);
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-heritage-primary:hover {
+  background-color: var(--brand-primary-deep);
+  color: var(--text-on-brand-pure);
+}
+
+.btn-heritage-secondary {
+  background-color: var(--surface-bg-button-alt);
+  color: var(--text-primary-body);
+  border: 1px solid var(--brand-accent-highlight);
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-heritage-secondary:hover {
+  background-color: var(--surface-bg-ribbon);
+  color: var(--brand-primary-default);
+}
+
+.btn-heritage-gold {
+  background-color: var(--brand-accent-highlight);
+  color: var(--text-primary-body);
+  border: 1px solid var(--brand-accent-soft);
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-heritage-gold:hover {
+  background-color: var(--brand-accent-soft);
+  color: var(--text-primary-body);
+}
+
+.btn-heritage-outline-light {
+  background-color: transparent;
+  color: var(--text-on-brand-inverse);
+  border: 1px solid var(--brand-accent-soft);
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-heritage-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--brand-accent-soft);
+}
+
+.archival-frame-outer {
+  background-color: var(--surface-bg-ribbon);
+  border: 2px solid var(--brand-accent-highlight);
+  padding: 8px;
+  position: relative;
+}
+
+.brass-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--brand-accent-highlight);
+  z-index: 2;
+}
+.brass-corner.tl { top: -2px; left: -2px; }
+.brass-corner.tr { top: -2px; right: -2px; }
+.brass-corner.bl { bottom: 24px; left: -2px; }
+.brass-corner.br { bottom: 24px; right: -2px; }
+
+.archival-photo-stage {
+  background-color: var(--surface-footer-dark);
+  min-height: 423px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  background-image: linear-gradient(180deg, rgba(41, 39, 35, 0.25) 0%, rgba(41, 39, 35, 0.92) 100%),
+    repeating-linear-gradient(45deg, rgba(194, 154, 80, 0.08) 0px, rgba(194, 154, 80, 0.08) 2px, transparent 2px, transparent 12px);
+}
+
+.milestone-card {
+  background-color: var(--surface-bg-primary);
+  border: 1px solid var(--surface-card-secondary);
+  border-top: 3px solid var(--brand-primary-default);
+  padding: 16px 16px 24px 16px;
+  height: 100%;
+  text-align: center;
+}
+
+.milestone-card.accent-top {
+  border-top-color: var(--brand-accent-highlight);
+}
+
+.exhibit-card {
+  background-color: var(--surface-card-white);
+  border: 1px solid var(--surface-card-secondary);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibit-card-media {
+  background-color: var(--surface-footer-dark);
+  height: 224px;
+  position: relative;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(180deg, rgba(41, 39, 35, 0.15) 0%, rgba(41, 39, 35, 0.85) 100%);
+  border-bottom: 2px solid var(--brand-accent-highlight);
+}
+
+.news-card-media {
+  background-color: var(--surface-footer-dark);
+  height: 192px;
+  position: relative;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(180deg, rgba(41, 39, 35, 0.2) 0%, rgba(41, 39, 35, 0.88) 100%);
+  border-bottom: 2px solid var(--brand-primary-default);
+}
+
+.badge-zone-primary {
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+.badge-zone-dark {
+  background-color: var(--surface-footer-dark);
+  color: var(--brand-accent-soft);
+  border: 1px solid var(--brand-accent-highlight);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+.timeline-step-card {
+  background-color: var(--surface-bg-primary);
+  border: 1px solid var(--surface-card-secondary);
+  padding: 16px;
+  height: 100%;
+}
+
+.timeline-step-card.step-highlight {
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  border: 1px solid var(--brand-accent-highlight);
+}
+
+.timeline-step-num {
+  width: 40px;
+  height: 40px;
+  background-color: var(--brand-primary-default);
+  color: var(--text-on-brand-inverse);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.timeline-step-card.step-highlight .timeline-step-num {
+  background-color: var(--brand-accent-highlight);
+  color: var(--text-primary-body);
+}
+
+.text-brand-primary { color: var(--brand-primary-default) !important; }
+.text-brand-accent { color: var(--brand-accent-highlight) !important; }
+.text-brand-soft { color: var(--brand-accent-soft) !important; }
+.text-body-primary { color: var(--text-primary-body) !important; }
+.text-inverse-cream { color: var(--text-on-brand-inverse) !important; }
+
+.border-heritage-gold { border-color: var(--brand-accent-highlight) !important; }
+.border-heritage-subtle { border-color: var(--surface-card-secondary) !important; }
