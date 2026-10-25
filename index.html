@@ -3,1768 +3,739 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hệ Sinh Thái Số Hóa Di Tích Lịch Sử ATK Định Hóa — Chuẩn 3 Hệ Màu 60-30-10</title>
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <title>Bảo Tàng Hồ Chí Minh — Không Gian Chuyên Đề Mùa Thu Độc Lập</title>
+  <meta name="description" content="Triển lãm chuyên đề kỷ niệm 80 năm Cách mạng Tháng Tám (1945 - 2025) & Quốc khánh 2/9 — Bảo tàng Hồ Chí Minh." />
+
+  <!-- Google Fonts: Merriweather & Be Vietnam Pro (Chuẩn Figma node 28:2) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    :root,
-    [data-theme="option1"] {
-      --surface-bg-primary: #F6F0E4;
-      --surface-card-secondary: #E5DCCB;
-      --brand-primary-default: #8F2929;
-      --brand-accent-highlight: #C29A50;
-      --brand-accent-secondary: #8F2929;
-      --text-primary-body: #292723;
-      --text-on-brand-inverse: #F6F0E4;
-      --text-on-brand-pure: #FFFFFF;
-      --theme-name: "Option 1 — Hào hùng & Trang trọng";
-      --theme-ref: "baotanghochiminh.vn";
-      --theme-ratio: "60% Nền giấy dó (#F6F0E4) · 30% Đỏ gạch (#8F2929) · 10% Vàng đồng (#C29A50)";
-      --theme-contrast-bg: "13.13:1 (AAA)";
-      --theme-contrast-brand: "7.35:1 / 8.34:1 (AAA)";
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-    [data-theme="option2"] {
-      --surface-bg-primary: #F1F0E5;
-      --surface-card-secondary: #DADCCF;
-      --brand-primary-default: #566447;
-      --brand-accent-highlight: #B9A16A;
-      --brand-accent-secondary: #566447;
-      --text-primary-body: #292E27;
-      --text-on-brand-inverse: #FFFFFF;
-      --text-on-brand-pure: #FFFFFF;
-      --theme-name: "Option 2 — Ký ức & Lịch sử sâu lắng";
-      --theme-ref: "vietnam.vn";
-      --theme-ratio: "60% Be xám (#F1F0E5) · 30% Xanh olive (#566447) · 10% Vàng cổ (#B9A16A)";
-      --theme-contrast-bg: "12.11:1 (AAA)";
-      --theme-contrast-brand: "6.35:1 (AA+)";
-    }
+  <!-- Bootstrap 5.3.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-    [data-theme="option3"] {
-      --surface-bg-primary: #F3F7FA;
-      --surface-card-secondary: #DCE6ED;
-      --brand-primary-default: #356B91;
-      --brand-accent-highlight: #D7AD45;
-      --brand-accent-secondary: #B9574B;
-      --text-primary-body: #263541;
-      --text-on-brand-inverse: #FFFFFF;
-      --text-on-brand-pure: #FFFFFF;
-      --theme-name: "Option 3 — Khát vọng & Tự do";
-      --theme-ref: "baotanglichsuquocgia.vn";
-      --theme-ratio: "60% Trắng xanh (#F3F7FA) · 30% Xanh hòa bình (#356B91) · 10% Vàng sao (#D7AD45) + Đỏ son (#B9574B)";
-      --theme-contrast-bg: "11.69:1 (AAA)";
-      --theme-contrast-brand: "5.73:1 (AA)";
-    }
-
-    /* STRICT FLAT GEOMETRY INVARIANT: ZERO BORDER RADIUS & ZERO BOX SHADOW */
-    *,
-    *::before,
-    *::after {
-      border-radius: 0px !important;
-      box-shadow: none !important;
-    }
-
-    body {
-      background-color: var(--surface-bg-primary);
-      color: var(--text-primary-body);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-
-    h1, h2, h3, .font-display {
-      font-family: 'Be Vietnam Pro', sans-serif;
-      letter-spacing: -0.015em;
-    }
-
-    .font-mono-code {
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    .bg-surface-primary { background-color: var(--surface-bg-primary); }
-    .bg-surface-secondary { background-color: var(--surface-card-secondary); }
-    .bg-brand-primary { background-color: var(--brand-primary-default); }
-    .bg-brand-accent { background-color: var(--brand-accent-highlight); }
-    .bg-brand-sub { background-color: var(--brand-accent-secondary); }
-
-    .text-content-primary { color: var(--text-primary-body); }
-    .text-content-inverse { color: var(--text-on-brand-inverse); }
-    .text-brand-primary { color: var(--brand-primary-default); }
-
-    .border-surface-secondary { border-color: var(--surface-card-secondary); }
-    .border-brand-primary { border-color: var(--brand-primary-default); }
-    .border-brand-accent { border-color: var(--brand-accent-highlight); }
-    .border-content-primary { border-color: var(--text-primary-body); }
-
-    .btn-primary {
-      background-color: var(--brand-primary-default);
-      color: var(--text-on-brand-inverse);
-      border: 2px solid var(--brand-primary-default);
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-weight: 600;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    .btn-primary:hover {
-      opacity: 0.92;
-    }
-
-    .btn-outline {
-      background-color: var(--surface-bg-primary);
-      color: var(--text-primary-body);
-      border: 2px solid var(--text-primary-body);
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-weight: 600;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    .btn-outline:hover {
-      background-color: var(--surface-card-secondary);
-    }
-
-    .btn-accent {
-      background-color: var(--brand-accent-highlight);
-      color: var(--text-primary-body);
-      border: 2px solid var(--text-primary-body);
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-weight: 700;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-
-    .tab-active {
-      background-color: var(--brand-primary-default) !important;
-      color: var(--text-on-brand-inverse) !important;
-      border-color: var(--brand-primary-default) !important;
-    }
-
-    .focus-ring:focus-visible {
-      outline: 2px solid var(--brand-primary-default);
-      outline-offset: 2px;
-    }
-  </style>
+  <!-- Custom Theme & Strict Flat Geometry Config (Zero Border-Radius, Zero Box-Shadow, No Black Borders) -->
+  <link rel="stylesheet" href="./styles/themes.css" />
 </head>
-<body class="min-h-screen flex flex-col selection:bg-brand-accent selection:text-content-primary">
+<body>
 
-  <!-- TOP ASTRA PROVENANCE & MULTI-THEME CONTROL BAR -->
-  <div class="bg-surface-secondary border-b-2 border-content-primary px-4 py-2.5 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3">
-      <div class="flex flex-wrap items-center gap-2">
-        <span class="bg-brand-accent text-content-primary font-bold px-2 py-1 border border-content-primary uppercase tracking-wider">
-          ASTRA WORKFLOW · UI-COLOR-SPEC-v2.0
-        </span>
-        <span class="font-mono-code font-semibold" id="activeThemeBadge">
-          Option 1: 60% #F6F0E4 · 30% #8F2929 · 10% #C29A50
-        </span>
-        <span class="hidden sm:inline text-content-primary opacity-80">
-          | Quy chuẩn: Không bo góc (0px) · Không đổ bóng (Flat) · WCAG 2.2 AAA
-        </span>
-      </div>
-      <div class="flex flex-wrap items-center gap-1.5 w-full lg:w-auto">
-        <span class="font-bold mr-1">Chuyển Hệ Màu (60–30–10):</span>
-        <button type="button" id="themeBtn1" class="px-3 py-1.5 font-semibold border border-content-primary tab-active focus-ring" data-set-theme="option1">
-          1. Hào hùng (#8F2929)
-        </button>
-        <button type="button" id="themeBtn2" class="px-3 py-1.5 font-semibold border border-content-primary bg-surface-primary text-content-primary focus-ring" data-set-theme="option2">
-          2. Ký ức (#566447)
-        </button>
-        <button type="button" id="themeBtn3" class="px-3 py-1.5 font-semibold border border-content-primary bg-surface-primary text-content-primary focus-ring" data-set-theme="option3">
-          3. Khát vọng (#356B91)
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- STICKY HEADER (30% PRIMARY BRAND) -->
-  <header class="bg-brand-primary text-content-inverse border-b-4 border-brand-accent sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-11 h-11 bg-brand-accent text-content-primary border-2 border-content-primary flex items-center justify-center font-display font-extrabold text-lg shrink-0">
-          ATK
+  <!-- ========================================================================
+       SECTION 1: MAIN HEADER NAVIGATION (Figma 28:423 — Visual Top Y=0..82)
+       Background: #8F2929 (--brand-primary-default) | Text: #F6F0E4 & #DFC58E
+       ======================================================================== -->
+  <header class="section-header-nav" data-figma-node="28:423">
+    <div class="container-figma d-flex flex-wrap justify-content-between align-items-center py-2" style="min-height: 80px;">
+      <!-- Brand Identity (28:425) -->
+      <a href="#" class="d-flex align-items-center gap-3 text-decoration-none">
+        <div class="d-flex align-items-center gap-2 px-2 py-1" style="border: 1px solid rgba(223, 197, 142, 0.35); background-color: rgba(111, 17, 21, 0.45);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="2" y="18" width="20" height="3" fill="#DFC58E"/>
+            <rect x="4" y="10" width="3" height="7" fill="#DFC58E"/>
+            <rect x="10.5" y="10" width="3" height="7" fill="#DFC58E"/>
+            <rect x="17" y="10" width="3" height="7" fill="#DFC58E"/>
+            <polygon points="12,3 2,9 22,9" fill="#C29A50"/>
+          </svg>
+          <div style="line-height: 1.1;">
+            <div class="text-brand-soft fw-bold" style="font-size: 8px; letter-spacing: 0.05em;">BẢO TÀNG HỒ CHÍ MINH</div>
+            <div class="text-inverse-cream" style="font-size: 7px; opacity: 0.85;">HO CHI MINH MUSEUM</div>
+          </div>
         </div>
         <div>
-          <div class="text-xs uppercase tracking-widest opacity-90 font-mono-code">CỔNG DI SẢN SỐ CÁCH MẠNG VIỆT BẮC</div>
-          <div class="font-display font-bold text-lg sm:text-xl leading-tight">SỐ HÓA DI TÍCH LỊCH SỬ ĐỊNH HÓA – THÁI NGUYÊN</div>
+          <div class="font-serif-heritage fw-bold text-inverse-cream" style="font-size: 18px; line-height: 1.25;">
+            BẢO TÀNG HỒ CHÍ MINH
+          </div>
+          <div class="fw-bold text-brand-soft" style="font-size: 10px; letter-spacing: 0.04em;">
+            KHÔNG GIAN CHUYÊN ĐỀ MÙA THU ĐỘC LẬP
+          </div>
+        </div>
+      </a>
+
+      <!-- Navigation Links (28:432) -->
+      <nav class="d-none d-xl-flex align-items-center gap-3" aria-label="Điều hướng chính">
+        <a href="#hero-section" class="header-nav-link active">Trang chủ</a>
+        <a href="#galleries-section" class="header-nav-link">Triển lãm "Mùa Thu Độc Lập"</a>
+        <a href="#galleries-section" class="header-nav-link">Hiện vật &amp; Tư liệu số</a>
+        <a href="#hero-section" class="header-nav-link">Tham quan ảo 3D/360</a>
+        <a href="#booking-section" class="header-nav-link">Đặt vé &amp; Lịch trình</a>
+        <a href="#news-section" class="header-nav-link">Tin tức sự kiện</a>
+      </nav>
+
+      <!-- Right Action Controls (28:445) -->
+      <div class="d-flex align-items-center gap-3">
+        <button type="button" class="btn btn-sm text-inverse-cream p-1 border-0" title="Tìm kiếm" aria-label="Tìm kiếm">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+        </button>
+        <div class="header-lang-box d-inline-flex align-items-center">
+          <span class="text-brand-soft">VI</span>
+          <span class="text-brand-accent mx-1">|</span>
+          <span class="text-inverse-cream">EN</span>
+        </div>
+        <a href="#booking-section" class="header-btn-ticket">
+          ĐẶT VÉ THAM QUAN
+        </a>
+        <div class="header-user-box" title="Tài khoản">
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4"/>
+          </svg>
         </div>
       </div>
-
-      <nav class="flex flex-wrap items-center gap-2" aria-label="Điều hướng chính">
-        <a href="#hub-showcase" class="px-3 py-2 text-sm font-semibold border border-transparent hover:border-brand-accent focus-ring">
-          Bản đồ &amp; Cẩm nang
-        </a>
-        <a href="#directory-8-relics" class="px-3 py-2 text-sm font-semibold border border-transparent hover:border-brand-accent focus-ring">
-          8 Điểm Di tích
-        </a>
-        <a href="#five-blocks-detail" class="px-3 py-2 text-sm font-semibold border border-transparent hover:border-brand-accent focus-ring">
-          Chi tiết 5 Khối Chuẩn
-        </a>
-        <a href="#color-spec-matrix" class="px-3 py-2 text-sm font-semibold border border-transparent hover:border-brand-accent focus-ring">
-          Đặc tả Màu DTCG
-        </a>
-        <button type="button" id="openPassportBtn" class="bg-brand-accent text-content-primary font-bold px-3.5 py-2 text-sm border-2 border-content-primary focus-ring">
-          ★ Hộ chiếu Số (<span id="stampCountHeader">0</span>/8 Dấu)
-        </button>
-      </nav>
     </div>
   </header>
 
-  <!-- STICKY AUDIO BAR & OFFLINE SIMULATION BANNER -->
-  <div class="bg-surface-secondary border-b-2 border-content-primary px-4 py-2">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
-      <div class="flex items-center gap-3 flex-wrap">
-        <button type="button" id="globalAudioToggle" class="bg-brand-primary text-content-inverse font-bold px-3 py-1.5 border border-content-primary focus-ring">
-          ▶ Phát Audio Thuyết minh Tự động
-        </button>
-        <span id="globalAudioStatus" class="font-medium">
-          Đang chọn: <strong id="currentAudioTitle">Danh lam thắng cảnh Chùa Hang (DH-QG-01)</strong> · Tốc độ:
+  <!-- ========================================================================
+       SECTION 2: TOP SOVEREIGN BANNER / OFFICIAL STEERING INFO (Figma 28:110 — Y=80..112)
+       Background: #8F2929 (--brand-primary-default) | Text: #F6F0E4 & #DFC58E
+       ======================================================================== -->
+  <section class="section-top-banner" data-figma-node="28:110">
+    <div class="container-figma d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div class="d-flex align-items-center gap-2">
+        <span class="text-brand-soft fw-bold" style="font-size: 13px;" aria-hidden="true">★</span>
+        <span class="fw-semibold text-inverse-cream" style="font-size: 12px;">
+          TRIỂN LÃM CHUYÊN ĐỀ KỶ NIỆM 80 NĂM CÁCH MẠNG THÁNG TÁM (1945 - 2025) &amp; QUỐC KHÁNH 2/9
         </span>
-        <button type="button" id="audioSpeedBtn" class="px-2 py-1 border border-content-primary bg-surface-primary font-mono-code font-bold">
-          1.0x
-        </button>
       </div>
-      <div class="flex items-center gap-2">
-        <button type="button" id="simulateSignalBtn" class="px-3 py-1 border border-content-primary bg-surface-primary font-semibold">
-          📶 Chế độ Thực địa Sóng yếu: TẮT
-        </button>
-        <button type="button" id="downloadOfflinePdfBtn" class="px-3 py-1 bg-brand-accent text-content-primary font-bold border border-content-primary">
-          ⬇ Tải Cẩm nang PDF Ngoại tuyến
-        </button>
+      <div class="d-flex flex-wrap align-items-center gap-3 text-brand-soft fw-bold" style="font-size: 10px;">
+        <span>Ban Tuyên giáo và Dân vận TW</span>
+        <span>•</span>
+        <span>Bộ VH-TT&amp;DL</span>
+        <span>•</span>
+        <span>Bảo tàng Hồ Chí Minh</span>
       </div>
     </div>
-    <!-- Offline/Weak Signal Alert Banner -->
-    <div id="weakSignalBanner" class="hidden max-w-7xl mx-auto mt-2 p-2.5 bg-brand-accent text-content-primary border-2 border-content-primary font-semibold text-xs sm:text-sm">
-      ⚠ Kết nối mạng tại điểm di tích đang yếu (Chế độ Thực địa ATK / Lòng Chùa Hang) — Bạn vẫn có thể đọc toàn bộ nội dung chữ, làm Quiz 1 chạm, đóng dấu Check-in vào thiết bị hoặc mở bản Cẩm nang PDF Ngoại tuyến.
-    </div>
-  </div>
+  </section>
 
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-8 space-y-12">
+  <main>
+    <!-- ======================================================================
+         SECTION 3: HERO SECTION — GRAND INDEPENDENCE AUTUMN DISPLAY (Figma 28:128)
+         Background: #F6F0E4 (--surface-bg-primary) | Padding: 64px 0
+         ====================================================================== -->
+    <section id="hero-section" class="section-surface-primary" data-figma-node="28:128">
+      <div class="container-figma">
+        <div class="row g-4 align-items-start">
+          <!-- Left Editorial Column (28:130) -->
+          <div class="col-12 col-lg-6 pe-lg-4">
+            <!-- Epoch Badge (28:132) -->
+            <div class="mb-3">
+              <div class="epoch-badge">
+                <span class="epoch-badge-dot"></span>
+                <span>1945 • MỐC SON LỊCH SỬ • 2025</span>
+              </div>
+            </div>
 
-    <!-- SECTION 1: ABOVE-THE-FOLD DUAL SHOWCASE (GIS MAP + 3D FLIPBOOK) -->
-    <section id="hub-showcase" class="space-y-6">
-      <div class="border-b-2 border-content-primary pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <div class="inline-block bg-brand-accent text-content-primary font-bold text-xs uppercase px-2.5 py-1 border border-content-primary mb-2">
-            TẦNG 1 · TRANG CHỦ HUB TỔNG (ABOVE-THE-FOLD)
+            <!-- Monumental Typography (28:136) -->
+            <div class="mb-3">
+              <div class="fw-semibold text-brand-accent mb-1" style="font-size: 14px;">
+                CHUYÊN ĐỀ TRƯNG BÀY ĐẶC BIỆT
+              </div>
+              <h1 class="font-serif-heritage fw-bold text-brand-primary mb-1" style="font-size: 48px; line-height: 1.12;">
+                MÙA THU ĐỘC LẬP
+              </h1>
+              <div class="font-serif-heritage fst-italic text-brand-accent" style="font-size: 18px;">
+                Independence Autumn Exhibition
+              </div>
+            </div>
+
+            <!-- Historic Quote Box "Lời Bác" (28:143) - Fill: #ECE4D3 -->
+            <div class="quote-box-heritage mb-3" data-figma-node="28:143">
+              <div class="d-flex gap-2">
+                <div class="font-serif-heritage fw-bold text-brand-accent" style="font-size: 40px; line-height: 0.9;">“</div>
+                <div>
+                  <blockquote class="font-serif-heritage fst-italic text-body-primary mb-2" style="font-size: 22px; line-height: 1.45;">
+                    Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do, độc lập.
+                  </blockquote>
+                  <cite class="d-block fw-bold text-brand-primary fst-normal" style="font-size: 12px;">
+                    — CHỦ TỊCH HỒ CHÍ MINH (TUYÊN NGÔN ĐỘC LẬP, 2/9/1945)
+                  </cite>
+                </div>
+              </div>
+            </div>
+
+            <!-- Narrative Description (28:153) -->
+            <p class="text-body-primary mb-4" style="font-size: 16px; line-height: 1.62;">
+              Trưng bày giới thiệu hơn <strong class="text-brand-primary">200 tài liệu, hiện vật và hình ảnh vô giá</strong>, tái hiện trọn vẹn hào khí mùa thu năm 1945 và ý chí quật cường của toàn dân tộc dưới sự lãnh đạo sáng suốt của Chủ tịch Hồ Chí Minh.
+            </p>
+
+            <!-- CTA Action ButtonsStacked (28:157) -->
+            <div class="d-flex flex-column align-items-start gap-3 mb-4">
+              <a href="#galleries-section" class="btn-heritage-primary">
+                <span class="text-brand-soft">🧭</span>
+                <span>KHÁM PHÁ KHÔNG GIAN TRƯNG BÀY</span>
+              </a>
+              <a href="#timeline-section" class="btn-heritage-secondary">
+                <span class="text-brand-primary">▣</span>
+                <span>THAM QUAN ẢO 360°</span>
+              </a>
+            </div>
+
+            <!-- Quick Museum Info Bar (28:169) -->
+            <div class="d-flex flex-wrap align-items-center gap-4 pt-1">
+              <div class="d-flex align-items-center gap-1">
+                <span class="text-brand-accent fw-bold" style="font-size: 12px;">◷</span>
+                <span class="fw-bold text-body-primary" style="font-size: 10px;">Mở cửa: 08:00 – 16:30 hàng ngày</span>
+              </div>
+              <div class="d-flex align-items-center gap-1">
+                <span class="text-brand-accent fw-bold" style="font-size: 12px;">⌖</span>
+                <span class="fw-bold text-body-primary" style="font-size: 10px;">Gian chuyên đề Tầng 1, Bảo tàng</span>
+              </div>
+            </div>
           </div>
-          <h1 class="text-2xl sm:text-4xl font-display font-extrabold tracking-tight">
-            Không Gian Số Hóa Căn Cứ Địa Cách Mạng ATK Định Hóa
-          </h1>
-          <p class="mt-2 text-sm sm:text-base max-w-3xl leading-relaxed">
-            Tra cứu trực tiếp vị trí địa lý trên <strong>Bản đồ số GIS</strong>, lật trang <strong>Cẩm nang số Flipbook</strong> tích hợp giọng đọc thuyết minh và khám phá <strong>8 điểm di tích lịch sử</strong> (5 di tích cấp Quốc gia, 3 di tích cấp Tỉnh).
+
+          <!-- Right Archival Exhibition Image Frame (28:180) - Fill: #ECE4D3 -->
+          <div class="col-12 col-lg-6">
+            <div class="archival-frame-outer" data-figma-node="28:180">
+              <span class="brass-corner tl"></span>
+              <span class="brass-corner tr"></span>
+              <span class="brass-corner bl"></span>
+              <span class="brass-corner br"></span>
+
+              <div class="archival-photo-stage">
+                <img
+                  src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=1000&q=80"
+                  alt="Không gian trưng bày chuyên đề Mùa Thu Độc Lập tại Bảo tàng Hồ Chí Minh"
+                  class="stage-bg-img"
+                />
+                <div class="archival-photo-content d-flex justify-content-between align-items-end gap-3 w-100">
+                  <div>
+                    <div class="badge-zone-primary mb-2">HIỆN VẬT TRƯNG BÀY GỐC</div>
+                    <h2 class="font-serif-heritage fw-bold text-inverse-cream mb-1" style="font-size: 18px;">
+                      Kỷ vật &amp; Tư liệu Cách mạng Tháng Tám
+                    </h2>
+                    <div class="text-brand-soft" style="font-size: 14px;">
+                      Không gian trang trọng với tiểu cảnh Sen Hồng &amp; Tuyên ngôn Độc lập
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center text-brand-soft" style="width: 28px; height: 28px;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Caption Line (28:198) -->
+              <div class="d-flex flex-wrap justify-content-between align-items-center px-2 pt-2" style="font-size: 10px;">
+                <span class="fw-bold text-body-primary">Gian khánh tiết - Bảo tàng Hồ Chí Minh (Hà Nội)</span>
+                <span class="fw-semibold text-brand-primary">Mã số hồ sơ số: HM-1945/2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: HISTORICAL NUMBERS / MILESTONES RIBBON (Figma 28:5)
+         Background Transition: #F6F0E4 -> #ECE4D3 (--surface-bg-ribbon)
+         Cards inside: #F6F0E4 (--surface-bg-primary)
+         ====================================================================== -->
+    <section class="section-surface-ribbon section-milestones-padding" data-figma-node="28:5">
+      <div class="container-figma">
+        <div class="row g-4">
+          <!-- Milestone 1 (28:7) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="milestone-card">
+              <div class="font-serif-heritage fw-bold text-brand-primary mb-1" style="font-size: 36px; line-height: 1.2;">
+                19/8 - 2/9
+              </div>
+              <div class="fw-bold text-brand-accent mb-2" style="font-size: 12px;">
+                MÙA THU NĂM 1945
+              </div>
+              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
+                Mốc son chói lọi mở ra kỷ nguyên độc lập tự do cho Tổ quốc
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 (28:15) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="milestone-card">
+              <div class="font-serif-heritage fw-bold text-brand-accent mb-1" style="font-size: 36px; line-height: 1.2;">
+                200+
+              </div>
+              <div class="fw-bold text-brand-primary mb-2" style="font-size: 12px;">
+                TÀI LIỆU &amp; HIỆN VẬT
+              </div>
+              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
+                Bản thảo, hình ảnh lịch sử, kỷ vật gốc quý giá được lưu trữ nghiêm ngặt
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 (28:23) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="milestone-card">
+              <div class="font-serif-heritage fw-bold text-brand-primary mb-1" style="font-size: 36px; line-height: 1.2;">
+                80 Năm
+              </div>
+              <div class="fw-bold text-brand-accent mb-2" style="font-size: 12px;">
+                GIỮ VỮNG ĐỘC LẬP
+              </div>
+              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
+                Sức mạnh đại đoàn kết dân tộc và hành trình Đổi mới hội nhập
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 4 (28:31) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="milestone-card">
+              <div class="font-serif-heritage fw-bold text-brand-accent mb-1" style="font-size: 36px; line-height: 1.2;">
+                360° 3D
+              </div>
+              <div class="fw-bold text-brand-primary mb-2" style="font-size: 12px;">
+                BẢO TÀNG SỐ HÓA
+              </div>
+              <p class="text-body-primary mb-0" style="font-size: 14px; line-height: 1.5;">
+                Trải nghiệm tương tác đa chiều cho đồng bào khắp trong và ngoài nước
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: KEY EXHIBITION GALLERIES — PHÂN KHU TRƯNG BÀY (Figma 28:204)
+         Background Transition: #ECE4D3 -> #F6F0E4 (--surface-bg-primary)
+         Cards inside: #FFFFFF (--surface-card-white)
+         ====================================================================== -->
+    <section id="galleries-section" class="section-surface-primary" data-figma-node="28:204">
+      <div class="container-figma">
+        <!-- Section Header (28:206) -->
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+          <div style="max-width: 648px;">
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span style="width: 24px; height: 2px; background-color: var(--brand-accent-highlight); display: inline-block;"></span>
+              <span class="fw-bold text-brand-accent" style="font-size: 12px;">KHÔNG GIAN TRƯNG BÀY</span>
+            </div>
+            <h2 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 28px;">
+              Các Phân Khu Trưng Bày Tiêu Biểu
+            </h2>
+            <p class="text-body-primary mb-0" style="font-size: 16px; line-height: 1.55;">
+              Hành trình lịch sử được phân tách thành 3 chủ đề xuyên suốt, giúp khách tham quan cảm nhận sâu sắc khí thế cách mạng sục sôi và bài học bất hủ.
+            </p>
+          </div>
+          <div class="fw-bold text-brand-primary" style="font-size: 10px;">
+            SƠ ĐỒ TUYẾN THAM QUAN: 1 → 2 → 3
+          </div>
+        </div>
+
+        <!-- 3 Columns Exhibit Cards (28:219) -->
+        <div class="row g-4">
+          <!-- Card 1: Khu A (28:220) -->
+          <div class="col-12 col-lg-4">
+            <article class="exhibit-card" data-figma-node="28:220">
+              <div class="exhibit-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=700&q=80"
+                  alt="Mùa Thu Lịch Sử 1945 & Bản Tuyên Ngôn Độc Lập"
+                  class="card-media-img"
+                />
+                <div class="card-media-overlay">
+                  <div>
+                    <span class="badge-zone-primary">KHU A • TRỌNG TÂM</span>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <span class="badge-zone-dark">1945</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <div class="fw-semibold text-brand-accent mb-1" style="font-size: 10px;">
+                    KHÔNG GIAN 01
+                  </div>
+                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 18px; line-height: 1.4;">
+                    Mùa Thu Lịch Sử 1945 &amp; Bản Tuyên Ngôn Độc Lập
+                  </h3>
+                  <p class="text-body-primary mb-3" style="font-size: 14px; line-height: 1.6;">
+                    Tập hợp các tài liệu quý giá về Lễ Tuyên ngôn Độc lập tại Quảng trường Ba Đình ngày 2/9/1945, ghi chép của Chính phủ Lâm thời và khí thế tổng khởi nghĩa giành chính quyền trên cả nước.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2">
+                  <span class="fw-bold text-body-primary" style="font-size: 10px;">84 tài liệu trưng bày</span>
+                  <a href="#timeline-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2: Khu B (28:247) -->
+          <div class="col-12 col-lg-4">
+            <article class="exhibit-card" data-figma-node="28:247">
+              <div class="exhibit-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=700&q=80"
+                  alt="Một Số Thủ Lĩnh Các Phong Trào Yêu Nước"
+                  class="card-media-img"
+                />
+                <div class="card-media-overlay">
+                  <div>
+                    <span class="badge-zone-primary">KHU B • NHÂN VẬT</span>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <span class="badge-zone-dark">Tiền bối &amp; Lãnh tụ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <div class="fw-semibold text-brand-accent mb-1" style="font-size: 10px;">
+                    KHÔNG GIAN 02
+                  </div>
+                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 18px; line-height: 1.4;">
+                    Một Số Thủ Lĩnh Các Phong Trào Yêu Nước
+                  </h3>
+                  <p class="text-body-primary mb-3" style="font-size: 14px; line-height: 1.6;">
+                    Tôn vinh khí phách của các chí sĩ, thủ lĩnh các phong trào yêu nước đầu thế kỷ 20 và vai trò hạt nhân của Nguyễn Ái Quốc - Hồ Chí Minh trên con đường tìm đường cứu nước, giải phóng dân tộc.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2">
+                  <span class="fw-bold text-body-primary" style="font-size: 10px;">65 hình ảnh &amp; di cảo</span>
+                  <a href="#timeline-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3: Khu C (28:273) -->
+          <div class="col-12 col-lg-4">
+            <article class="exhibit-card" data-figma-node="28:273">
+              <div class="exhibit-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1555921015-5532091f6026?auto=format&fit=crop&w=700&q=80"
+                  alt="80 Năm Giữ Vững Độc Lập, Đổi Mới & Phát Triển"
+                  class="card-media-img"
+                />
+                <div class="card-media-overlay">
+                  <div>
+                    <span class="badge-zone-primary">KHU C • TIẾP NỐI</span>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <span class="badge-zone-dark">1945 - 2025</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <div class="fw-semibold text-brand-accent mb-1" style="font-size: 10px;">
+                    KHÔNG GIAN 03
+                  </div>
+                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 18px; line-height: 1.4;">
+                    80 Năm Giữ Vững Độc Lập, Đổi Mới &amp; Phát Triển
+                  </h3>
+                  <p class="text-body-primary mb-3" style="font-size: 14px; line-height: 1.6;">
+                    Khẳng định thành tựu vĩ đại sau 80 năm đấu tranh, bảo vệ chủ quyền biên giới, biển đảo; xây dựng Nhà nước pháp quyền XHCN và vị thế Việt Nam ngày càng vững chắc trên trường quốc tế.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2">
+                  <span class="fw-bold text-body-primary" style="font-size: 10px;">50+ hiện vật số hóa</span>
+                  <a href="#timeline-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: INTERACTIVE HIGHLIGHT SECTION — HISTORICAL TIMELINE (Figma 28:299)
+         Background Transition: #F6F0E4 -> #ECE4D3 (--surface-bg-ribbon)
+         Step 1-3 Cards: #F6F0E4 | Step 4 Highlight Card: #8F2929
+         ====================================================================== -->
+    <section id="timeline-section" class="section-surface-ribbon section-timeline-padding" data-figma-node="28:299">
+      <div class="container-figma">
+        <!-- Centered Header (28:301) -->
+        <div class="text-center mx-auto mb-5" style="max-width: 768px;">
+          <div class="fw-bold text-brand-primary mb-1" style="font-size: 12px;">
+            DẤU ẤN BẤT HỦ
+          </div>
+          <h2 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 28px;">
+            Biên Niên Sử Mùa Thu Tháng Tám Năm 1945
+          </h2>
+          <p class="text-body-primary mb-0" style="font-size: 16px; line-height: 1.55;">
+            Những thời khắc quyết định vận mệnh cả dân tộc được tái hiện chi tiết thông qua các nguồn dữ liệu bảo tàng đối chiếu khoa học.
           </p>
         </div>
-        <div class="flex flex-wrap gap-2">
-          <button type="button" id="scanQrModalBtn" class="btn-outline text-sm">
-            ▣ Quét Mã QR Điểm Di Tích
-          </button>
-          <a href="#five-blocks-detail" class="btn-primary text-sm">
-            Khám Phá Điểm Đang Chọn →
+
+        <!-- Timeline Nodes Grid (28:309) -->
+        <div class="row g-4">
+          <!-- Step 1 (28:310) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="timeline-step-card" data-figma-node="28:310">
+              <div class="timeline-step-num">01</div>
+              <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">
+                13 - 15/8/1945
+              </div>
+              <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
+                Hội nghị toàn quốc Tân Trào
+              </h3>
+              <p class="text-body-primary mb-0" style="font-size: 13px; line-height: 1.55;">
+                Hội đồng Quốc dân thông qua quyết định Tổng khởi nghĩa giành chính quyền trước khi quân Đồng minh tiến vào Đông Dương.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 (28:323) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="timeline-step-card" data-figma-node="28:323">
+              <div class="timeline-step-num">02</div>
+              <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">
+                19/8/1945
+              </div>
+              <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
+                Khởi nghĩa thắng lợi tại Hà Nội
+              </h3>
+              <p class="text-body-primary mb-0" style="font-size: 13px; line-height: 1.55;">
+                Hàng chục vạn đồng bào tập hợp trước Nhà hát Lớn, chiếm Phủ Khâm sai và các cứ điểm trọng yếu, chính quyền thực dân sụp đổ.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 (28:336) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="timeline-step-card" data-figma-node="28:336">
+              <div class="timeline-step-num">03</div>
+              <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">
+                23 - 25/8/1945
+              </div>
+              <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
+                Huế và Sài Gòn toàn thắng
+              </h3>
+              <p class="text-body-primary mb-0" style="font-size: 13px; line-height: 1.55;">
+                Làn sóng tổng khởi nghĩa bùng nổ khắp ba miền Bắc - Trung - Nam, vua Bảo Đại thoái vị trao ấn kiếm cho phái đoàn cách mạng.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 Highlight (28:349) - Fill: #8F2929 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="timeline-step-card step-highlight" data-figma-node="28:349">
+              <div class="timeline-step-num">04</div>
+              <div class="fw-bold text-brand-soft mb-1" style="font-size: 10px;">
+                2/9/1945
+              </div>
+              <h3 class="font-serif-heritage fw-bold text-inverse-cream mb-2" style="font-size: 16px; line-height: 1.4;">
+                Bản Tuyên Ngôn Độc Lập
+              </h3>
+              <p class="text-inverse-cream mb-0" style="font-size: 13px; line-height: 1.55;">
+                Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập tại Quảng trường Ba Đình, khai sinh nước Việt Nam Dân chủ Cộng hòa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: NEWS & EDUCATIONAL ACTIVITIES SECTION (Figma 28:39)
+         Background Transition: #ECE4D3 -> #F6F0E4 (--surface-bg-primary)
+         Cards inside: #FFFFFF (--surface-card-white)
+         ====================================================================== -->
+    <section id="news-section" class="section-surface-primary" data-figma-node="28:39">
+      <div class="container-figma">
+        <!-- Header Row (28:41) -->
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5">
+          <div>
+            <div class="fw-bold text-brand-accent mb-1" style="font-size: 12px;">
+              HOẠT ĐỘNG ĐỒNG HÀNH
+            </div>
+            <h2 class="font-serif-heritage fw-bold text-body-primary mb-0" style="font-size: 28px;">
+              Tin Tức &amp; Sự Kiện Chuyên Đề
+            </h2>
+          </div>
+          <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
+            Xem tất cả bản tin →
           </a>
         </div>
-      </div>
 
-      <!-- 2-COLUMN ANTI-OVERFLOW GRID: LEFT = GIS MAP, RIGHT = FLIPBOOK -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <!-- Phân khu A: Bản đồ Số Định Hóa (7 cols) -->
-        <div class="lg:col-span-7 bg-surface-secondary border-2 border-content-primary p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-content-primary">
-              <div>
-                <span class="text-xs font-mono-code uppercase font-bold text-brand-primary">PHÂN KHU A · INTERACTIVE GIS MAP</span>
-                <h2 class="text-lg sm:text-xl font-display font-bold">Bản Đồ Số 8 Điểm Di Tích Định Hóa</h2>
+        <!-- 3 News Cards Row (28:52) -->
+        <div class="row g-4">
+          <!-- News Card 1 (28:53) -->
+          <div class="col-12 col-lg-4">
+            <article class="exhibit-card" data-figma-node="28:53">
+              <div class="news-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=700&q=80"
+                  alt="Hội thảo khoa học: Giá trị trường tồn của Tuyên ngôn Độc lập năm 1945"
+                  class="card-media-img"
+                />
               </div>
-              <div class="flex items-center gap-3 text-xs font-semibold">
-                <span class="inline-flex items-center gap-1.5">
-                  <span class="w-3.5 h-3.5 inline-block bg-brand-primary border border-content-primary"></span> 5 Cấp Quốc gia
-                </span>
-                <span class="inline-flex items-center gap-1.5">
-                  <span class="w-3.5 h-3.5 inline-block bg-brand-accent border border-content-primary"></span> 3 Cấp Tỉnh
-                </span>
+              <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">TỌA ĐÀM KHOA HỌC • Hôm nay</div>
+                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
+                    Hội thảo khoa học: “Giá trị trường tồn của Tuyên ngôn Độc lập năm 1945”
+                  </h3>
+                  <p class="text-body-primary mb-3" style="font-size: 13px; line-height: 1.55;">
+                    Quy tụ hơn 120 chuyên gia đầu ngành phân tích sâu giá trị lập hiến và quyền con người trong tư...
+                  </p>
+                </div>
+                <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
+                  Đọc chi tiết →
+                </a>
               </div>
-            </div>
-
-            <!-- Interactive SVG Map Canvas (No rounded corners, no temple/cloud motifs) -->
-            <div class="relative bg-surface-primary border-2 border-content-primary p-4">
-              <svg viewBox="0 0 680 360" class="w-full h-auto block" role="img" aria-label="Bản đồ số phân bố 8 điểm di tích lịch sử tại huyện Định Hóa">
-                <!-- Grid background lines -->
-                <g stroke="currentColor" stroke-opacity="0.12" stroke-width="1">
-                  <line x1="0" y1="60" x2="680" y2="60" />
-                  <line x1="0" y1="120" x2="680" y2="120" />
-                  <line x1="0" y1="180" x2="680" y2="180" />
-                  <line x1="0" y1="240" x2="680" y2="240" />
-                  <line x1="0" y1="300" x2="680" y2="300" />
-                  <line x1="110" y1="0" x2="110" y2="360" />
-                  <line x1="220" y1="0" x2="220" y2="360" />
-                  <line x1="330" y1="0" x2="330" y2="360" />
-                  <line x1="440" y1="0" x2="440" y2="360" />
-                  <line x1="550" y1="0" x2="550" y2="360" />
-                </g>
-
-                <!-- Zone Boundaries (Sharp Polygons) -->
-                <polygon points="40,40 270,40 270,220 40,220" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
-                <text x="52" y="62" font-size="11" font-weight="700" fill="currentColor">CỤM XÃ BẢO LINH (ĐẠI BẢN DOANH)</text>
-
-                <polygon points="310,30 640,30 640,195 310,195" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
-                <text x="322" y="52" font-size="11" font-weight="700" fill="currentColor">CỤM TRUNG TÂM THỊ TRẤN CHỢ CHU</text>
-
-                <polygon points="60,235 340,235 340,340 60,340" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
-                <text x="72" y="255" font-size="11" font-weight="700" fill="currentColor">XÃ BẢO CƯỜNG</text>
-
-                <polygon points="370,220 640,220 640,340 370,340" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
-                <text x="382" y="242" font-size="11" font-weight="700" fill="currentColor">XÃ ĐỒNG THỊNH (QUÂN GIỚI K77)</text>
-
-                <!-- Connecting Route Lines -->
-                <polyline points="110,120 205,155 190,295 495,290" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4" stroke-opacity="0.5" />
-                <polyline points="375,105 455,120 535,105 585,155" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4" stroke-opacity="0.5" />
-
-                <!-- 8 Interactive Pins (Square Markers - Zero Rounded Corners) -->
-                <g class="cursor-pointer map-pin" data-relic-id="DH-QG-02" transform="translate(110, 120)">
-                  <rect x="-16" y="-16" width="32" height="32" fill="var(--brand-primary-default)" stroke="var(--brand-accent-highlight)" stroke-width="3" />
-                  <text x="0" y="4" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">QG2</text>
-                  <text x="0" y="30" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Bộ Tổng Tham Mưu</text>
-                </g>
-
-                <g class="cursor-pointer map-pin" data-relic-id="DH-QG-05" transform="translate(205, 155)">
-                  <rect x="-16" y="-16" width="32" height="32" fill="var(--brand-primary-default)" stroke="var(--brand-accent-highlight)" stroke-width="3" />
-                  <text x="0" y="4" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">QG5</text>
-                  <text x="0" y="30" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Cục Tác Chiến</text>
-                </g>
-
-                <g class="cursor-pointer map-pin" data-relic-id="DH-QG-04" transform="translate(190, 295)">
-                  <rect x="-16" y="-16" width="32" height="32" fill="var(--brand-primary-default)" stroke="var(--brand-accent-highlight)" stroke-width="3" />
-                  <text x="0" y="4" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">QG4</text>
-                  <text x="0" y="30" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Cục Tổng Thanh Tra</text>
-                </g>
-
-                <g class="cursor-pointer map-pin" data-relic-id="DH-QG-03" transform="translate(495, 290)">
-                  <rect x="-16" y="-16" width="32" height="32" fill="var(--brand-primary-default)" stroke="var(--brand-accent-highlight)" stroke-width="3" />
-                  <text x="0" y="4" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">QG3</text>
-                  <text x="0" y="30" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Quân Giới K77</text>
-                </g>
-
-                <g class="cursor-pointer map-pin" data-relic-id="DH-QG-01" transform="translate(375, 105)">
-                  <rect x="-16" y="-16" width="32" height="32" fill="var(--brand-primary-default)" stroke="var(--brand-accent-highlight)" stroke-width="3" />
-                  <text x="0" y="4" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="700">QG1</text>
-                  <text x="0" y="30" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Chùa Hang</text>
-                </g>
-
-                <g class="cursor-pointer map-pin" data-relic-id="DH-CT-03" transform="translate(455, 120)">
-                  <rect x="-15" y="-15" width="30" height="30" fill="var(--brand-accent-highlight)" stroke="var(--text-primary-body)" stroke-width="2.5" />
-                  <text x="0" y="4" text-anchor="middle" fill="var(--text-primary-body)" font-size="10" font-weight="800">CT3</text>
-                  <text x="0" y="29" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Đình Quan Đế</text>
-                </g>
-
-                <g class="cursor-pointer map-pin" data-relic-id="DH-CT-02" transform="translate(535, 105)">
-                  <rect x="-15" y="-15" width="30" height="30" fill="var(--brand-accent-highlight)" stroke="var(--text-primary-body)" stroke-width="2.5" />
-                  <text x="0" y="4" text-anchor="middle" fill="var(--text-primary-body)" font-size="10" font-weight="800">CT2</text>
-                  <text x="0" y="29" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Đảng Bộ Châu</text>
-                </g>
-
-                <g class="cursor-pointer map-pin" data-relic-id="DH-CT-01" transform="translate(585, 155)">
-                  <rect x="-15" y="-15" width="30" height="30" fill="var(--brand-accent-highlight)" stroke="var(--text-primary-body)" stroke-width="2.5" />
-                  <text x="0" y="4" text-anchor="middle" fill="var(--text-primary-body)" font-size="10" font-weight="800">CT1</text>
-                  <text x="0" y="29" text-anchor="middle" fill="currentColor" font-size="10" font-weight="700">Tiểu Đoàn 187</text>
-                </g>
-              </svg>
-            </div>
+            </article>
           </div>
 
-          <!-- Selected Map Pin Pop-up Summary Bar -->
-          <div id="mapPinPopup" class="mt-4 bg-surface-primary border-2 border-content-primary p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div>
-              <div class="flex items-center gap-2">
-                <span id="popupRelicCode" class="bg-brand-primary text-content-inverse text-xs font-mono-code font-bold px-2 py-0.5">DH-QG-01</span>
-                <span id="popupRelicRank" class="bg-brand-accent text-content-primary text-xs font-bold px-2 py-0.5 border border-content-primary">Cấp Quốc gia</span>
-                <span id="popupRelicCommune" class="text-xs font-mono-code font-semibold">TT Chợ Chu</span>
+          <!-- News Card 2 (28:72) -->
+          <div class="col-12 col-lg-4">
+            <article class="exhibit-card" data-figma-node="28:72">
+              <div class="news-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=80"
+                  alt="Hành trình về nguồn: Hơn 5000 đoàn viên thanh niên viếng và tham quan"
+                  class="card-media-img"
+                />
               </div>
-              <h3 id="popupRelicName" class="font-display font-bold text-base mt-1">Danh lam thắng cảnh Chùa Hang</h3>
-              <p id="popupRelicDecision" class="text-xs opacity-85 font-mono-code mt-0.5">Quyết định: Số 515/QĐ-BVHTTDL (Năm 2015) · Tọa độ: 21.9142° N, 105.6428° E</p>
-            </div>
-            <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto">
-              <a href="#five-blocks-detail" class="btn-primary text-xs py-2 px-3 flex-1 sm:flex-initial">Xem 5 Khối</a>
-              <a id="popupGpsLink" href="https://www.google.com/maps/search/?api=1&query=21.9142,105.6428" target="_blank" rel="noopener noreferrer" class="btn-outline text-xs py-2 px-3 flex-1 sm:flex-initial">Chỉ đường GPS ↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phân khu B: Cẩm nang Số Flipbook (5 cols) -->
-        <div class="lg:col-span-5 bg-surface-secondary border-2 border-content-primary p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 pb-3 mb-4 border-b border-content-primary">
-              <div>
-                <span class="text-xs font-mono-code uppercase font-bold text-brand-primary">PHÂN KHU B · INTERACTIVE FLIPBOOK</span>
-                <h2 class="text-lg sm:text-xl font-display font-bold">Cẩm Nang Số Di Tích Định Hóa</h2>
-              </div>
-              <span class="bg-brand-accent text-content-primary font-mono-code font-bold text-xs px-2.5 py-1 border border-content-primary" id="flipbookPageIndicator">
-                Trang 1 / 8
-              </span>
-            </div>
-
-            <!-- Quick Search inside Flipbook -->
-            <div class="mb-3 flex gap-2">
-              <input type="text" id="flipbookSearchInput" placeholder="Tìm nhanh trang cẩm nang (VD: K77, Bảo Linh...)" class="w-full px-3 py-2 text-xs bg-surface-primary border-2 border-content-primary text-content-primary focus-ring" />
-              <button type="button" id="flipbookAudioBtn" class="px-3 py-2 bg-brand-primary text-content-inverse text-xs font-bold border-2 border-content-primary shrink-0">
-                🔊 Đọc trang
-              </button>
-            </div>
-
-            <!-- Book Page Leaf Container (Sharp 0px corners, border-left spine) -->
-            <div id="flipbookPageContainer" class="bg-surface-primary border-2 border-content-primary border-l-8 p-5 min-h-[270px] flex flex-col justify-between" style="border-left-color: var(--brand-primary-default);">
-              <div>
-                <div class="flex items-center justify-between gap-2 border-b border-content-primary pb-2 mb-3">
-                  <span id="fbRelicId" class="font-mono-code text-xs font-bold text-brand-primary">TRANG 01 · DH-QG-01</span>
-                  <span id="fbRelicCommune" class="text-xs font-semibold bg-surface-secondary px-2 py-0.5 border border-content-primary">TT Chợ Chu</span>
+              <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">GIÁO DỤC TRUYỀN THỐNG • 3 ngày trước</div>
+                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
+                    Hành trình về nguồn: Hơn 5000 đoàn viên thanh niên viếng và tham quan...
+                  </h3>
+                  <p class="text-body-primary mb-3" style="font-size: 13px; line-height: 1.55;">
+                    Các chương trình giáo dục tương tác và chiếu phim tư liệu ngắn thu hút đông đảo thế hệ trẻ tìm...
+                  </p>
                 </div>
-                <h3 id="fbRelicTitle" class="font-display font-bold text-lg leading-snug">
-                  Danh lam thắng cảnh Chùa Hang
-                </h3>
-                <p id="fbRelicSummary" class="text-xs sm:text-sm mt-2 leading-relaxed">
-                  Điểm giao thoa cảnh quan thiên nhiên kỳ vĩ và căn cứ cách mạng tại trung tâm thị trấn Chợ Chu, nơi Chủ tịch Hồ Chí Minh từng dừng chân làm việc trong những năm kháng chiến chống thực dân Pháp.
-                </p>
+                <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
+                  Đọc chi tiết →
+                </a>
               </div>
-
-              <div class="mt-4 pt-3 border-t border-content-primary flex items-center justify-between gap-3">
-                <div class="text-xs font-mono-code">
-                  <div><strong>Số QĐ:</strong> <span id="fbRelicDecision">Số 515/QĐ-BVHTTDL</span></div>
-                  <div><strong>Hiện trạng:</strong> <span id="fbRelicStatus">Lớn, chụp ngoài trời, lòng hang</span></div>
-                </div>
-                <!-- Simulated Dynamic QR Box (Square grid) -->
-                <div class="w-14 h-14 bg-surface-secondary border-2 border-content-primary p-1 flex flex-col items-center justify-center shrink-0" title="Mã QR định danh điểm di tích">
-                  <div class="font-mono-code text-[9px] font-bold leading-none">QR CODE</div>
-                  <div id="fbQrCodeLabel" class="font-mono-code text-[10px] font-extrabold mt-1 text-brand-primary">DH-QG-01</div>
-                </div>
-              </div>
-            </div>
+            </article>
           </div>
 
-          <!-- Flipbook Controls (5 Mandatory Features) -->
-          <div class="mt-4 space-y-2">
-            <div class="flex items-center justify-between gap-2">
-              <button type="button" id="prevFlipPageBtn" class="btn-outline text-xs py-2 px-3 flex-1">
-                ← Lật trang trước
-              </button>
-              <button type="button" id="nextFlipPageBtn" class="btn-primary text-xs py-2 px-3 flex-1">
-                Lật trang sau →
-              </button>
-            </div>
-            <div class="flex items-center justify-between gap-2 text-xs pt-1">
-              <label for="flipPageSlider" class="font-semibold shrink-0">Kéo trang:</label>
-              <input type="range" id="flipPageSlider" min="0" max="7" value="0" class="w-full accent-brand-primary cursor-pointer" />
-            </div>
+          <!-- News Card 3 (28:91) -->
+          <div class="col-12 col-lg-4">
+            <article class="exhibit-card" data-figma-node="28:91">
+              <div class="news-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+                  alt="Ra mắt ứng dụng Thuyết minh tự động Audio Guide đa ngữ Mùa Thu Độc Lập"
+                  class="card-media-img"
+                />
+              </div>
+              <div class="p-3 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <div class="fw-bold text-brand-accent mb-1" style="font-size: 10px;">CHUYỂN ĐỔI SỐ BẢO TÀNG • 1 tuần trước</div>
+                  <h3 class="font-serif-heritage fw-bold text-body-primary mb-2" style="font-size: 16px; line-height: 1.4;">
+                    Ra mắt ứng dụng Thuyết minh tự động Audio Guide đa ngữ Mùa Thu Độc Lập
+                  </h3>
+                  <p class="text-body-primary mb-3" style="font-size: 13px; line-height: 1.55;">
+                    Ứng dụng quét mã QR tiếp cận trực tiếp file âm thanh và dữ liệu chi tiết bằng 6 ngôn ngữ quốc tế...
+                  </p>
+                </div>
+                <a href="#booking-section" class="fw-bold text-brand-primary text-decoration-none" style="font-size: 12px;">
+                  Đọc chi tiết →
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: QUICK DIRECTORY OF 8 DIGITIZED HISTORICAL RELICS -->
-    <section id="directory-8-relics" class="space-y-6">
-      <div class="border-b-2 border-content-primary pb-4 flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <div class="inline-block bg-brand-accent text-content-primary font-bold text-xs uppercase px-2.5 py-1 border border-content-primary mb-2">
-            KHU VỰC 1.3 · DANH MỤC TRA CỨU NHANH 8 ĐIỂM SỐ HÓA
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-display font-extrabold">
-            Danh Sách 8 Điểm Di Tích Lịch Sử Tại Định Hóa
-          </h2>
-          <p class="text-sm mt-1">
-            Dữ liệu chuẩn hóa 100% theo hồ sơ xếp hạng của Bộ Văn hóa, Thể thao &amp; Du lịch và UBND tỉnh Thái Nguyên.
-          </p>
-        </div>
-
-        <!-- Search Box -->
-        <div class="w-full md:w-72">
-          <input type="search" id="directorySearchInput" placeholder="Tìm tên di tích, số quyết định, xã..." class="w-full px-3.5 py-2.5 text-sm bg-surface-secondary border-2 border-content-primary text-content-primary focus-ring" />
-        </div>
-      </div>
-
-      <!-- 1-Tap Filter Pills (Zero border-radius) -->
-      <div class="flex flex-wrap items-center gap-2" id="filterPillsContainer" role="tablist" aria-label="Bộ lọc điểm di tích">
-        <button type="button" class="filter-pill px-3.5 py-2 text-xs sm:text-sm font-bold border-2 border-content-primary tab-active" data-filter="ALL">
-          Tất cả (8)
-        </button>
-        <button type="button" class="filter-pill px-3.5 py-2 text-xs sm:text-sm font-bold border-2 border-content-primary bg-surface-secondary" data-filter="Quốc gia">
-          Cấp Quốc gia (5)
-        </button>
-        <button type="button" class="filter-pill px-3.5 py-2 text-xs sm:text-sm font-bold border-2 border-content-primary bg-surface-secondary" data-filter="Cấp Tỉnh">
-          Cấp Tỉnh (3)
-        </button>
-        <button type="button" class="filter-pill px-3.5 py-2 text-xs sm:text-sm font-bold border-2 border-content-primary bg-surface-secondary" data-filter="TT Chợ Chu">
-          TT Chợ Chu (4)
-        </button>
-        <button type="button" class="filter-pill px-3.5 py-2 text-xs sm:text-sm font-bold border-2 border-content-primary bg-surface-secondary" data-filter="Xã Bảo Linh">
-          Xã Bảo Linh (2)
-        </button>
-        <button type="button" class="filter-pill px-3.5 py-2 text-xs sm:text-sm font-bold border-2 border-content-primary bg-surface-secondary" data-filter="Xã Đồng Thịnh">
-          Xã Đồng Thịnh (1)
-        </button>
-        <button type="button" class="filter-pill px-3.5 py-2 text-xs sm:text-sm font-bold border-2 border-content-primary bg-surface-secondary" data-filter="Xã Bảo Cường">
-          Xã Bảo Cường (1)
-        </button>
-      </div>
-
-      <!-- Empty State when search yields 0 matches -->
-      <div id="directoryEmptyState" class="hidden bg-surface-secondary border-2 border-content-primary p-8 text-center space-y-3">
-        <div class="text-lg font-display font-bold">Không tìm thấy điểm di tích khớp với từ khóa của bạn</div>
-        <p class="text-sm max-w-md mx-auto">Hệ thống hiện số hóa 8 điểm di tích lịch sử cách mạng tại Thị trấn Chợ Chu, xã Bảo Linh, xã Đồng Thịnh và xã Bảo Cường.</p>
-        <button type="button" id="resetDirectoryFilterBtn" class="btn-primary text-xs">
-          Xem lại trọn bộ 8 điểm di tích Định Hóa
-        </button>
-      </div>
-
-      <!-- 8 Relic Cards Grid (Anti-Overflow H=FILL, V=HUG) -->
-      <div id="relicCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"></div>
-    </section>
-
-    <!-- SECTION 3: TẦNG 2 — CHI TIẾT ĐIỂM DI TÍCH THEO CẤU TRÚC 5 KHỐI CHUẨN -->
-    <section id="five-blocks-detail" class="space-y-8 pt-4 border-t-4 border-brand-primary">
-      <div class="bg-surface-secondary border-2 border-content-primary p-5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
-        <div>
-          <div class="flex flex-wrap items-center gap-2 mb-1.5">
-            <span class="bg-brand-primary text-content-inverse font-mono-code font-bold text-xs px-2.5 py-1">
-              TẦNG 2 · CẤU TRÚC 5 KHỐI NỘI DUNG CHUẨN
-            </span>
-            <span id="detailRelicCodeBadge" class="bg-brand-accent text-content-primary font-mono-code font-bold text-xs px-2.5 py-1 border border-content-primary">
-              DH-QG-01 · CẤP QUỐC GIA
-            </span>
-          </div>
-          <h2 id="detailRelicMainHeading" class="text-xl sm:text-3xl font-display font-extrabold">
-            Danh lam thắng cảnh Chùa Hang
-          </h2>
-        </div>
-
-        <!-- Relic Selector Dropdown to inspect any of the 8 relics in 5-Block view -->
-        <div class="w-full lg:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-          <label for="relicDetailSelect" class="text-xs font-bold uppercase shrink-0">Chuyển điểm di tích:</label>
-          <select id="relicDetailSelect" class="px-3 py-2.5 text-xs sm:text-sm font-semibold bg-surface-primary border-2 border-content-primary text-content-primary focus-ring"></select>
-        </div>
-      </div>
-
-      <!-- Sticky Anchor Bar for 5 Blocks -->
-      <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs font-bold">
-        <a href="#block-1-story" class="p-2.5 bg-surface-secondary border-2 border-content-primary hover:bg-brand-primary hover:text-content-inverse text-center">
-          Khối 1: Câu chuyện ATK
-        </a>
-        <a href="#block-2-vr360" class="p-2.5 bg-surface-secondary border-2 border-content-primary hover:bg-brand-primary hover:text-content-inverse text-center">
-          Khối 2: Tư liệu &amp; VR 360°
-        </a>
-        <a href="#block-3-legal" class="p-2.5 bg-surface-secondary border-2 border-content-primary hover:bg-brand-primary hover:text-content-inverse text-center">
-          Khối 3: Pháp lý &amp; GIS
-        </a>
-        <a href="#block-4-interactive" class="p-2.5 bg-surface-secondary border-2 border-content-primary hover:bg-brand-primary hover:text-content-inverse text-center">
-          Khối 4: Quiz &amp; Check-in
-        </a>
-        <a href="#block-5-route" class="p-2.5 bg-surface-secondary border-2 border-content-primary hover:bg-brand-primary hover:text-content-inverse text-center col-span-2 sm:col-span-1">
-          Khối 5: Tuyến Du lịch Số
-        </a>
-      </div>
-
-      <!-- KHỐI 1: CÂU CHUYỆN CĂN CỨ ĐỊA (2-COLUMN GOOGLE STITCH STANDARD) -->
-      <article id="block-1-story" class="bg-surface-secondary border-2 border-content-primary p-6">
-        <div class="border-b-2 border-content-primary pb-3 mb-5 flex items-center justify-between">
-          <span class="font-mono-code text-xs font-bold uppercase text-brand-primary">KHỐI 1 / 5 · HISTORICAL NARRATIVE &amp; STRATEGIC SIGNIFICANCE</span>
-          <span class="text-xs font-semibold">Bố cục 2 cột chống tràn (Google Stitch Standard)</span>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          <!-- Left Column: Content Stack -->
-          <div class="lg:col-span-7 space-y-4">
-            <div class="inline-block bg-brand-primary text-content-inverse text-xs font-bold px-2.5 py-1 uppercase" id="b1Eyebrow">
-              DI TÍCH LỊCH SỬ CẤP QUỐC GIA · TT CHỢ CHU
+    <!-- ======================================================================
+         SECTION 8: MUSEUM VISIT BOOKING CALLOUT (Figma 28:363)
+         Background Transition: #F6F0E4 -> #8F2929 (--brand-primary-default)
+         CTA Button: #C29A50 (--brand-accent-highlight) with #292723 text
+         ====================================================================== -->
+    <section id="booking-section" class="section-booking-callout" data-figma-node="28:363">
+      <div class="container-figma">
+        <div class="row g-4 align-items-center justify-content-between">
+          <div class="col-12 col-lg-7">
+            <div class="fw-bold text-brand-soft mb-1" style="font-size: 12px;">
+              ĐẶT LỊCH HƯỚN DẪN CHUYÊN SÂU
             </div>
-            <h3 id="b1Title" class="text-2xl font-display font-bold leading-snug">
-              Danh lam thắng cảnh Chùa Hang
-            </h3>
-            <p id="b1Summary" class="text-sm sm:text-base leading-relaxed">
-              Điểm giao thoa cảnh quan thiên nhiên kỳ vĩ và căn cứ cách mạng tại trung tâm thị trấn Chợ Chu, nơi Chủ tịch Hồ Chí Minh từng dừng chân làm việc trong những năm kháng chiến chống thực dân Pháp.
-            </p>
-            <div class="space-y-2">
-              <div class="text-xs font-bold uppercase tracking-wider">Nhân vật Lãnh đạo &amp; Đơn vị Lịch sử gắn liền:</div>
-              <div id="b1Leaders" class="flex flex-wrap gap-2"></div>
-            </div>
-            <div class="bg-surface-primary border-2 border-content-primary p-4 space-y-1.5">
-              <div class="text-xs font-bold uppercase text-brand-primary">Tầm vóc Chiến dịch Chiến lược (1947 – 1954):</div>
-              <div id="b1Campaigns" class="text-sm font-semibold"></div>
-            </div>
-          </div>
-
-          <!-- Right Column: Witness Blockquote Card -->
-          <div class="lg:col-span-5 bg-surface-primary border-2 border-content-primary border-l-8 p-5 space-y-3" style="border-left-color: var(--brand-accent-highlight);">
-            <div class="text-xs font-mono-code font-bold uppercase text-brand-primary">
-              TRÍCH DẪN KÝ ỨC THỜI CHIẾN &amp; HỒ SƠ DI SẢN
-            </div>
-            <blockquote id="b1Quote" class="text-sm sm:text-base italic leading-relaxed">
-              "Từ giữa núi rừng Định Hóa đại ngàn, từng chỉ thị tác chiến, từng mẻ đạn quân giới và từng bước chân bộ đội cận vệ đã góp phần làm nên sức mạnh tổng lực của Thủ đô kháng chiến Việt Bắc."
-            </blockquote>
-            <div class="text-xs font-mono-code pt-2 border-t border-content-primary">
-              Nguồn dẫn chứng: Hồ sơ xếp hạng di tích lịch sử văn hóa huyện Định Hóa, tỉnh Thái Nguyên.
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- KHỐI 2: TƯ LIỆU SỐ HÓA & KHUNG VR 360° -->
-      <article id="block-2-vr360" class="bg-surface-secondary border-2 border-content-primary p-6 space-y-5">
-        <div class="border-b-2 border-content-primary pb-3 flex flex-wrap items-center justify-between gap-2">
-          <span class="font-mono-code text-xs font-bold uppercase text-brand-primary">KHỐI 2 / 5 · ARCHIVAL GALLERY &amp; 360° VIRTUAL TOUR</span>
-          <span class="text-xs font-semibold">Tích hợp Khung xoay 360° &amp; Đối sánh Tư liệu Kháng chiến ↔ Hiện trạng 2026</span>
-        </div>
-
-        <!-- Interactive 360 Viewport Simulation -->
-        <div class="bg-surface-primary border-2 border-brand-accent p-4 space-y-3">
-          <div id="vrViewportCanvas" class="relative h-64 sm:h-80 bg-surface-secondary border-2 border-content-primary flex flex-col items-center justify-center p-6 text-center select-none cursor-grab active:cursor-grabbing overflow-hidden">
-            <div class="text-xs font-mono-code uppercase font-bold bg-brand-accent text-content-primary px-2.5 py-1 border border-content-primary mb-2">
-              KHÔNG GIAN THỰC TẾ ẢO VR 360° · GÓC QUAY HIỆN TẠI: <span id="vrYawValue">120° ĐÔNG NAM</span>
-            </div>
-            <h4 id="vrSceneTitle" class="text-lg sm:text-xl font-display font-bold max-w-xl">
-              Toàn cảnh Thực địa: Danh lam thắng cảnh Chùa Hang
-            </h4>
-            <p id="vrHotspotDetail" class="text-xs sm:text-sm mt-2 max-w-lg">
-              Giữ chuột kéo ngang hoặc bấm các nút điều khiển bên dưới để xoay góc nhìn 360° quanh khu vực Nhà bia di tích và cảnh quan thực địa.
-            </p>
-            <div class="mt-4 flex flex-wrap justify-center gap-2">
-              <span class="px-2.5 py-1 text-xs font-mono-code bg-surface-primary border border-content-primary">
-                [Hotspot #1: Nhà bia tưởng niệm]
-              </span>
-              <span class="px-2.5 py-1 text-xs font-mono-code bg-surface-primary border border-content-primary">
-                [Hotspot #2: Bảng trích dẫn Quyết định]
-              </span>
-              <span class="px-2.5 py-1 text-xs font-mono-code bg-surface-primary border border-content-primary">
-                [Hotspot #3: Cảnh quan bảo vệ]
-              </span>
-            </div>
-          </div>
-
-          <!-- VR Control Bar (48x48px touch target compliance) -->
-          <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
-            <div class="flex flex-wrap gap-2">
-              <button type="button" id="vrRotateLeftBtn" class="btn-outline text-xs py-2 px-3">↺ Xoay Trái 45°</button>
-              <button type="button" id="vrRotateRightBtn" class="btn-outline text-xs py-2 px-3">↻ Xoay Phải 45°</button>
-              <button type="button" id="vrAutoRotateBtn" class="btn-primary text-xs py-2 px-3">⟳ Xoay Tự Động: BẬT</button>
-            </div>
-            <div class="flex items-center gap-2 text-xs font-mono-code">
-              <span>So sánh tư liệu:</span>
-              <button type="button" id="compare1950Btn" class="px-2.5 py-1.5 border border-content-primary bg-surface-secondary font-bold">1947–1954 (Đen trắng)</button>
-              <button type="button" id="compare2026Btn" class="px-2.5 py-1.5 border border-content-primary tab-active font-bold">2026 (Hiện trạng)</button>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- KHỐI 3: HIỆN TRẠNG & HỒ SƠ PHÁP LÝ (3-CARD LEGAL & GIS GRID) -->
-      <article id="block-3-legal" class="bg-surface-secondary border-2 border-content-primary p-6 space-y-5">
-        <div class="border-b-2 border-content-primary pb-3 flex items-center justify-between">
-          <span class="font-mono-code text-xs font-bold uppercase text-brand-primary">KHỐI 3 / 5 · CURRENT SITE STATUS &amp; LEGAL GIS DOSSIER</span>
-          <span class="text-xs font-semibold">Chuẩn hóa Pháp lý &amp; Tọa độ Địa lý</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <!-- Card 3.1: Hồ sơ Pháp lý -->
-          <div class="bg-surface-primary border-2 border-content-primary p-5 space-y-2">
-            <div class="inline-block bg-brand-accent text-content-primary font-mono-code text-xs font-bold px-2 py-0.5 border border-content-primary">
-              ★ HỒ SƠ PHÁP LÝ XẾP HẠNG
-            </div>
-            <h4 class="font-display font-bold text-base">Quyết Định Công Nhận Di Tích</h4>
-            <div class="text-xs space-y-1.5 font-mono-code pt-1">
-              <div><strong>Mã định danh:</strong> <span id="b3Code">DH-QG-01</span></div>
-              <div><strong>Cấp xếp hạng:</strong> <span id="b3Rank">Di tích lịch sử cấp Quốc gia</span></div>
-              <div><strong>Số Quyết định:</strong> <span id="b3Decision">Số 515/QĐ-BVHTTDL</span></div>
-              <div><strong>Năm công nhận:</strong> <span id="b3Year">2015</span></div>
-            </div>
-          </div>
-
-          <!-- Card 3.2: Hiện trạng Thực địa -->
-          <div class="bg-surface-primary border-2 border-content-primary p-5 space-y-2">
-            <div class="inline-block bg-brand-accent text-content-primary font-mono-code text-xs font-bold px-2 py-0.5 border border-content-primary">
-              ■ HIỆN TRẠNG CÔNG TRÌNH THỰC ĐỊA
-            </div>
-            <h4 class="font-display font-bold text-base">Khảo Sát Thực Tế Tại Điểm</h4>
-            <p id="b3FieldStatus" class="text-sm font-semibold leading-relaxed pt-1">
-              Lớn, chụp ngoài trời, lòng hang (Có ảnh tư liệu thực địa)
-            </p>
-            <p class="text-xs opacity-80">
-              Loại hình: <span id="b3Category" class="font-semibold">Danh lam thắng cảnh</span> · Đã gắn biển mã QR tra cứu số hóa tại điểm.
+            <h2 class="font-serif-heritage fw-bold text-inverse-cream mb-2" style="font-size: 28px; line-height: 1.35;">
+              Đăng Ký Tham Quan Cho Đoàn &amp; Tổ Chức Giáo Dục
+            </h2>
+            <p class="text-inverse-cream mb-0" style="font-size: 16px; line-height: 1.55;">
+              Bảo tàng tiếp đón các đoàn cựu chiến binh, cơ quan, trường học với dịch vụ thuyết minh viên chuyên nghiệp, thuyết minh song ngữ và phòng chiếu phim tư liệu chuyên đề.
             </p>
           </div>
-
-          <!-- Card 3.3: Tọa độ Định vị Địa lý GIS -->
-          <div class="bg-surface-primary border-2 border-content-primary p-5 space-y-3 flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="inline-block bg-brand-accent text-content-primary font-mono-code text-xs font-bold px-2 py-0.5 border border-content-primary">
-                ⊕ TỌA ĐỘ ĐỊNH VỊ ĐỊA LÝ (WGS84)
-              </div>
-              <h4 class="font-display font-bold text-base">Thông Số GIS &amp; Hành Chính</h4>
-              <div class="text-xs font-mono-code space-y-1">
-                <div><strong>Tọa độ:</strong> <span id="b3Coords">21.9142° N, 105.6428° E</span></div>
-                <div><strong>Đơn vị:</strong> <span id="b3Commune">TT Chợ Chu</span>, Định Hóa, Thái Nguyên</div>
-              </div>
-            </div>
-            <button type="button" id="copyGisCoordsBtn" class="btn-outline text-xs py-2 px-3 w-full">
-              📋 Sao chép tọa độ GIS
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- KHỐI 4: TƯƠNG TÁC GIÁO DỤC (1-TAP QUIZ + 250-WORD JUNIOR SCRIPT + DIGITAL CHECK-IN STAMP) -->
-      <article id="block-4-interactive" class="bg-surface-secondary border-2 border-content-primary p-6 space-y-6">
-        <div class="border-b-2 border-content-primary pb-3 flex flex-wrap items-center justify-between gap-2">
-          <span class="font-mono-code text-xs font-bold uppercase text-brand-primary">KHỐI 4 / 5 · INTERACTIVE ENGAGEMENT SUITE</span>
-          <span class="text-xs font-semibold">Quiz 1 chạm · Thuyết minh viên nhí 250 từ · Đóng dấu Check-in Thiết bị</span>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <!-- Module 4.1: One-Tap Quiz (5 cols) -->
-          <div class="lg:col-span-5 bg-surface-primary border-2 border-content-primary p-5 flex flex-col justify-between space-y-4">
-            <div class="space-y-3">
-              <div class="flex items-center justify-between">
-                <span class="bg-brand-primary text-content-inverse text-xs font-mono-code font-bold px-2 py-0.5">
-                  MÔ-ĐUN 4.1 · QUIZ 1 CHẠM
-                </span>
-                <span class="font-mono-code text-xs font-bold">Điểm Di sản: <strong id="quizScoreValue">0</strong></span>
-              </div>
-              <h4 id="quizQuestionText" class="font-display font-bold text-base leading-snug">
-                Câu hỏi: Điểm di tích đang chọn thuộc địa bàn xã/thị trấn nào của huyện Định Hóa và được công nhận theo Quyết định nào?
-              </h4>
-              <div id="quizOptionsContainer" class="space-y-2"></div>
-            </div>
-            <div id="quizExplanationBox" class="hidden p-3 bg-surface-secondary border-2 border-content-primary text-xs leading-relaxed"></div>
-          </div>
-
-          <!-- Module 4.2: Góc Thuyết minh viên nhí 250 từ (4 cols) -->
-          <div class="lg:col-span-4 bg-surface-primary border-2 border-content-primary p-5 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="bg-brand-accent text-content-primary text-xs font-mono-code font-bold px-2 py-0.5 border border-content-primary">
-                  🎙️ THUYẾT MINH VIÊN NHÍ
-                </span>
-                <span class="font-mono-code text-xs font-bold" id="teleprompterTimer">02:00</span>
-              </div>
-              <h4 class="font-display font-bold text-base">Kịch Bản Thực Hành (~250 Từ)</h4>
-              <div id="juniorScriptBox" class="text-xs leading-relaxed bg-surface-secondary border border-content-primary p-3 max-h-48 overflow-y-auto space-y-2">
-                <p><strong>[Mở đầu - 50 từ]:</strong> Nhiệt liệt chào mừng quý thầy cô và các bạn học sinh đến với vùng đất lịch sử ATK Định Hóa, tỉnh Thái Nguyên. Hôm nay, em xin tự hào giới thiệu điểm di tích <span id="scriptRelicName">Danh lam thắng cảnh Chùa Hang</span> tại <span id="scriptRelicCommune">TT Chợ Chu</span>.</p>
-                <p><strong>[Nội dung lịch sử - 140 từ]:</strong> Trong suốt cuộc kháng chiến chống thực dân Pháp trường kỳ từ năm 1947 đến năm 1954, Định Hóa là An toàn khu Trung ương – nơi Chủ tịch Hồ Chí Minh, Đại tướng Võ Nguyên Giáp cùng Trung ương Đảng và Bộ Tổng Tư lệnh đặt đại bản doanh. Tại địa danh này, các quyết sách chiến lược quan trọng đã được ban hành, góp phần đập tan cuộc hành quân Thu – Đông 1947 và làm nên thắng lợi Điện Biên Phủ năm 1954.</p>
-                <p><strong>[Kết thúc - 60 từ]:</strong> Ngày nay, di tích đã được xếp hạng theo <span id="scriptRelicDecision">Số 515/QĐ-BVHTTDL</span>. Thế hệ trẻ chúng em nguyện ra sức học tập, gìn giữ và lan tỏa giá trị di sản cách mạng hào hùng của quê hương Định Hóa!</p>
-              </div>
-            </div>
-            <div class="flex gap-2">
-              <button type="button" id="startTimerBtn" class="btn-outline text-xs py-2 px-3 flex-1">⏱ Bấm giờ 02:00</button>
-              <button type="button" id="speakScriptBtn" class="btn-primary text-xs py-2 px-3 flex-1">🔊 Nghe giọng mẫu</button>
-            </div>
-          </div>
-
-          <!-- Module 4.3: Đóng dấu Check-in Điện tử (3 cols) -->
-          <div class="lg:col-span-3 bg-surface-primary border-2 border-content-primary p-5 flex flex-col justify-between space-y-4">
-            <div class="space-y-2">
-              <span class="bg-brand-primary text-content-inverse text-xs font-mono-code font-bold px-2 py-0.5">
-                MÔ-ĐUN 4.3 · CHECK-IN SỐ
-              </span>
-              <h4 class="font-display font-bold text-base">Sổ Tay Hành Trình ATK</h4>
-              <p class="text-xs leading-relaxed">
-                Đóng dấu xác nhận tham quan điểm di tích này vào bộ nhớ thiết bị và tải chứng nhận về máy.
-              </p>
-              <div id="stampVisualBox" class="border-2 border-dashed border-content-primary p-4 text-center my-2 bg-surface-secondary">
-                <div id="stampStatusLabel" class="font-mono-code text-xs font-bold uppercase">CHƯA ĐÓNG DẤU ĐIỂM NÀY</div>
-                <div id="stampDateLabel" class="text-[11px] mt-1 opacity-80">Bấm nút bên dưới để đóng dấu</div>
-              </div>
-            </div>
-            <button type="button" id="checkInStampBtn" class="btn-accent text-xs py-2.5 px-3 w-full">
-              ★ Đóng Dấu Check-in Tại Đây
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- KHỐI 5: TUYẾN DU LỊCH SỐ & TIỆN ÍCH PHỤ CẬN -->
-      <article id="block-5-route" class="bg-surface-secondary border-2 border-content-primary p-6 space-y-5">
-        <div class="border-b-2 border-content-primary pb-3 flex flex-wrap items-center justify-between gap-2">
-          <span class="font-mono-code text-xs font-bold uppercase text-brand-primary">KHỐI 5 / 5 · DIGITAL TOURISM ROUTE &amp; LOCAL AMENITIES</span>
-          <span class="text-xs font-semibold">Gợi ý Điểm tiếp theo (km) · Chỉ đường GPS · Bãi đỗ xe &amp; Ẩm thực Chợ Chu</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <!-- Next Destination Stepper -->
-          <div class="bg-surface-primary border-2 border-content-primary p-5 space-y-3">
-            <div class="text-xs font-mono-code font-bold uppercase text-brand-primary">5A · ĐIỂM DI TÍCH TIẾP THEO GẦN NHẤT</div>
-            <h4 id="b5NextName" class="font-display font-bold text-base">Đình Quan Đế (Nơi mít tinh 28/3/1945)</h4>
-            <div class="text-xs font-mono-code space-y-1">
-              <div><strong>Khoảng cách thực tế:</strong> <span id="b5NextKm">1.2 km</span></div>
-              <div><strong>Thời gian di chuyển:</strong> <span id="b5NextMin">~4 phút</span></div>
-            </div>
-            <button type="button" id="goToNextRelicBtn" class="btn-primary text-xs py-2 px-3 w-full">
-              Chuyển sang Điểm Tiếp Theo →
-            </button>
-          </div>
-
-          <!-- Parking & Transport -->
-          <div class="bg-surface-primary border-2 border-content-primary p-5 space-y-2">
-            <div class="text-xs font-mono-code font-bold uppercase text-brand-primary">5B · BÃI ĐỖ XE ĐOÀN &amp; CHỈ ĐƯỜNG GPS</div>
-            <h4 class="font-display font-bold text-base">Hạ Tầng Đón Tiếp Đoàn Về Nguồn</h4>
-            <p class="text-xs leading-relaxed">
-              Có khu vực đỗ xe ô tô con và xe khách đoàn 29–45 chỗ tại khuôn viên trung tâm Thị trấn Chợ Chu và khu vực nhà văn hóa các xã Bảo Linh, Đồng Thịnh, Bảo Cường.
-            </p>
-            <a id="b5GpsBtn" href="https://www.google.com/maps/search/?api=1&query=21.9142,105.6428" target="_blank" rel="noopener noreferrer" class="btn-outline text-xs py-2 px-3 w-full mt-2">
-              Mở Chỉ Đường GPS Trên Google Maps ↗
+          <div class="col-12 col-lg-5 d-flex flex-wrap justify-content-lg-end align-items-center gap-3">
+            <a href="mailto:bthm@baotanghochiminh.vn" class="btn-heritage-gold">
+              ĐĂNG KÝ LỊCH ĐOÀN
+            </a>
+            <a href="tel:02438463757" class="btn-heritage-outline-light">
+              <span>📞</span>
+              <span>(024) 38463757</span>
             </a>
           </div>
-
-          <!-- Local Cuisine Chợ Chu -->
-          <div class="bg-surface-primary border-2 border-content-primary p-5 space-y-2">
-            <div class="text-xs font-mono-code font-bold uppercase text-brand-primary">5C · ẨM THỰC CHỢ CHU &amp; ĐẶC SẢN ĐỊNH HÓA</div>
-            <h4 class="font-display font-bold text-base">Điểm Dừng Chân &amp; Văn Hóa Bản Địa</h4>
-            <ul class="text-xs space-y-1.5 list-disc list-inside leading-relaxed">
-              <li><strong>Cơm lam Định Hóa &amp; Xôi ngũ sắc:</strong> Trung tâm phố Chợ Chu (cách 0.5 – 2.5 km).</li>
-              <li><strong>Thưởng trà Thái Nguyên &amp; Măng rừng ATK:</strong> Các điểm dừng chân cộng đồng xã Bảo Linh – Chợ Chu.</li>
-              <li><strong>Hỗ trợ du khách:</strong> Nhà văn hóa xã &amp; Trạm thông tin du lịch Định Hóa.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- SECTION 4: MA TRẬN ĐẶC TẢ 3 HỆ MÀU UI/UX (60-30-10) & DTCG TOKENS -->
-    <section id="color-spec-matrix" class="space-y-6 pt-4 border-t-4 border-content-primary">
-      <div class="border-b-2 border-content-primary pb-4">
-        <div class="inline-block bg-brand-accent text-content-primary font-bold text-xs uppercase px-2.5 py-1 border border-content-primary mb-2">
-          PHẦN 2 &amp; PHẦN 4 · HỒ SƠ ĐẶC TẢ MÀU SẮC DTCG &amp; KIỂM ĐỊNH WCAG 2.2
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-display font-extrabold">
-          Ma Trận 3 Hệ Màu UI/UX (Tỷ Lệ 60–30–10) &amp; Biến Semantic Tokens
-        </h2>
-        <p class="text-sm mt-1">
-          Bấm vào từng phương án bên dưới để áp dụng trực tiếp hệ màu đó lên toàn bộ giao diện và kiểm tra độ tương phản thực tế theo chuẩn W3C WCAG 2.2.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Option 1 Card -->
-        <div class="bg-surface-secondary border-2 border-content-primary p-5 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="font-mono-code text-xs font-bold uppercase px-2 py-0.5 bg-[#8F2929] text-[#F6F0E4]">OPTION 1 · MẶC ĐỊNH</span>
-              <span class="text-xs font-mono-code">baotanghochiminh.vn</span>
-            </div>
-            <h3 class="font-display font-bold text-lg">Hào Hùng &amp; Trang Trọng</h3>
-            <p class="text-xs leading-relaxed">
-              Tôn nghiêm, giàu bản sắc dân tộc, phù hợp cổng thông tin di tích và anh hùng lịch sử.
-            </p>
-            <div class="space-y-1.5 text-xs font-mono-code">
-              <div class="flex items-center justify-between p-2 bg-[#F6F0E4] text-[#292723] border border-[#292723]">
-                <span>60% Background</span> <strong>#F6F0E4 (13.13:1 AAA)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#8F2929] text-[#F6F0E4] border border-[#292723]">
-                <span>30% Primary Brand</span> <strong>#8F2929 (7.35:1 AAA)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#C29A50] text-[#292723] border border-[#292723]">
-                <span>10% Accent</span> <strong>#C29A50 (Vàng đồng)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#E5DCCB] text-[#292723] border border-[#292723]">
-                <span>Neutral Dark / Light</span> <strong>#292723 / #E5DCCB</strong>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn-primary text-xs w-full" data-set-theme="option1">
-            Áp dụng Option 1 (Hào hùng &amp; Trang trọng)
-          </button>
-        </div>
-
-        <!-- Option 2 Card -->
-        <div class="bg-surface-secondary border-2 border-content-primary p-5 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="font-mono-code text-xs font-bold uppercase px-2 py-0.5 bg-[#566447] text-[#FFFFFF]">OPTION 2 · LƯU TRỮ</span>
-              <span class="text-xs font-mono-code">vietnam.vn</span>
-            </div>
-            <h3 class="font-display font-bold text-lg">Ký Ức &amp; Lịch Sử Sâu Lắng</h3>
-            <p class="text-xs leading-relaxed">
-              Trầm tĩnh, gần gũi với tư liệu, phù hợp bản đồ di tích, hồ sơ nhân vật và kho lưu trữ.
-            </p>
-            <div class="space-y-1.5 text-xs font-mono-code">
-              <div class="flex items-center justify-between p-2 bg-[#F1F0E5] text-[#292E27] border border-[#292E27]">
-                <span>60% Background</span> <strong>#F1F0E5 (12.11:1 AAA)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#566447] text-[#FFFFFF] border border-[#292E27]">
-                <span>30% Primary Brand</span> <strong>#566447 (6.35:1 AA+)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#B9A16A] text-[#292E27] border border-[#292E27]">
-                <span>10% Accent</span> <strong>#B9A16A (Vàng cổ)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#DADCCF] text-[#292E27] border border-[#292E27]">
-                <span>Neutral Dark / Light</span> <strong>#292E27 / #DADCCF</strong>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn-primary text-xs w-full" data-set-theme="option2">
-            Áp dụng Option 2 (Ký ức &amp; Lịch sử sâu lắng)
-          </button>
-        </div>
-
-        <!-- Option 3 Card -->
-        <div class="bg-surface-secondary border-2 border-content-primary p-5 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between">
-              <span class="font-mono-code text-xs font-bold uppercase px-2 py-0.5 bg-[#356B91] text-[#FFFFFF]">OPTION 3 · DU LỊCH SỐ</span>
-              <span class="text-xs font-mono-code">baotanglichsuquocgia.vn</span>
-            </div>
-            <h3 class="font-display font-bold text-lg">Khát Vọng &amp; Tự Do</h3>
-            <p class="text-xs leading-relaxed">
-              Tươi sáng, cởi mở, hướng đến thế hệ trẻ, phù hợp nền tảng du lịch văn hóa và giáo dục lịch sử số.
-            </p>
-            <div class="space-y-1.5 text-xs font-mono-code">
-              <div class="flex items-center justify-between p-2 bg-[#F3F7FA] text-[#263541] border border-[#263541]">
-                <span>60% Background</span> <strong>#F3F7FA (11.69:1 AAA)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#356B91] text-[#FFFFFF] border border-[#263541]">
-                <span>30% Primary Brand</span> <strong>#356B91 (5.73:1 AA)</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#D7AD45] text-[#263541] border border-[#263541]">
-                <span>10% Accent + Sub</span> <strong>#D7AD45 + #B9574B</strong>
-              </div>
-              <div class="flex items-center justify-between p-2 bg-[#DCE6ED] text-[#263541] border border-[#263541]">
-                <span>Neutral Dark / Light</span> <strong>#263541 / #DCE6ED</strong>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn-primary text-xs w-full" data-set-theme="option3">
-            Áp dụng Option 3 (Khát vọng &amp; Tự do)
-          </button>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- MODAL: DIGITAL PASSPORT & QR SCANNER (IN-PAGE MODAL, ZERO BORDER-RADIUS) -->
-  <div id="appModalOverlay" class="hidden fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
-    <div class="bg-surface-primary border-4 border-content-primary max-w-lg w-full p-6 space-y-4">
-      <div class="flex items-center justify-between border-b-2 border-content-primary pb-3">
-        <h3 id="modalTitle" class="font-display font-bold text-lg">Hộ Chiếu Di Sản Số ATK Định Hóa</h3>
-        <button type="button" id="closeModalBtn" class="px-2.5 py-1 bg-brand-primary text-content-inverse font-bold text-xs border border-content-primary">
-          ✕ ĐÓNG
-        </button>
-      </div>
-      <div id="modalBodyContent" class="text-xs sm:text-sm space-y-3"></div>
-    </div>
-  </div>
+  <!-- ========================================================================
+       SECTION 9: FOOTER (Figma 28:382)
+       Background Transition: #8F2929 -> #292723 (--surface-footer-dark)
+       ======================================================================== -->
+  <footer class="section-footer-dark" data-figma-node="28:382">
+    <div class="container-figma">
+      <div class="row g-4 pb-4">
+        <!-- Left Column (28:385) -->
+        <div class="col-12 col-lg-6">
+          <div class="font-serif-heritage fw-bold text-brand-accent mb-2" style="font-size: 18px;">
+            BẢO TÀNG HỒ CHÍ MINH
+          </div>
+          <p class="text-inverse-cream mb-3" style="font-size: 14px; line-height: 1.6; max-width: 576px;">
+            Không gian trưng bày chuyên đề kỷ niệm Ngày Độc Lập - Nơi lưu giữ, tôn vinh và lan tỏa những giá trị bất hủ của Chủ tịch Hồ Chí Minh cùng sự nghiệp giải phóng dân tộc.
+          </p>
+          <div class="d-flex flex-column gap-1 fw-semibold text-brand-soft" style="font-size: 14px;">
+            <div>Địa chỉ: <span class="text-inverse-cream fw-normal">Số 19 Ngọc Hà, Ba Đình, Hà Nội</span></div>
+            <div>Điện thoại: <span class="text-inverse-cream fw-normal">(024) 38463757 - (024) 38455435</span></div>
+            <div>Email: <span class="text-inverse-cream fw-normal">bthm@baotanghochiminh.vn</span></div>
+          </div>
+        </div>
 
-  <!-- TOAST NOTIFICATION (FLAT, SHARP) -->
-  <div id="toastNotification" class="hidden fixed bottom-5 right-5 z-50 bg-brand-primary text-content-inverse border-2 border-brand-accent px-4 py-3 text-xs sm:text-sm font-semibold max-w-sm"></div>
+        <!-- Right Column with Vertical Border (28:399) -->
+        <div class="col-12 col-lg-6 ps-lg-4" style="border-left: 1px solid rgba(194, 154, 80, 0.28);">
+          <div class="fw-semibold text-brand-accent mb-3" style="font-size: 14px;">
+            BAN CHỈ ĐẠO &amp; ĐƠN VỊ THỰC HIỆN
+          </div>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0" style="font-size: 14px;">
+            <li class="d-flex align-items-center gap-2">
+              <span class="text-brand-accent fw-bold">▪</span>
+              <span class="text-inverse-cream">Ban Tuyên giáo và Dân vận Trung ương</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <span class="text-brand-accent fw-bold">▪</span>
+              <span class="text-inverse-cream">Bộ Văn hóa, Thể thao và Du lịch</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <span class="text-brand-accent fw-bold">▪</span>
+              <span class="text-inverse-cream">Bảo tàng Hồ Chí Minh (baotanghochiminh.vn)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-brand-primary text-content-inverse border-t-4 border-brand-accent mt-12">
-    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs leading-relaxed">
-      <div class="space-y-2">
-        <div class="font-display font-bold text-base">HỆ SINH THÁI SỐ HÓA DI TÍCH ĐỊNH HÓA</div>
-        <p>Thiết kế &amp; vận hành theo chuẩn Astra Agentic Workflow · Kiến trúc DTCG 3-Tier Tokens · Đạt chuẩn tương phản W3C WCAG 2.2 AA/AAA.</p>
-      </div>
-      <div class="space-y-1 font-mono-code">
-        <div class="font-bold uppercase">Thông số Kỹ thuật Giao diện:</div>
-        <div>• Quy tắc hình học: Không bo góc (0px) · Không đổ bóng</div>
-        <div>• Tỷ lệ phối màu: 60% Nền – 30% Chủ đạo – 10% Nhấn</div>
-        <div>• Dữ liệu: 5 Di tích Quốc gia · 3 Di tích Cấp Tỉnh</div>
-      </div>
-      <div class="space-y-1 font-mono-code">
-        <div class="font-bold uppercase">Liên kết Nguồn Dẫn chứng:</div>
-        <div>• GitHub Repo: vuthiet2k/demo_dinh_hoa (branch: main)</div>
-        <div>• Spec Version: UI-COLOR-SPEC-v2.0 · DTCG-2026.1</div>
+      <!-- Bottom Horizontal Border Row (28:413) -->
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-4" style="border-top: 1px solid rgba(246, 240, 228, 0.14); font-size: 10px;">
+        <div class="fw-bold text-inverse-cream" style="opacity: 0.85;">
+          © 2024 Bảo tàng Hồ Chí Minh. Giữ toàn bộ bản quyền nội dung và tư liệu số.
+        </div>
+        <div class="d-flex flex-wrap align-items-center gap-4 fw-bold">
+          <a href="#hero-section" class="text-inverse-cream text-decoration-none" style="opacity: 0.85;">Quy chế bảo tàng</a>
+          <a href="#galleries-section" class="text-inverse-cream text-decoration-none" style="opacity: 0.85;">Điều khoản tư liệu số</a>
+          <a href="#booking-section" class="text-inverse-cream text-decoration-none" style="opacity: 0.85;">Liên hệ hướng dẫn đoàn</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    const RELICS_DATA = [
-      {
-        id: "DH-QG-01",
-        rank: "Quốc gia",
-        rankLabel: "Di tích lịch sử cấp Quốc gia",
-        commune: "TT Chợ Chu",
-        name: "Danh lam thắng cảnh Chùa Hang",
-        decisionYear: 2015,
-        decisionNumber: "Số 515/QĐ-BVHTTDL",
-        category: "Danh lam thắng cảnh",
-        fieldStatus: "Lớn, chụp ngoài trời, lòng hang (Có ảnh tư liệu thực địa)",
-        coordinates: "21.9142° N, 105.6428° E",
-        latLngQuery: "21.9142,105.6428",
-        leaders: ["Chủ tịch Hồ Chí Minh", "Trung ương Đảng & Chính phủ"],
-        campaigns: "Căn cứ địa kháng chiến ATK Định Hóa (1947 – 1954)",
-        quote: "Trong lòng hang đá tự nhiên kỳ vĩ tại Chợ Chu, dấu chân Bác Hồ và các chiến sĩ cách mạng vẫn vẹn nguyên cùng năm tháng kháng chiến trường kỳ.",
-        summary: "Điểm giao thoa cảnh quan thiên nhiên kỳ vĩ và căn cứ cách mạng tại trung tâm thị trấn Chợ Chu, nơi Chủ tịch Hồ Chí Minh từng dừng chân làm việc trong những năm kháng chiến chống thực dân Pháp.",
-        nextRoute: { targetId: "DH-CT-03", targetName: "Đình Quan Đế (Nơi mít tinh 28/3/1945)", distanceKm: "1.2 km", durationMin: "~4 phút" }
-      },
-      {
-        id: "DH-QG-02",
-        rank: "Quốc gia",
-        rankLabel: "Di tích lịch sử cấp Quốc gia",
-        commune: "Xã Bảo Linh",
-        name: "Di tích lịch sử Nơi ở và làm việc của Bộ Tổng tham mưu QĐND VN (1949 - 1954)",
-        decisionYear: 2015,
-        decisionNumber: "Số 2245/QĐ-BVHTTDL ngày 29/6/2015",
-        category: "Di tích lịch sử",
-        fieldStatus: "Nhà bia di tích (Có ảnh tư liệu thực địa)",
-        coordinates: "21.8835° N, 105.5914° E",
-        latLngQuery: "21.8835,105.5914",
-        leaders: ["Đại tướng Võ Nguyên Giáp", "Đại tướng Hoàng Văn Thái"],
-        campaigns: "Chiến dịch Biên giới 1950 & Chiến dịch Điện Biên Phủ 1954",
-        quote: "Tại xã Bảo Linh, cơ quan đầu não tham mưu chiến lược của Quân đội Nhân dân Việt Nam đã thức trắng nhiều đêm bên bản đồ tác chiến, mở đường tới Điện Biên Phủ.",
-        summary: "Cơ quan tham mưu chiến lược cơ mật của Quân đội Nhân dân Việt Nam giai đoạn 1949 - 1954, nơi hoạch định các kế hoạch tác chiến chiến lược làm nên chiến thắng Điện Biên Phủ.",
-        nextRoute: { targetId: "DH-QG-05", targetName: "Cục Tác chiến (1949 - 1954) - Xã Bảo Linh", distanceKm: "1.8 km", durationMin: "~5 phút" }
-      },
-      {
-        id: "DH-QG-03",
-        rank: "Quốc gia",
-        rankLabel: "Di tích lịch sử cấp Quốc gia",
-        commune: "Xã Đồng Thịnh",
-        name: "Xưởng Đội Cấn - Nhà máy Quân giới K77 (1947 - 1954)",
-        decisionYear: 2017,
-        decisionNumber: "Số 2245/QĐ-BVHTTDL ngày 29/6/2015",
-        category: "Di tích lịch sử",
-        fieldStatus: "Nhà bia di tích + Nhà văn hoá (Có 02 ảnh tư liệu thực địa)",
-        coordinates: "21.8691° N, 105.6284° E",
-        latLngQuery: "21.8691,105.6284",
-        leaders: ["Anh hùng Lao động Ngô Gia Khảm", "Ngành Quân giới Việt Nam"],
-        campaigns: "Chiến dịch Việt Bắc Thu – Đông 1947 & Chiến dịch Điện Biên Phủ 1954",
-        quote: "Giữa rừng sâu Đồng Thịnh, tiếng búa rèn vũ khí của công nhân Xưởng Đội Cấn K77 vang vọng suốt ngày đêm, tiếp lửa trực tiếp cho tiền tuyến.",
-        summary: "Cơ sở chế tạo vũ khí, đạn dược tiêu biểu của ngành Quân giới Việt Nam trong kháng chiến chống Pháp tại xã Đồng Thịnh, bảo đảm hỏa lực cho các chiến dịch lớn.",
-        nextRoute: { targetId: "DH-QG-04", targetName: "Cục Tổng Thanh tra Quân đội (Xã Bảo Cường)", distanceKm: "5.2 km", durationMin: "~10 phút" }
-      },
-      {
-        id: "DH-QG-04",
-        rank: "Quốc gia",
-        rankLabel: "Di tích lịch sử cấp Quốc gia",
-        commune: "Xã Bảo Cường",
-        name: "Di tích lịch sử Nơi thành lập và đóng quân của Cục Tổng Thanh tra Quân đội Quốc gia Việt Nam (1948 - 1954)",
-        decisionYear: 2018,
-        decisionNumber: "Số 86/QĐ-BVHTTDL ngày 16/01/2018",
-        category: "Di tích lịch sử",
-        fieldStatus: "Nhà bia di tích (Có ảnh tư liệu thực địa)",
-        coordinates: "21.8976° N, 105.6319° E",
-        latLngQuery: "21.8976,105.6319",
-        leaders: ["Thiếu tướng Lê Thiết Hùng", "Thanh tra Bộ Quốc phòng"],
-        campaigns: "Xây dựng kỷ luật & Sức mạnh chính quy Quân đội (1948 – 1954)",
-        quote: "Tại thôn Bãi Hội, xã Bảo Cường, Cục Tổng Thanh tra Quân đội chính thức ra đời, giữ nghiêm kỷ cương và nâng cao sức chiến đấu của toàn quân.",
-        summary: "Nơi thành lập và đóng quân của Cục Tổng Thanh tra Quân đội Quốc gia Việt Nam (nay là Thanh tra Bộ Quốc phòng) tại thôn Bãi Hội, xã Bảo Cường.",
-        nextRoute: { targetId: "DH-QG-03", targetName: "Xưởng Đội Cấn - Nhà máy Quân giới K77", distanceKm: "5.2 km", durationMin: "~10 phút" }
-      },
-      {
-        id: "DH-QG-05",
-        rank: "Quốc gia",
-        rankLabel: "Di tích lịch sử cấp Quốc gia",
-        commune: "Xã Bảo Linh",
-        name: "Di tích lịch sử Địa điểm nơi ở và làm việc của Cục Tác chiến (1949 - 1954), xã Bảo Linh, huyện Định Hóa",
-        decisionYear: 2024,
-        decisionNumber: "Số 3545/QĐ-BVHTTDL ngày 20/11/2024",
-        category: "Di tích lịch sử",
-        fieldStatus: "Nhà bia di tích (Có ảnh tư liệu thực địa)",
-        coordinates: "21.8890° N, 105.5982° E",
-        latLngQuery: "21.8890,105.5982",
-        leaders: ["Đại tướng Hoàng Văn Thái", "Cục Tác chiến - Bộ Tổng Tham mưu"],
-        campaigns: "Chiến dịch Biên giới 1950, Hòa Bình, Tây Bắc, Điện Biên Phủ 1954",
-        quote: "Mỗi mũi tên trên bản đồ tác chiến tại xã Bảo Linh là kết tinh trí tuệ quân sự Việt Nam qua từng chiến dịch lịch sử.",
-        summary: "Trung tâm tác chiến trực thuộc Bộ Tổng Tham mưu tại xã Bảo Linh, nơi trực tiếp theo dõi bản đồ chiến sự và tham mưu phương án tác chiến từ 1949 đến 1954.",
-        nextRoute: { targetId: "DH-QG-02", targetName: "Bộ Tổng tham mưu QĐND VN (Xã Bảo Linh)", distanceKm: "1.8 km", durationMin: "~5 phút" }
-      },
-      {
-        id: "DH-CT-01",
-        rank: "Cấp Tỉnh",
-        rankLabel: "Di tích lịch sử cấp Tỉnh",
-        commune: "TT Chợ Chu",
-        name: "Di tích lịch sử Nơi thành lập Tiểu đoàn 187, tiền thân của Lữ đoàn 144 – Bộ Tổng tham mưu",
-        decisionYear: 2014,
-        decisionNumber: "Số 2785/QĐ-UBND",
-        category: "Di tích lịch sử",
-        fieldStatus: "Nhà bia di tích + Nhà văn hoá (Có ảnh tư liệu thực địa)",
-        coordinates: "21.9085° N, 105.6472° E",
-        latLngQuery: "21.9085,105.6472",
-        leaders: ["Lữ đoàn Cận vệ 144", "Bộ Tổng Tham mưu"],
-        campaigns: "Bảo vệ tuyệt đối an toàn cơ quan đầu não kháng chiến ATK",
-        quote: "Tiểu đoàn 187 là lá chắn thép bảo vệ các cơ quan Trung ương Đảng, Chính phủ và Bộ Tổng Tư lệnh suốt những năm tháng kháng chiến.",
-        summary: "Đơn vị cận vệ kiên trung bảo vệ tuyệt đối an toàn cho các cơ quan đầu não kháng chiến của Trung ương Đảng, Chính phủ và Bộ Tổng Tư lệnh tại ATK Định Hóa.",
-        nextRoute: { targetId: "DH-CT-02", targetName: "Địa điểm thành lập Đảng bộ Châu Định Hóa", distanceKm: "1.5 km", durationMin: "~5 phút" }
-      },
-      {
-        id: "DH-CT-02",
-        rank: "Cấp Tỉnh",
-        rankLabel: "Di tích lịch sử cấp Tỉnh",
-        commune: "TT Chợ Chu",
-        name: "Địa điểm thành lập Đảng bộ Châu Định Hóa, tiền thân của Đảng bộ huyện/xã Định Hóa (26/6/1946)",
-        decisionYear: 2020,
-        decisionNumber: "Quyết định ngày 01/12/2014",
-        category: "Di tích lịch sử",
-        fieldStatus: "Đảng bộ huyện (Có ảnh tư liệu thực địa)",
-        coordinates: "21.9110° N, 105.6451° E",
-        latLngQuery: "21.9110,105.6451",
-        leaders: ["Đảng bộ Châu Định Hóa", "Nhân dân các dân tộc Định Hóa"],
-        campaigns: "Xây dựng hậu phương căn cứ địa vững chắc (1946 – 1954)",
-        quote: "Ngày 26/6/1946 đánh dấu bước ngoặt lịch sử khi Đảng bộ Châu Định Hóa chính thức thành lập, quy tụ sức mạnh đoàn kết quân dân các dân tộc.",
-        summary: "Cột mốc lịch sử trọng đại đánh dấu sự ra đời của Đảng bộ Châu Định Hóa ngày 26/6/1946, trực tiếp lãnh đạo nhân dân xây dựng và bảo vệ Thủ đô kháng chiến.",
-        nextRoute: { targetId: "DH-CT-03", targetName: "Đình Quan Đế (Nơi mít tinh 28/3/1945)", distanceKm: "0.8 km", durationMin: "~3 phút" }
-      },
-      {
-        id: "DH-CT-03",
-        rank: "Cấp Tỉnh",
-        rankLabel: "Di tích lịch sử cấp Tỉnh",
-        commune: "TT Chợ Chu",
-        name: "Di tích lịch sử Địa điểm cuộc mít tinh tại đình Quan Đế (28/3/1945), đại diện Mặt trận Việt Minh tuyên bố xóa bỏ chính quyền tay sai do thực dân Pháp dựng lên, thị trấn Chợ Chu, Định Hóa, Thái Nguyên",
-        decisionYear: 2023,
-        decisionNumber: "Số 3873/QĐ-UBND",
-        category: "Di tích lịch sử",
-        fieldStatus: "Bia đá + Cây đa di sản; Nhà văn hoá phía sau (Có 02 ảnh tư liệu thực địa)",
-        coordinates: "21.9125° N, 105.6440° E",
-        latLngQuery: "21.9125,105.6440",
-        leaders: ["Mặt trận Việt Minh", "Cứu quốc quân"],
-        campaigns: "Cao trào Kháng Nhật cứu nước & Khởi nghĩa giành chính quyền (28/3/1945)",
-        quote: "Dưới bóng cây đa di sản ngày 28/3/1945, lời tuyên bố xóa bỏ chính quyền thực dân tay sai đã mở ra kỷ nguyên độc lập tự do cho quê hương Định Hóa.",
-        summary: "Nơi diễn ra cuộc mít tinh lịch sử ngày 28/3/1945, đại diện Mặt trận Việt Minh tuyên bố xóa bỏ chính quyền tay sai thực dân phong kiến, lập nên chính quyền cách mạng.",
-        nextRoute: { targetId: "DH-QG-01", targetName: "Danh lam thắng cảnh Chùa Hang", distanceKm: "1.2 km", durationMin: "~4 phút" }
-      }
-    ];
-
-    const THEME_META = {
-      option1: "Option 1: 60% #F6F0E4 · 30% #8F2929 · 10% #C29A50",
-      option2: "Option 2: 60% #F1F0E5 · 30% #566447 · 10% #B9A16A",
-      option3: "Option 3: 60% #F3F7FA · 30% #356B91 · 10% #D7AD45 + #B9574B"
-    };
-
-    let currentTheme = "option1";
-    let currentRelicIndex = 0;
-    let activeFilter = "ALL";
-    let searchKeyword = "";
-    let vrYaw = 120;
-    let vrAutoRotate = true;
-    let vrIntervalId = null;
-    let isAudioPlaying = false;
-    let audioSpeed = 1.0;
-    let quizScore = 0;
-    let timerSeconds = 120;
-    let timerIntervalId = null;
-    let checkedInStamps = {};
-
-    try {
-      const savedStamps = localStorage.getItem("dinh_hoa_stamps_v2");
-      if (savedStamps) checkedInStamps = JSON.parse(savedStamps);
-      const savedTheme = localStorage.getItem("dinh_hoa_theme_v2");
-      if (savedTheme && THEME_META[savedTheme]) currentTheme = savedTheme;
-    } catch (e) {
-      checkedInStamps = {};
-    }
-
-    function showToast(message) {
-      const toast = document.getElementById("toastNotification");
-      toast.textContent = message;
-      toast.classList.remove("hidden");
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => {
-        toast.classList.add("hidden");
-      }, 3200);
-    }
-
-    function applyTheme(themeKey) {
-      if (!THEME_META[themeKey]) return;
-      currentTheme = themeKey;
-      document.documentElement.setAttribute("data-theme", themeKey);
-      document.getElementById("activeThemeBadge").textContent = THEME_META[themeKey];
-
-      ["option1", "option2", "option3"].forEach((key, idx) => {
-        const btn = document.getElementById("themeBtn" + (idx + 1));
-        if (btn) {
-          if (key === themeKey) {
-            btn.classList.add("tab-active");
-          } else {
-            btn.classList.remove("tab-active");
-          }
-        }
-      });
-
-      try {
-        localStorage.setItem("dinh_hoa_theme_v2", themeKey);
-      } catch (e) {}
-      showToast("Đã áp dụng " + THEME_META[themeKey]);
-    }
-
-    function updateStampCountUI() {
-      const count = Object.keys(checkedInStamps).length;
-      document.getElementById("stampCountHeader").textContent = String(count);
-    }
-
-    function renderFlipbookPage(index) {
-      const relic = RELICS_DATA[index];
-      if (!relic) return;
-      document.getElementById("flipbookPageIndicator").textContent = "Trang " + (index + 1) + " / " + RELICS_DATA.length;
-      document.getElementById("fbRelicId").textContent = "TRANG 0" + (index + 1) + " · " + relic.id;
-      document.getElementById("fbRelicCommune").textContent = relic.commune;
-      document.getElementById("fbRelicTitle").textContent = relic.name;
-      document.getElementById("fbRelicSummary").textContent = relic.summary;
-      document.getElementById("fbRelicDecision").textContent = relic.decisionNumber;
-      document.getElementById("fbRelicStatus").textContent = relic.fieldStatus;
-      document.getElementById("fbQrCodeLabel").textContent = relic.id;
-      document.getElementById("flipPageSlider").value = String(index);
-    }
-
-    function renderMapPopup(relic) {
-      document.getElementById("popupRelicCode").textContent = relic.id;
-      document.getElementById("popupRelicRank").textContent = relic.rankLabel;
-      document.getElementById("popupRelicCommune").textContent = relic.commune;
-      document.getElementById("popupRelicName").textContent = relic.name;
-      document.getElementById("popupRelicDecision").textContent = "Quyết định: " + relic.decisionNumber + " (" + relic.decisionYear + ") · Tọa độ: " + relic.coordinates;
-      document.getElementById("popupGpsLink").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(relic.latLngQuery);
-    }
-
-    function renderFiveBlocksDetail(index) {
-      const relic = RELICS_DATA[index];
-      if (!relic) return;
-      currentRelicIndex = index;
-
-      document.getElementById("relicDetailSelect").value = String(index);
-      document.getElementById("currentAudioTitle").textContent = relic.name + " (" + relic.id + ")";
-      document.getElementById("detailRelicCodeBadge").textContent = relic.id + " · " + relic.rankLabel.toUpperCase();
-      document.getElementById("detailRelicMainHeading").textContent = relic.name;
-
-      // Block 1
-      document.getElementById("b1Eyebrow").textContent = relic.rankLabel.toUpperCase() + " · " + relic.commune.toUpperCase();
-      document.getElementById("b1Title").textContent = relic.name;
-      document.getElementById("b1Summary").textContent = relic.summary;
-      document.getElementById("b1Campaigns").textContent = relic.campaigns;
-      document.getElementById("b1Quote").textContent = '"' + relic.quote + '"';
-
-      const leadersContainer = document.getElementById("b1Leaders");
-      leadersContainer.innerHTML = "";
-      relic.leaders.forEach((leader) => {
-        const chip = document.createElement("span");
-        chip.className = "px-2.5 py-1 text-xs font-bold bg-surface-primary border-2 border-content-primary";
-        chip.textContent = "★ " + leader;
-        leadersContainer.appendChild(chip);
-      });
-
-      // Block 2
-      document.getElementById("vrSceneTitle").textContent = "Toàn cảnh Thực địa: " + relic.name;
-
-      // Block 3
-      document.getElementById("b3Code").textContent = relic.id;
-      document.getElementById("b3Rank").textContent = relic.rankLabel;
-      document.getElementById("b3Decision").textContent = relic.decisionNumber;
-      document.getElementById("b3Year").textContent = String(relic.decisionYear);
-      document.getElementById("b3FieldStatus").textContent = relic.fieldStatus;
-      document.getElementById("b3Category").textContent = relic.category;
-      document.getElementById("b3Coords").textContent = relic.coordinates;
-      document.getElementById("b3Commune").textContent = relic.commune;
-
-      // Block 4: Quiz, Script, Stamp
-      renderQuizForRelic(relic);
-      document.getElementById("scriptRelicName").textContent = relic.name;
-      document.getElementById("scriptRelicCommune").textContent = relic.commune;
-      document.getElementById("scriptRelicDecision").textContent = relic.decisionNumber;
-
-      const stampDate = checkedInStamps[relic.id];
-      const stampStatusLabel = document.getElementById("stampStatusLabel");
-      const stampDateLabel = document.getElementById("stampDateLabel");
-      const stampVisualBox = document.getElementById("stampVisualBox");
-      if (stampDate) {
-        stampStatusLabel.textContent = "✓ ĐÃ ĐÓNG DẤU: " + relic.id;
-        stampDateLabel.textContent = "Thời gian lưu: " + stampDate;
-        stampVisualBox.className = "border-2 border-brand-primary p-4 text-center my-2 bg-brand-accent text-content-primary";
-      } else {
-        stampStatusLabel.textContent = "CHƯA ĐÓNG DẤU ĐIỂM NÀY";
-        stampDateLabel.textContent = "Bấm nút bên dưới để đóng dấu";
-        stampVisualBox.className = "border-2 border-dashed border-content-primary p-4 text-center my-2 bg-surface-secondary";
-      }
-
-      // Block 5
-      document.getElementById("b5NextName").textContent = relic.nextRoute.targetName;
-      document.getElementById("b5NextKm").textContent = relic.nextRoute.distanceKm;
-      document.getElementById("b5NextMin").textContent = relic.nextRoute.durationMin;
-      document.getElementById("b5GpsBtn").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(relic.latLngQuery);
-    }
-
-    function renderQuizForRelic(relic) {
-      const container = document.getElementById("quizOptionsContainer");
-      const explanation = document.getElementById("quizExplanationBox");
-      explanation.classList.add("hidden");
-      explanation.textContent = "";
-      container.innerHTML = "";
-
-      const options = [
-        {
-          label: "A. " + relic.commune + " — Công nhận theo " + relic.decisionNumber,
-          isCorrect: true
-        },
-        {
-          label: "B. Xã Phú Đình — Công nhận năm 1995",
-          isCorrect: false
-        },
-        {
-          label: "C. Xã Tân Trào — Di tích kiến trúc tôn giáo cổ",
-          isCorrect: false
-        }
-      ];
-
-      options.forEach((opt) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "w-full text-left px-3.5 py-2.5 text-xs sm:text-sm font-semibold bg-surface-secondary border-2 border-content-primary hover:bg-brand-accent focus-ring";
-        btn.textContent = opt.label;
-        btn.addEventListener("click", () => {
-          Array.from(container.children).forEach((c) => {
-            c.disabled = true;
-          });
-          if (opt.isCorrect) {
-            btn.className = "w-full text-left px-3.5 py-2.5 text-xs sm:text-sm font-bold bg-brand-primary text-content-inverse border-2 border-content-primary";
-            btn.textContent = "✓ CHÍNH XÁC: " + opt.label;
-            quizScore += 10;
-            document.getElementById("quizScoreValue").textContent = String(quizScore);
-            explanation.textContent = "Giải thích chuẩn lịch sử: " + relic.name + " tọa lạc tại " + relic.commune + ", huyện Định Hóa, được công nhận theo " + relic.decisionNumber + " (" + relic.decisionYear + ").";
-          } else {
-            btn.className = "w-full text-left px-3.5 py-2.5 text-xs sm:text-sm font-bold bg-brand-sub text-white border-2 border-content-primary";
-            btn.textContent = "✕ CHƯA ĐÚNG: " + opt.label;
-            explanation.textContent = "Đáp án đúng là A: " + relic.name + " thuộc " + relic.commune + " (" + relic.decisionNumber + ").";
-          }
-          explanation.classList.remove("hidden");
-        });
-        container.appendChild(btn);
-      });
-    }
-
-    function renderDirectoryCards() {
-      const grid = document.getElementById("relicCardsGrid");
-      const emptyState = document.getElementById("directoryEmptyState");
-      grid.innerHTML = "";
-
-      const filtered = RELICS_DATA.filter((r) => {
-        const matchFilter =
-          activeFilter === "ALL" ||
-          r.rank === activeFilter ||
-          r.commune === activeFilter;
-        const kw = searchKeyword.trim().toLowerCase();
-        const matchSearch =
-          !kw ||
-          r.name.toLowerCase().includes(kw) ||
-          r.id.toLowerCase().includes(kw) ||
-          r.commune.toLowerCase().includes(kw) ||
-          r.decisionNumber.toLowerCase().includes(kw);
-        return matchFilter && matchSearch;
-      });
-
-      if (filtered.length === 0) {
-        emptyState.classList.remove("hidden");
-        return;
-      }
-      emptyState.classList.add("hidden");
-
-      filtered.forEach((relic) => {
-        const fullIdx = RELICS_DATA.findIndex((item) => item.id === relic.id);
-        const isStamped = Boolean(checkedInStamps[relic.id]);
-        const card = document.createElement("div");
-        card.className = "bg-surface-secondary border-2 border-content-primary flex flex-col justify-between p-4 space-y-4";
-
-        card.innerHTML = `
-          <div class="space-y-2.5">
-            <div class="flex items-center justify-between gap-1 text-xs font-mono-code">
-              <span class="px-2 py-0.5 font-bold bg-brand-primary text-content-inverse">${relic.id}</span>
-              <span class="px-2 py-0.5 font-bold bg-brand-accent text-content-primary border border-content-primary">${relic.rank}</span>
-            </div>
-            <div class="bg-surface-primary border-2 border-content-primary p-3 text-xs font-mono-code">
-              <div class="font-bold text-brand-primary uppercase">${relic.commune} · NĂM ${relic.decisionYear}</div>
-              <div class="truncate mt-0.5">${relic.decisionNumber}</div>
-            </div>
-            <h3 class="font-display font-bold text-base leading-snug break-words">
-              ${relic.name}
-            </h3>
-            <p class="text-xs leading-relaxed opacity-90">
-              <strong>Hiện trạng:</strong> ${relic.fieldStatus}
-            </p>
-          </div>
-          <div class="space-y-2 pt-2 border-t border-content-primary">
-            <div class="flex items-center justify-between text-[11px] font-mono-code">
-              <span>Tọa độ: ${relic.coordinates}</span>
-              <span class="font-bold">${isStamped ? "★ Đã đóng dấu" : "○ Chưa đóng dấu"}</span>
-            </div>
-            <div class="flex gap-2">
-              <button type="button" class="btn-outline text-xs py-1.5 px-2.5 flex-1 audio-card-btn" data-idx="${fullIdx}">
-                🔊 Audio
-              </button>
-              <button type="button" class="btn-primary text-xs py-1.5 px-2.5 flex-1 detail-card-btn" data-idx="${fullIdx}">
-                Chi tiết 5 Khối
-              </button>
-            </div>
-          </div>
-        `;
-
-        grid.appendChild(card);
-      });
-
-      grid.querySelectorAll(".detail-card-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const idx = Number(btn.getAttribute("data-idx"));
-          selectRelicEverywhere(idx, true);
-        });
-      });
-
-      grid.querySelectorAll(".audio-card-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const idx = Number(btn.getAttribute("data-idx"));
-          selectRelicEverywhere(idx, false);
-          speakText(RELICS_DATA[idx].name + ". " + RELICS_DATA[idx].summary);
-        });
-      });
-    }
-
-    function selectRelicEverywhere(index, scrollToDetail) {
-      const relic = RELICS_DATA[index];
-      if (!relic) return;
-      currentRelicIndex = index;
-      renderFlipbookPage(index);
-      renderMapPopup(relic);
-      renderFiveBlocksDetail(index);
-      if (scrollToDetail) {
-        document.getElementById("five-blocks-detail").scrollIntoView({ behavior: "smooth" });
-      }
-    }
-
-    function speakText(text) {
-      if ("speechSynthesis" in window) {
-        try {
-          window.speechSynthesis.cancel();
-          const utter = new SpeechSynthesisUtterance(text);
-          utter.lang = "vi-VN";
-          utter.rate = audioSpeed;
-          window.speechSynthesis.speak(utter);
-          isAudioPlaying = true;
-          document.getElementById("globalAudioToggle").textContent = "⏸ Tạm dừng Audio Thuyết minh";
-          utter.onend = () => {
-            isAudioPlaying = false;
-            document.getElementById("globalAudioToggle").textContent = "▶ Phát Audio Thuyết minh Tự động";
-          };
-          showToast("Đang phát thuyết minh giọng đọc tiếng Việt (" + audioSpeed + "x)");
-          return;
-        } catch (e) {}
-      }
-      isAudioPlaying = !isAudioPlaying;
-      document.getElementById("globalAudioToggle").textContent = isAudioPlaying
-        ? "⏸ Tạm dừng Audio Thuyết minh"
-        : "▶ Phát Audio Thuyết minh Tự động";
-      showToast("Đã bật trình phát Audio Guide cho: " + RELICS_DATA[currentRelicIndex].name);
-    }
-
-    function openModal(title, htmlContent) {
-      document.getElementById("modalTitle").textContent = title;
-      document.getElementById("modalBodyContent").innerHTML = htmlContent;
-      document.getElementById("appModalOverlay").classList.remove("hidden");
-    }
-
-    function closeModal() {
-      document.getElementById("appModalOverlay").classList.add("hidden");
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-      const selectEl = document.getElementById("relicDetailSelect");
-      RELICS_DATA.forEach((relic, i) => {
-        const opt = document.createElement("option");
-        opt.value = String(i);
-        opt.textContent = relic.id + " — " + relic.name;
-        selectEl.appendChild(opt);
-      });
-
-      applyTheme(currentTheme);
-      updateStampCountUI();
-      renderDirectoryCards();
-      selectRelicEverywhere(0, false);
-
-      document.querySelectorAll("[data-set-theme]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          applyTheme(btn.getAttribute("data-set-theme"));
-        });
-      });
-
-      document.querySelectorAll(".map-pin").forEach((pin) => {
-        pin.addEventListener("click", () => {
-          const relicId = pin.getAttribute("data-relic-id");
-          const idx = RELICS_DATA.findIndex((r) => r.id === relicId);
-          if (idx !== -1) {
-            selectRelicEverywhere(idx, false);
-            showToast("Đã chọn trên Bản đồ số: " + RELICS_DATA[idx].name);
-          }
-        });
-      });
-
-      document.getElementById("prevFlipPageBtn").addEventListener("click", () => {
-        const nextIdx = (currentRelicIndex - 1 + RELICS_DATA.length) % RELICS_DATA.length;
-        selectRelicEverywhere(nextIdx, false);
-      });
-
-      document.getElementById("nextFlipPageBtn").addEventListener("click", () => {
-        const nextIdx = (currentRelicIndex + 1) % RELICS_DATA.length;
-        selectRelicEverywhere(nextIdx, false);
-      });
-
-      document.getElementById("flipPageSlider").addEventListener("input", (e) => {
-        const idx = Number(e.target.value);
-        selectRelicEverywhere(idx, false);
-      });
-
-      document.getElementById("flipbookSearchInput").addEventListener("input", (e) => {
-        const kw = e.target.value.trim().toLowerCase();
-        if (!kw) return;
-        const idx = RELICS_DATA.findIndex(
-          (r) =>
-            r.name.toLowerCase().includes(kw) ||
-            r.id.toLowerCase().includes(kw) ||
-            r.commune.toLowerCase().includes(kw)
-        );
-        if (idx !== -1) {
-          selectRelicEverywhere(idx, false);
-        }
-      });
-
-      document.getElementById("flipbookAudioBtn").addEventListener("click", () => {
-        const r = RELICS_DATA[currentRelicIndex];
-        speakText(r.name + ". " + r.summary);
-      });
-
-      document.querySelectorAll(".filter-pill").forEach((pill) => {
-        pill.addEventListener("click", () => {
-          activeFilter = pill.getAttribute("data-filter");
-          document.querySelectorAll(".filter-pill").forEach((p) => p.classList.remove("tab-active"));
-          pill.classList.add("tab-active");
-          renderDirectoryCards();
-        });
-      });
-
-      document.getElementById("directorySearchInput").addEventListener("input", (e) => {
-        searchKeyword = e.target.value;
-        renderDirectoryCards();
-      });
-
-      document.getElementById("resetDirectoryFilterBtn").addEventListener("click", () => {
-        activeFilter = "ALL";
-        searchKeyword = "";
-        document.getElementById("directorySearchInput").value = "";
-        document.querySelectorAll(".filter-pill").forEach((p, i) => {
-          if (i === 0) p.classList.add("tab-active");
-          else p.classList.remove("tab-active");
-        });
-        renderDirectoryCards();
-      });
-
-      selectEl.addEventListener("change", (e) => {
-        selectRelicEverywhere(Number(e.target.value), false);
-      });
-
-      document.getElementById("globalAudioToggle").addEventListener("click", () => {
-        if (isAudioPlaying && "speechSynthesis" in window) {
-          window.speechSynthesis.cancel();
-          isAudioPlaying = false;
-          document.getElementById("globalAudioToggle").textContent = "▶ Phát Audio Thuyết minh Tự động";
-          showToast("Đã tạm dừng thuyết minh Audio");
-        } else {
-          const r = RELICS_DATA[currentRelicIndex];
-          speakText(r.name + ". " + r.summary);
-        }
-      });
-
-      document.getElementById("audioSpeedBtn").addEventListener("click", (e) => {
-        audioSpeed = audioSpeed === 1.0 ? 1.25 : 1.0;
-        e.target.textContent = audioSpeed.toFixed(2).replace(".00", ".0") + "x";
-        showToast("Tốc độ đọc Audio: " + e.target.textContent);
-      });
-
-      document.getElementById("simulateSignalBtn").addEventListener("click", (e) => {
-        const banner = document.getElementById("weakSignalBanner");
-        const isHidden = banner.classList.contains("hidden");
-        if (isHidden) {
-          banner.classList.remove("hidden");
-          e.target.textContent = "📶 Chế độ Thực địa Sóng yếu: BẬT";
-        } else {
-          banner.classList.add("hidden");
-          e.target.textContent = "📶 Chế độ Thực địa Sóng yếu: TẮT";
-        }
-      });
-
-      document.getElementById("downloadOfflinePdfBtn").addEventListener("click", () => {
-        const lines = [
-          "CẨM NANG SỐ HÓA 8 ĐIỂM DI TÍCH LỊCH SỬ ATK ĐỊNH HÓA - THÁI NGUYÊN",
-          "Chuẩn Astra Agentic Workflow · DTCG 3-Tier Tokens (60-30-10)",
-          "==================================================================",
-          ""
-        ];
-        RELICS_DATA.forEach((r, idx) => {
-          lines.push((idx + 1) + ". [" + r.id + "] " + r.name);
-          lines.push("   - Cấp xếp hạng: " + r.rankLabel + " (" + r.decisionNumber + ")");
-          lines.push("   - Địa chỉ: " + r.commune + ", huyện Định Hóa, tỉnh Thái Nguyên");
-          lines.push("   - Tọa độ GIS: " + r.coordinates);
-          lines.push("   - Hiện trạng: " + r.fieldStatus);
-          lines.push("   - Tóm tắt: " + r.summary);
-          lines.push("");
-        });
-        const blob = new Blob([lines.join("\n")], { type: "text/plain;charset=utf-8" });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "Cam-Nang-So-Hoa-8-Di-Tich-Dinh-Hoa.txt";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        showToast("Đã tải Cẩm nang Ngoại tuyến 8 điểm di tích Định Hóa về thiết bị!");
-      });
-
-      function updateVrLabel() {
-        const dirs = ["BẮC", "ĐÔNG BẮC", "ĐÔNG", "ĐÔNG NAM", "NAM", "TÂY NAM", "TÂY", "TÂY BẮC"];
-        const dirIdx = Math.floor(((vrYaw % 360) + 360) % 360 / 45);
-        document.getElementById("vrYawValue").textContent = (((vrYaw % 360) + 360) % 360) + "° " + dirs[dirIdx];
-      }
-
-      document.getElementById("vrRotateLeftBtn").addEventListener("click", () => {
-        vrYaw -= 45;
-        updateVrLabel();
-      });
-      document.getElementById("vrRotateRightBtn").addEventListener("click", () => {
-        vrYaw += 45;
-        updateVrLabel();
-      });
-
-      function startVrLoop() {
-        clearInterval(vrIntervalId);
-        vrIntervalId = setInterval(() => {
-          if (vrAutoRotate) {
-            vrYaw = (vrYaw + 5) % 360;
-            updateVrLabel();
-          }
-        }, 1200);
-      }
-      startVrLoop();
-
-      document.getElementById("vrAutoRotateBtn").addEventListener("click", (e) => {
-        vrAutoRotate = !vrAutoRotate;
-        e.target.textContent = vrAutoRotate ? "⟳ Xoay Tự Động: BẬT" : "⟳ Xoay Tự Động: TẮT";
-      });
-
-      document.getElementById("compare1950Btn").addEventListener("click", (e) => {
-        document.getElementById("vrViewportCanvas").style.filter = "grayscale(100%) contrast(115%)";
-        e.target.classList.add("tab-active");
-        document.getElementById("compare2026Btn").classList.remove("tab-active");
-      });
-
-      document.getElementById("compare2026Btn").addEventListener("click", (e) => {
-        document.getElementById("vrViewportCanvas").style.filter = "none";
-        e.target.classList.add("tab-active");
-        document.getElementById("compare1950Btn").classList.remove("tab-active");
-      });
-
-      document.getElementById("copyGisCoordsBtn").addEventListener("click", () => {
-        const r = RELICS_DATA[currentRelicIndex];
-        const text = r.id + " - " + r.name + ": " + r.coordinates;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).catch(() => {});
-        }
-        showToast("Đã sao chép tọa độ GIS: " + r.coordinates);
-      });
-
-      document.getElementById("startTimerBtn").addEventListener("click", (e) => {
-        if (timerIntervalId) {
-          clearInterval(timerIntervalId);
-          timerIntervalId = null;
-          timerSeconds = 120;
-          document.getElementById("teleprompterTimer").textContent = "02:00";
-          e.target.textContent = "⏱ Bấm giờ 02:00";
-          return;
-        }
-        e.target.textContent = "⏹ Dừng đồng hồ";
-        timerIntervalId = setInterval(() => {
-          if (timerSeconds > 0) {
-            timerSeconds--;
-            const m = String(Math.floor(timerSeconds / 60)).padStart(2, "0");
-            const s = String(timerSeconds % 60).padStart(2, "0");
-            document.getElementById("teleprompterTimer").textContent = m + ":" + s;
-          } else {
-            clearInterval(timerIntervalId);
-            timerIntervalId = null;
-            showToast("Đã hoàn thành 02:00 phút tập thuyết minh!");
-          }
-        }, 1000);
-      });
-
-      document.getElementById("speakScriptBtn").addEventListener("click", () => {
-        const boxText = document.getElementById("juniorScriptBox").innerText;
-        speakText(boxText);
-      });
-
-      document.getElementById("checkInStampBtn").addEventListener("click", () => {
-        const r = RELICS_DATA[currentRelicIndex];
-        const nowStr = new Date().toLocaleString("vi-VN");
-        checkedInStamps[r.id] = nowStr;
-        try {
-          localStorage.setItem("dinh_hoa_stamps_v2", JSON.stringify(checkedInStamps));
-        } catch (e) {}
-        updateStampCountUI();
-        renderFiveBlocksDetail(currentRelicIndex);
-        renderDirectoryCards();
-        showToast("Đã đóng dấu Check-in điểm " + r.id + " vào thiết bị!");
-      });
-
-      document.getElementById("goToNextRelicBtn").addEventListener("click", () => {
-        const r = RELICS_DATA[currentRelicIndex];
-        const nextIdx = RELICS_DATA.findIndex((item) => item.id === r.nextRoute.targetId);
-        if (nextIdx !== -1) {
-          selectRelicEverywhere(nextIdx, true);
-          showToast("Đã chuyển tới điểm tiếp theo: " + RELICS_DATA[nextIdx].name);
-        }
-      });
-
-      document.getElementById("openPassportBtn").addEventListener("click", () => {
-        const rows = RELICS_DATA.map((r) => {
-          const stamped = checkedInStamps[r.id];
-          return `
-            <div class="p-2.5 border-2 border-content-primary bg-surface-secondary flex items-center justify-between gap-2">
-              <div>
-                <div class="font-mono-code font-bold text-xs">${r.id} · ${r.commune}</div>
-                <div class="font-semibold text-xs">${r.name}</div>
-              </div>
-              <span class="px-2 py-1 text-xs font-mono-code font-bold border border-content-primary ${stamped ? 'bg-brand-accent text-content-primary' : 'bg-surface-primary'}">
-                ${stamped ? '✓ ĐÃ ĐÓNG DẤU' : 'CHƯA ĐÓNG'}
-              </span>
-            </div>
-          `;
-        }).join("");
-        openModal("Hộ Chiếu Di Sản Số ATK Định Hóa (" + Object.keys(checkedInStamps).length + "/8 Dấu)", `<div class="space-y-2 max-h-80 overflow-y-auto">${rows}</div>`);
-      });
-
-      document.getElementById("scanQrModalBtn").addEventListener("click", () => {
-        const quickLinks = RELICS_DATA.map((r, i) => `
-          <button type="button" class="qr-jump-btn w-full text-left p-2.5 border-2 border-content-primary bg-surface-secondary hover:bg-brand-accent font-mono-code text-xs" data-idx="${i}">
-            [QR ${r.id}] → Mở ngay: <strong>${r.name}</strong> (${r.commune})
-          </button>
-        `).join("");
-        openModal("Mô Phỏng Quét Mã QR Tại Bia Di Tích Thực Địa", `
-          <p class="text-xs">Chọn mã QR tại điểm di tích thực địa để mở thẳng cấu trúc 5 Khối và phát thuyết minh tự động:</p>
-          <div class="space-y-1.5 max-h-72 overflow-y-auto mt-2">${quickLinks}</div>
-        `);
-        document.querySelectorAll(".qr-jump-btn").forEach((b) => {
-          b.addEventListener("click", () => {
-            const idx = Number(b.getAttribute("data-idx"));
-            closeModal();
-            selectRelicEverywhere(idx, true);
-            showToast("Đã quét mã QR mở điểm: " + RELICS_DATA[idx].id);
-          });
-        });
-      });
-
-      document.getElementById("closeModalBtn").addEventListener("click", closeModal);
-      document.getElementById("appModalOverlay").addEventListener("click", (e) => {
-        if (e.target.id === "appModalOverlay") closeModal();
-      });
-    });
-  </script>
+  <!-- Bootstrap 5.3.3 Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
