@@ -1,0 +1,21 @@
+{
+  "name": "demo-dinh-hoa",
+  "version": "2.0.0",
+  "description": "He sinh thai So hoa Di tich Lich su Cach mang & Anh hung Dan toc - ATK Dinh Hoa (Chuan Astra Agentic Workflow, DTCG 3-Tier Tokens 60-30-10, W3C WCAG 2.2)",
+  "private": false,
+  "metadata": {
+    "prd_version": "UI-COLOR-SPEC-v2.0",
+    "policy_version": "ASTRA-GPT6-1.0",
+    "schema_version": "DTCG-2026.1",
+    "plan_version": "PLAN-COLOR-60-30-10-v1.0",
+    "geometry_policy": "zero-radius-zero-shadow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuthiet2k/demo_dinh_hoa.git"
+  },
+  "scripts": {
+    "start": "npx serve .",
+    "validate:tokens": "node -e \"JSON.parse(require('fs').readFileSync('./styles/tokens.json', 'utf8')); console.log('DTCG Tokens Validated OK');\""
+  }
+}
