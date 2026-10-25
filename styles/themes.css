@@ -1,587 +1,167 @@
 /**
- * DTCG 3-Tier Semantic Color Tokens, Bootstrap 5.3 Config & Strict Flat Geometry Rules
- * Project: He sinh thai So hoa Di tich Lich su Dinh Hoa & Chuyen de Mua Thu Doc Lap
- * Figma Source: fileKey ANxe1oSyFCZDLHBBvYqYnE · node-id 28:2
- * Standard: Astra Agentic Workflow · W3C WCAG 2.2 · 60-30-10 Rule · Bootstrap 5.3 CDN
- * Strict Constraint: ZERO BORDER-RADIUS, ZERO BOX-SHADOW, NO BLACK BORDERS
+ * DTCG 3-Tier Semantic Color Tokens & Strict Flat Geometry Rules
+ * Project: He sinh thai So hoa Di tich Lich su Dinh Hoa (ATK Dinh Hoa - Thai Nguyen)
+ * Standard: Astra Agentic Workflow · W3C WCAG 2.2 · 60-30-10 Rule
+ * Hard Constraint: ZERO border-radius (0px) & ZERO box-shadow (none)
  */
 
 :root,
 [data-theme="option1"] {
-  /* Option 1 — Hào hùng & Trang trọng (Chuẩn Figma node 28:2 - Bảo tàng Hồ Chí Minh) */
-  --surface-bg-primary: #F6F0E4;      /* rgb(246,240,228) - 60% Nền giấy dó chính (Hero, Galleries, News) */
-  --surface-bg-ribbon: #ECE4D3;       /* rgb(236,228,211) - Nền section chuyển tiếp (Milestones Ribbon, Timeline, Quote Box) */
-  --surface-bg-button-alt: #F3EDE1;   /* rgb(243,237,225) - Nền nút phụ (Secondary CTA) */
-  --surface-card-white: #FFFFFF;      /* rgb(255,255,255) - Nền thẻ bài viết & phân khu trưng bày */
-  --surface-card-secondary: #E5DCCB;  /* Viền phân cách & đường viền giấy dó mảnh (Tuyệt đối không dùng viền đen) */
-  --surface-footer-dark: #292723;     /* rgb(41,39,35)    - Nền Footer & khung ảnh trưng bày */
-
-  --brand-primary-default: #8F2929;   /* rgb(143,41,41)   - 30% Đỏ gạch (Header, Top Banner, Booking Callout, Step 4) */
-  --brand-primary-deep: #6F1115;      /* rgb(111,17,21)   - Đỏ thẫm (Header Action Icon Box) */
-  --brand-accent-highlight: #C29A50;  /* rgb(194,154,80)  - 10% Vàng đồng (Số liệu, nhãn phụ, nút CTA vàng đồng) */
-  --brand-accent-soft: #DFC58E;       /* rgb(223,197,142) - Vàng kem sáng trên nền Đỏ gạch / Footer */
-  --brand-accent-secondary: #8F2929;  /* Đồng nhất Primary */
-
-  --text-primary-body: #292723;       /* rgb(41,39,35)    - Chữ chính Than đậm (13.13:1 AAA) */
-  --text-on-brand-inverse: #F6F0E4;   /* rgb(246,240,228) - Chữ sáng trên nền Đỏ gạch & Footer */
-  --text-on-brand-pure: #FFFFFF;      /* rgb(255,255,255) - Chữ trắng tinh */
-
-  /* Typography Tokens from Figma 28:2 */
-  --font-serif: 'Merriweather', Georgia, serif;
-  --font-sans: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
-  /* Bootstrap 5.3 Root Variable Overrides */
-  --bs-body-bg: var(--surface-bg-primary);
-  --bs-body-color: var(--text-primary-body);
-  --bs-body-font-family: var(--font-sans);
-  --bs-primary: #8F2929;
-  --bs-primary-rgb: 143, 41, 41;
-  --bs-secondary: #ECE4D3;
-  --bs-secondary-rgb: 236, 228, 211;
-  --bs-warning: #C29A50;
-  --bs-warning-rgb: 194, 154, 80;
-  --bs-dark: #292723;
-  --bs-dark-rgb: 41, 39, 35;
-  --bs-light: #F6F0E4;
-  --bs-light-rgb: 246, 240, 228;
-  --bs-border-color: #E5DCCB;
-  --bs-border-radius: 0px;
-  --bs-border-radius-sm: 0px;
-  --bs-border-radius-lg: 0px;
-  --bs-border-radius-xl: 0px;
-  --bs-border-radius-xxl: 0px;
-  --bs-border-radius-2xl: 0px;
-  --bs-border-radius-pill: 0px;
-  --bs-box-shadow: none;
-  --bs-box-shadow-sm: none;
-  --bs-box-shadow-lg: none;
-  --bs-box-shadow-inset: none;
+  --surface-bg-primary: #F6F0E4;
+  --surface-bg-warm: #EFE8D8;
+  --surface-card-secondary: #E5DCCB;
+  --surface-white: #FAF7F0;
+  --brand-primary-default: #7A1C1C;
+  --brand-primary-hover: #5E1414;
+  --brand-olive-secondary: #3E5A47;
+  --brand-accent-highlight: #C29A50;
+  --brand-accent-dark: #6E521C;
+  --text-primary-body: #292723;
+  --text-secondary-muted: #5C564E;
+  --text-on-brand-inverse: #F6F0E4;
+  --border-subtle-color: #DCD2C0;
+  --border-strong-color: #292723;
 }
 
 [data-theme="option2"] {
-  /* Option 2 — Ký ức & Lịch sử sâu lắng (Tham chiếu: vietnam.vn) */
   --surface-bg-primary: #F1F0E5;
-  --surface-bg-ribbon: #E4E5D8;
-  --surface-bg-button-alt: #EAEBDD;
-  --surface-card-white: #FFFFFF;
+  --surface-bg-warm: #E5E4D5;
   --surface-card-secondary: #DADCCF;
-  --surface-footer-dark: #292E27;
-
+  --surface-white: #F8F8F2;
   --brand-primary-default: #566447;
-  --brand-primary-deep: #3E4A32;
+  --brand-primary-hover: #424E36;
+  --brand-olive-secondary: #7A1C1C;
   --brand-accent-highlight: #B9A16A;
-  --brand-accent-soft: #DDD0B1;
-  --brand-accent-secondary: #566447;
-
+  --brand-accent-dark: #5A4B28;
   --text-primary-body: #292E27;
+  --text-secondary-muted: #52594F;
   --text-on-brand-inverse: #FFFFFF;
-  --text-on-brand-pure: #FFFFFF;
-
-  --bs-body-bg: var(--surface-bg-primary);
-  --bs-body-color: var(--text-primary-body);
-  --bs-primary: #566447;
-  --bs-primary-rgb: 86, 100, 71;
-  --bs-secondary: #E4E5D8;
-  --bs-secondary-rgb: 228, 229, 216;
-  --bs-warning: #B9A16A;
-  --bs-warning-rgb: 185, 161, 106;
-  --bs-dark: #292E27;
-  --bs-dark-rgb: 41, 46, 39;
-  --bs-light: #F1F0E5;
-  --bs-light-rgb: 241, 240, 229;
-  --bs-border-color: #DADCCF;
+  --border-subtle-color: #C9CCB9;
+  --border-strong-color: #292E27;
 }
 
 [data-theme="option3"] {
-  /* Option 3 — Khát vọng & Tự do (Tham chiếu: baotanglichsuquocgia.vn) */
   --surface-bg-primary: #F3F7FA;
-  --surface-bg-ribbon: #E6EEF4;
-  --surface-bg-button-alt: #ECF2F7;
-  --surface-card-white: #FFFFFF;
+  --surface-bg-warm: #E5EEF5;
   --surface-card-secondary: #DCE6ED;
-  --surface-footer-dark: #263541;
-
+  --surface-white: #FFFFFF;
   --brand-primary-default: #356B91;
-  --brand-primary-deep: #234B68;
+  --brand-primary-hover: #275270;
+  --brand-olive-secondary: #B9574B;
   --brand-accent-highlight: #D7AD45;
-  --brand-accent-soft: #F0D796;
-  --brand-accent-secondary: #B9574B;
-
+  --brand-accent-dark: #6E5414;
   --text-primary-body: #263541;
+  --text-secondary-muted: #516370;
   --text-on-brand-inverse: #FFFFFF;
-  --text-on-brand-pure: #FFFFFF;
-
-  --bs-body-bg: var(--surface-bg-primary);
-  --bs-body-color: var(--text-primary-body);
-  --bs-primary: #356B91;
-  --bs-primary-rgb: 53, 107, 145;
-  --bs-secondary: #E6EEF4;
-  --bs-secondary-rgb: 230, 238, 244;
-  --bs-warning: #D7AD45;
-  --bs-warning-rgb: 215, 173, 69;
-  --bs-dark: #263541;
-  --bs-dark-rgb: 38, 53, 65;
-  --bs-light: #F3F7FA;
-  --bs-light-rgb: 243, 247, 250;
-  --bs-border-color: #DCE6ED;
+  --border-subtle-color: #C6D6E2;
+  --border-strong-color: #263541;
 }
 
-/* ==========================================================================
-   STRICT GEOMETRIC INVARIANT: ZERO BORDER-RADIUS, ZERO BOX-SHADOW, NO BLACK BORDERS
-   ========================================================================== */
+/* STRICT GEOMETRIC INVARIANT: NO BORDER-RADIUS, NO BOX-SHADOW */
 *,
 *::before,
-*::after,
-.btn,
-.card,
-.badge,
-.form-control,
-.form-select,
-.input-group-text,
-.nav-link,
-.navbar,
-.dropdown-menu,
-.modal-content,
-.alert,
-.accordion-item,
-.accordion-button {
+*::after {
   border-radius: 0px !important;
   box-shadow: none !important;
-}
-
-/* Override any legacy dark/black border classes to subtle paper-do / gold border */
-.border-content-primary {
-  border-color: var(--surface-card-secondary) !important;
 }
 
 body {
   background-color: var(--surface-bg-primary);
   color: var(--text-primary-body);
-  font-family: var(--font-sans);
-  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, .font-serif-heritage {
-  font-family: var(--font-serif);
+h1, h2, h3, h4, .font-display {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: -0.015em;
 }
 
-.container-figma {
-  max-width: 1184px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
 }
 
-@media (min-width: 1240px) {
-  .container-figma {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+.bg-surface-primary { background-color: var(--surface-bg-primary); }
+.bg-surface-warm { background-color: var(--surface-bg-warm); }
+.bg-surface-secondary { background-color: var(--surface-card-secondary); }
+.bg-surface-card { background-color: var(--surface-white); }
+.bg-brand-primary { background-color: var(--brand-primary-default); }
+.bg-brand-olive { background-color: var(--brand-olive-secondary); }
+.bg-brand-accent { background-color: var(--brand-accent-highlight); }
+.bg-brand-gold-dark { background-color: var(--brand-accent-dark); }
 
-/* ==========================================================================
-   SECTION BACKGROUND TRANSITION ARCHITECTURE (EXACT FIGMA 28:2 VISUAL ORDER)
-   1. Main Header (28:423)      -> #8F2929 (--brand-primary-default)
-   2. Top Banner (28:110)       -> #8F2929 (--brand-primary-default)
-   3. Hero Section (28:128)     -> #F6F0E4 (--surface-bg-primary)
-   4. Milestones Ribbon (28:5)  -> #ECE4D3 (--surface-bg-ribbon)
-   5. Galleries Section (28:204)-> #F6F0E4 (--surface-bg-primary)
-   6. Timeline Section (28:299) -> #ECE4D3 (--surface-bg-ribbon)
-   7. News Section (28:39)      -> #F6F0E4 (--surface-bg-primary)
-   8. Booking Callout (28:363)  -> #8F2929 (--brand-primary-default)
-   9. Footer (28:382)           -> #292723 (--surface-footer-dark)
-   ========================================================================== */
+.text-content-primary { color: var(--text-primary-body); }
+.text-content-muted { color: var(--text-secondary-muted); }
+.text-content-inverse { color: var(--text-on-brand-inverse); }
+.text-brand-primary { color: var(--brand-primary-default); }
+.text-brand-olive { color: var(--brand-olive-secondary); }
+.text-brand-accent { color: var(--brand-accent-highlight); }
 
-/* 1. Header Navigation (28:423) */
-.section-header-nav {
+.border-subtle { border-color: var(--border-subtle-color); }
+.border-strong { border-color: var(--border-strong-color); }
+.border-brand { border-color: var(--brand-primary-default); }
+.border-olive { border-color: var(--brand-olive-secondary); }
+.border-accent { border-color: var(--brand-accent-highlight); }
+
+.btn-brand {
   background-color: var(--brand-primary-default);
   color: var(--text-on-brand-inverse);
-  border-bottom: 1px solid rgba(223, 197, 142, 0.22);
-  min-height: 80px;
-}
-
-.header-nav-link {
-  color: var(--text-on-brand-inverse) !important;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.3;
-  padding: 8px 10px !important;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.header-nav-link.active,
-.header-nav-link:hover {
-  color: var(--brand-accent-soft) !important;
-  border-bottom-color: var(--brand-accent-soft);
-}
-
-.header-lang-box {
-  border: 1px solid rgba(223, 197, 142, 0.45);
-  padding: 2px 8px;
-  font-size: 10px;
+  border: 1px solid var(--brand-primary-default);
+  padding: 10px 18px;
   font-weight: 700;
-}
-
-.header-btn-ticket {
-  background-color: var(--brand-primary-default);
-  color: var(--text-on-brand-inverse);
-  border: 1px solid rgba(223, 197, 142, 0.55);
-  padding: 5px 16px;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-
-.header-btn-ticket:hover {
-  background-color: var(--brand-accent-highlight);
-  color: var(--text-primary-body);
-  border-color: var(--brand-accent-highlight);
-}
-
-.header-user-box {
-  background-color: var(--brand-primary-deep);
-  color: var(--text-on-brand-pure);
-  width: 32px;
-  height: 32px;
+  font-size: 13px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: none;
+  gap: 8px;
+  cursor: pointer;
+}
+.btn-brand:hover {
+  background-color: var(--brand-primary-hover);
 }
 
-/* 2. Top Sovereign Banner (28:110) — Positioned directly below Header */
-.section-top-banner {
-  background-color: var(--brand-primary-default);
-  color: var(--text-on-brand-inverse);
-  border-bottom: 1px solid rgba(194, 154, 80, 0.35);
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 12px;
-}
-
-/* 3. Hero Section (28:128) & Primary Surface Sections (28:204, 28:39) */
-.section-surface-primary {
-  background-color: var(--surface-bg-primary);
-  color: var(--text-primary-body);
-  padding-top: 64px;
-  padding-bottom: 64px;
-  border: none;
-}
-
-/* 4. Ribbon & Timeline Surface Sections (28:5, 28:299) */
-.section-surface-ribbon {
-  background-color: var(--surface-bg-ribbon);
-  color: var(--text-primary-body);
-  border: none;
-}
-
-.section-milestones-padding {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.section-timeline-padding {
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
-
-/* 8. Museum Visit Booking Callout (28:363) */
-.section-booking-callout {
-  background-color: var(--brand-primary-default);
-  color: var(--text-on-brand-inverse);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border: none;
-}
-
-/* 9. Footer (28:382) */
-.section-footer-dark {
-  background-color: var(--surface-footer-dark);
-  color: var(--text-on-brand-inverse);
-  padding-top: 64px;
-  padding-bottom: 40px;
-  border: none;
-}
-
-/* ==========================================================================
-   COMPONENT TOKENS & FLAT HERITAGE STYLING (FIGMA 28:2 — NO BLACK BORDERS)
-   ========================================================================== */
-
-/* Epoch Badge (28:132) */
-.epoch-badge {
-  background-color: var(--surface-bg-ribbon);
-  border: none;
-  padding: 4px 10px;
+.btn-olive {
+  background-color: var(--brand-olive-secondary);
+  color: #FFFFFF;
+  border: 1px solid var(--brand-olive-secondary);
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 13px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.btn-olive:hover {
+  opacity: 0.92;
+}
+
+.btn-flat-outline {
+  background-color: var(--surface-white);
+  color: var(--text-primary-body);
+  border: 1px solid var(--border-subtle-color);
+  padding: 9px 16px;
+  font-weight: 600;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--brand-primary-default);
-  letter-spacing: 0.04em;
-}
-
-.epoch-badge-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--brand-primary-default);
-  display: inline-block;
-}
-
-/* Historic Quote Box "Lời Bác" (28:143) */
-.quote-box-heritage {
-  background-color: var(--surface-bg-ribbon);
-  border: none;
-  border-left: 3px solid var(--brand-accent-highlight);
-  padding: 16px 20px;
-}
-
-/* Flat Action Buttons (28:158, 28:164, 28:374) */
-.btn-heritage-primary {
-  background-color: var(--brand-primary-default);
-  color: var(--text-on-brand-inverse);
-  border: 1px solid var(--brand-primary-default);
-  padding: 8px 24px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   cursor: pointer;
 }
-
-.btn-heritage-primary:hover {
-  background-color: var(--brand-primary-deep);
-  color: var(--text-on-brand-pure);
-}
-
-.btn-heritage-secondary {
-  background-color: var(--surface-bg-button-alt);
-  color: var(--text-primary-body);
-  border: 1px solid var(--surface-card-secondary);
-  padding: 8px 24px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.btn-heritage-secondary:hover {
-  background-color: var(--surface-bg-ribbon);
+.btn-flat-outline:hover {
+  border-color: var(--brand-primary-default);
   color: var(--brand-primary-default);
 }
 
-.btn-heritage-gold {
-  background-color: var(--brand-accent-highlight);
-  color: var(--text-primary-body);
-  border: 1px solid var(--brand-accent-highlight);
-  padding: 8px 24px;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.pill-active {
+  background-color: var(--brand-primary-default) !important;
+  color: #FFFFFF !important;
+  border-color: var(--brand-primary-default) !important;
 }
 
-.btn-heritage-gold:hover {
-  background-color: var(--brand-accent-soft);
-  color: var(--text-primary-body);
+.stamp-box-rotate {
+  transform: rotate(-4deg);
 }
-
-.btn-heritage-outline-light {
-  background-color: transparent;
-  color: var(--text-on-brand-inverse);
-  border: 1px solid rgba(246, 240, 228, 0.45);
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-heritage-outline-light:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--brand-accent-soft);
-}
-
-/* Right Archival Exhibition Image Frame with Brass Corner Flares (28:180) */
-.archival-frame-outer {
-  background-color: var(--surface-bg-ribbon);
-  border: 1px solid var(--surface-card-secondary);
-  padding: 8px;
-  position: relative;
-}
-
-.brass-corner {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: var(--brand-accent-highlight);
-  z-index: 2;
-}
-.brass-corner.tl { top: 0; left: 0; }
-.brass-corner.tr { top: 0; right: 0; }
-.brass-corner.bl { bottom: 26px; left: 0; }
-.brass-corner.br { bottom: 26px; right: 0; }
-
-.archival-photo-stage {
-  background-color: var(--surface-footer-dark);
-  min-height: 423px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  overflow: hidden;
-}
-
-.archival-photo-stage img.stage-bg-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.archival-photo-stage::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(41, 39, 35, 0.1) 0%, rgba(41, 39, 35, 0.88) 100%);
-  z-index: 1;
-}
-
-.archival-photo-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* Milestone Cards (28:7, 28:15, 28:23, 28:31) — Pure Flat #F6F0E4 on #ECE4D3 */
-.milestone-card {
-  background-color: var(--surface-bg-primary);
-  border: 1px solid var(--surface-card-secondary);
-  padding: 20px 16px 28px 16px;
-  height: 100%;
-  text-align: center;
-}
-
-/* Exhibit & News Cards (28:220, 28:247, 28:273, 28:53, 28:72, 28:91) — Pure Flat #FFFFFF */
-.exhibit-card {
-  background-color: var(--surface-card-white);
-  border: 1px solid var(--surface-card-secondary);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.exhibit-card-media {
-  background-color: var(--surface-footer-dark);
-  height: 224px;
-  position: relative;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.news-card-media {
-  background-color: var(--surface-footer-dark);
-  height: 192px;
-  position: relative;
-  overflow: hidden;
-}
-
-.card-media-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.card-media-overlay {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.badge-zone-primary {
-  background-color: var(--brand-primary-default);
-  color: var(--text-on-brand-inverse);
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  display: inline-block;
-}
-
-.badge-zone-dark {
-  background-color: rgba(41, 39, 35, 0.9);
-  color: var(--brand-accent-soft);
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 8px;
-  display: inline-block;
-}
-
-/* Timeline Step Cards (28:310, 28:323, 28:336, 28:349) */
-.timeline-step-card {
-  background-color: var(--surface-bg-primary);
-  border: 1px solid var(--surface-card-secondary);
-  padding: 16px;
-  height: 100%;
-}
-
-.timeline-step-card.step-highlight {
-  background-color: var(--brand-primary-default);
-  color: var(--text-on-brand-inverse);
-  border: 1px solid var(--brand-primary-default);
-}
-
-.timeline-step-num {
-  width: 40px;
-  height: 40px;
-  background-color: var(--brand-primary-default);
-  color: var(--text-on-brand-inverse);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-}
-
-.timeline-step-card.step-highlight .timeline-step-num {
-  background-color: var(--brand-accent-highlight);
-  color: var(--text-primary-body);
-}
-
-/* Text & Border Utility Classes */
-.text-brand-primary { color: var(--brand-primary-default) !important; }
-.text-brand-accent { color: var(--brand-accent-highlight) !important; }
-.text-brand-soft { color: var(--brand-accent-soft) !important; }
-.text-body-primary { color: var(--text-primary-body) !important; }
-.text-inverse-cream { color: var(--text-on-brand-inverse) !important; }
-
-.border-heritage-gold { border-color: var(--brand-accent-highlight) !important; }
-.border-heritage-subtle { border-color: var(--surface-card-secondary) !important; }
