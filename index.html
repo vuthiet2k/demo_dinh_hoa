@@ -5,31 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hệ Thống Số Hóa Di Tích Lịch Sử ATK Định Hóa — Thủ Đô Gió Ngàn Chiến Khu Việt Bắc</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        borderRadius: {
+          none: "0px",
+          DEFAULT: "0px",
+          sm: "0px",
+          md: "0px",
+          lg: "0px",
+          xl: "0px",
+          "2xl": "0px",
+          "3xl": "0px",
+          full: "0px"
+        },
+        boxShadow: {
+          none: "none",
+          DEFAULT: "none",
+          sm: "none",
+          md: "none",
+          lg: "none",
+          xl: "none",
+          "2xl": "none",
+          inner: "none"
+        },
+        extend: {
+          fontFamily: {
+            sans: ["Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+            serif: ["Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+            display: ["Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+            mono: ["Merriweather", "Georgia", "serif"]
+          }
+        }
+      }
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/themes.css" />
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col font-serif">
 
   <!-- STICKY NAVIGATION & THEME SWITCHER HEADER -->
   <header class="bg-brand-primary text-white border-b-4 border-accent sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
       <a href="#mainOverviewMount" class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-brand-accent text-content-primary border-2 border-white font-display font-extrabold text-sm flex items-center justify-center shrink-0">
+        <div class="w-10 h-10 bg-brand-accent text-content-primary border-2 border-white font-display font-black text-sm flex items-center justify-center shrink-0">
           ATK
         </div>
         <div>
           <div class="text-[10px] font-mono-code uppercase tracking-widest text-[#E5DCCB]">
             CỔNG DỮ LIỆU ĐỊA CHỈ ĐỎ QUỐC GIA
           </div>
-          <div class="font-display font-extrabold text-sm sm:text-base uppercase leading-tight">
+          <div class="font-display font-black text-sm sm:text-base uppercase leading-tight">
             HỆ THỐNG SỐ HÓA DI TÍCH ATK ĐỊNH HÓA
           </div>
         </div>
       </a>
 
-      <nav class="flex flex-wrap items-center gap-1.5 text-xs font-semibold" aria-label="Điều hướng phân hệ">
+      <nav class="flex flex-wrap items-center gap-1.5 text-xs font-bold" aria-label="Điều hướng phân hệ">
         <a href="#mainOverviewMount" class="px-3 py-1.5 border border-white/25 hover:bg-white/15">
           1. Trang Chủ Hub
         </a>
@@ -89,7 +124,7 @@
   </div>
 
   <!-- TOAST NOTIFICATION BAR -->
-  <div id="globalToastBar" class="hidden fixed bottom-5 right-5 z-50 bg-brand-primary text-white border-2 border-accent px-4 py-3 text-xs font-semibold max-w-sm"></div>
+  <div id="globalToastBar" class="hidden fixed bottom-5 right-5 z-50 bg-brand-primary text-white border-2 border-accent px-4 py-3 text-xs font-bold max-w-sm"></div>
 
   <!-- FOOTER -->
   <footer class="bg-brand-primary text-white border-t-4 border-accent mt-16">
@@ -109,6 +144,7 @@
       </div>
       <div class="space-y-1 font-mono-code text-[11px]">
         <div class="font-bold uppercase text-[#E5DCCB]">Quy Chuẩn Kỹ Thuật Giao Diện:</div>
+        <div>• Kiểu chữ chủ đạo: Merriweather (Google Fonts)</div>
         <div>• Hình học phẳng: border-radius: 0px | box-shadow: none</div>
         <div>• Hệ quy chiếu: VN-2000 &amp; WGS-84 RTK (±0.03m)</div>
         <div>• Kho lưu trữ: github.com/vuthiet2k/demo_dinh_hoa</div>
