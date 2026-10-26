@@ -62,9 +62,10 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
-        display: ["Be Vietnam Pro", "Merriweather", "Georgia", "serif"],
-        mono: ["JetBrains Mono", "monospace"]
+        sans: ["Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        serif: ["Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        display: ["Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+        mono: ["Merriweather", "Georgia", "serif"]
       }
     }
   },
