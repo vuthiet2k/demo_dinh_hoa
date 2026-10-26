@@ -1,6 +1,6 @@
 # Hệ Thống Số Hóa Di Tích Lịch Sử ATK Định Hóa — Thủ Đô Gió Ngàn Chiến Khu Việt Bắc
 
-**Chuẩn Quy Trình Vận Hành:** Astra Agentic Workflow · **Kiến Trúc Token:** W3C DTCG 3-Tier Tokens (60–30–10) · **Kiểm Định Tương Phản:** W3C WCAG 2.2 AA/AAA · **Quy Chuẩn Hình Học:** Flat & Sharp (`border-radius: 0px`, `box-shadow: none`).
+**Chuẩn Quy Trình Vận Hành:** Astra Agentic Workflow · **Kiểu Chữ Chủ Đạo (Typography):** `Merriweather` (Google Fonts) · **Kiến Trúc Token:** W3C DTCG 3-Tier Tokens (60–30–10) · **Kiểm Định Tương Phản:** W3C WCAG 2.2 AA/AAA · **Quy Chuẩn Hình Học:** Flat & Sharp (`border-radius: 0px`, `box-shadow: none`).
 
 ## 1. Kiến Trúc Phân Mảnh Mã Nguồn (Modular Codebase Architecture)
 
@@ -8,13 +8,13 @@ Toàn bộ giao diện và dữ liệu được tách thành các mô-đun độ
 
 ```text
 demo_dinh_hoa/
-├── index.html                           # Entry point HTML gọn nhẹ (nạp CSS & các module JS)
+├── index.html                           # Entry point HTML gọn nhẹ (nạp Google Fonts Merriweather, CSS & các module JS)
 ├── vercel.json                          # Cấu hình triển khai tĩnh & Security Headers trên Vercel
 ├── package.json                         # Metadata dự án & scripts kiểm định
-├── tailwind.config.js                   # Cấu hình Tailwind CSS ánh xạ Semantic Tokens & ép 0px radius/shadow
+├── tailwind.config.js                   # Cấu hình Tailwind CSS ánh xạ font Merriweather, Semantic Tokens & ép 0px radius/shadow
 ├── styles/
-│   ├── tokens.json                      # Bộ biến màu chuẩn W3C DTCG 3-Tier (Option 1, 2, 3)
-│   └── themes.css                       # CSS Variables & hệ thống class hình học phẳng
+│   ├── tokens.json                      # Bộ biến màu & kiểu chữ Merriweather chuẩn W3C DTCG 3-Tier (Option 1, 2, 3)
+│   └── themes.css                       # CSS Variables (--font-primary: 'Merriweather') & hệ thống class hình học phẳng
 ├── src/
 │   ├── data/
 │   │   └── relics-data.js               # File JS lưu trữ độc lập toàn bộ dữ liệu 8 di tích, GIS, Flipbook 10 trang, Quiz, Kịch bản 250 từ & Tuyến du lịch
